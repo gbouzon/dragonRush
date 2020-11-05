@@ -1,2 +1,2 @@
 # gmae-project
-Repository for final project in game programming course
+This repository is used for us to work on and share several verisons of our final game programming 1 project
