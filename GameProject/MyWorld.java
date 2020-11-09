@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class MyWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Giuliana Bouzon, Andrei Marinescu Chelsea Chinniah 
+ * @version 1.0, November 8th, 2020
  */
 public class MyWorld extends World
 {
