@@ -1,11 +1,11 @@
 #Greenfoot project file
 class.MyWorld.image=Game_Background_188.png
 class.Strawberry.image=stawberry.png
-editor.fx.0.height=737
-editor.fx.0.width=814
-editor.fx.0.x=496
-editor.fx.0.y=70
-height=881
+editor.fx.0.height=837
+editor.fx.0.width=854
+editor.fx.0.x=-1357
+editor.fx.0.y=143
+height=1058
 package.numDependencies=0
 package.numTargets=2
 project.charset=UTF-8
@@ -37,7 +37,7 @@ target2.width=80
 target2.x=0
 target2.y=0
 version=3.0.0
-width=1250
+width=1938
 world.lastInstantiated=MyWorld
-xPosition=78
-yPosition=23
+xPosition=0
+yPosition=0
