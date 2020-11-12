@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Coins extends Actor
+public class Coins extends Allies
 {
     private GreenfootImage[] coins;
     private int index, counter;
