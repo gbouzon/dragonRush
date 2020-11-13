@@ -22,7 +22,7 @@ public class Allies extends Actor
      */
     public Actor generateAllies(){
         int choice = Greenfoot.getRandomNumber(2);
-        if(choice==0){
+        if(choice == 0){
             return new Coins();
         }
         else{

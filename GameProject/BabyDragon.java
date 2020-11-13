@@ -44,6 +44,6 @@ public class BabyDragon extends Dragon
     public void act() 
     {
         //example of using the animation method. Put this in your control method.
-        ((MyWorld)getWorld()).switchImage(dragonAttack, indexAttack, this);
+        //super.checkKeyPress();
     }    
 }

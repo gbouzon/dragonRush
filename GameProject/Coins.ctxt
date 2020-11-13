@@ -1,10 +1,13 @@
 #BlueJ class context
 comment0.target=Coins
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Coins\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Coins\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=Coins()
-comment1.text=\r\n\ Constructor\ for\ Coins\ class\r\n
+comment1.target=void\ movingCoins()
+comment1.text=\n\ Moves\ allies\ until\ the\ left\ of\ the\ screen\ (which\ is\ where\ they\ will\ disappear)\n\ @author\ Chelsea\ Nadarajah-Chinniah\n
 comment2.params=
-comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Coins\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=3
+comment2.target=Coins()
+comment2.text=\n\ Constructor\ for\ Coins\ class\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ Coins\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=4

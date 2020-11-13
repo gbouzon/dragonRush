@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ Parent\ class\ for\ game\ levels.\r\n\ \r\n\ @author\ Giuliana\ Bouzon\r\n\ @version\ 1.0\r\n
+comment0.text=\n\ Parent\ class\ for\ game\ levels.\n\ \n\ @author\ Giuliana\ Bouzon\n\ @version\ 1.0\n
 comment1.params=
 comment1.target=MyWorld()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\n\ \n
 comment2.params=array\ str\ index
 comment2.target=greenfoot.GreenfootImage[]\ makeArrays(greenfoot.GreenfootImage[],\ java.lang.String,\ int)
-comment2.text=\r\n\ Method\ to\ make\ arrays\ with\ characters'\ pictures\ for\ the\ animation\r\n\ @author\ Giuliana\ Bouzon\r\n
+comment2.text=\n\ Method\ to\ make\ arrays\ with\ characters'\ pictures\ for\ the\ animation\n\ @author\ Giuliana\ Bouzon\n
 comment3.params=array\ index\ actor
 comment3.target=void\ switchImage(greenfoot.GreenfootImage[],\ int,\ greenfoot.Actor)
-comment3.text=\r\n\ Method\ to\ make\ characters'\ animation\r\n\ @author\ Giuliana\ Bouzon\r\n
+comment3.text=\n\ Method\ to\ make\ characters'\ animation\n\ @author\ Giuliana\ Bouzon\n
 comment4.params=
 comment4.target=void\ checkObjects()
-comment4.text=\r\n\ Adds\ more\ allies\ objects\ to\ the\ world\ when\ there\ are\ none.\r\n
+comment4.text=\n\ Adds\ more\ allies\ objects\ to\ the\ world\ when\ there\ are\ none.\n
 numComments=5

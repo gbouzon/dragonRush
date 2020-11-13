@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Cherry here.
  * 
- * @author (your name) 
+ * @author 
  * @version (a version number or a date)
  */
 public class Cherry extends Fruits
@@ -14,6 +14,6 @@ public class Cherry extends Fruits
      */
     public void act() 
     {
-        // Add your action code here.
+        movingFruits();
     }    
 }

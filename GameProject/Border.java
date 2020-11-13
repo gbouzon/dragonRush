@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Strawberry here.
+ * Write a description of class Border here.
  * 
- * @author 
+ * @author (your name) 
  * @version (a version number or a date)
  */
-public class Strawberry extends Fruits
+public class Border extends Actor
 {
     /**
-     * Act - do whatever the Strawberry wants to do. This method is called whenever
+     * Act - do whatever the Border wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        movingFruits();
+        // Add your action code here.
     }    
 }
