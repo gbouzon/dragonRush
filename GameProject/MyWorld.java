@@ -9,8 +9,6 @@ import java.lang.*;
  */
 public class MyWorld extends World
 {
-    private ArrayList<Actor> list;
-
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -18,15 +16,13 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1300, 700, 1); 
-        list = new ArrayList<>();
+        super(1280, 720, 1); 
     }
     /**
      * Method to make arrays with characters' pictures for the animation
      * @author Giuliana Bouzon
      */
-    public GreenfootImage[] makeArrays(GreenfootImage[] array, String str, int size, int index){
-        array = new GreenfootImage[size];
+    public GreenfootImage[] makeArrays(GreenfootImage[] array, String str, int index){
         index = 0;
         for(int i = 0; i<array.length; i++){
             array[i] = new GreenfootImage(str + (i+1) + ".png");
@@ -45,12 +41,13 @@ public class MyWorld extends World
     /**
      * Adds more allies objects to the world when there are none.
      */
-    public void checkObjects(java.lang.Class<Actor> cls){
-        //to be fixed: make it add randomly (random fruits + coins)
+    public void checkObjects(){ //to be refactored
        List<Actor> list = new ArrayList<>();
-       list.addAll(getObjects(cls));
+       list.addAll(getObjects(Allies.class));
        if(list.size() == 0){
-           addObject(new Fruits(), Greenfoot.getRandomNumber(500), Greenfoot.getRandomNumber(500));
+           for(int i = 0; i<5;){
+               addObject(new Allies(), 1250, Greenfoot.getRandomNumber(500));
+           }
         }
     }
 }

@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class AdultDragon here.
  * 
@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class AdultDragon extends Dragon
 {
-    private GreenfootImage[] fire;
+    private ArrayList<GreenfootImage> fire;
     private int indexFire;
     /**
      * Constructor for Adult Dragon class.

@@ -14,9 +14,11 @@ public class Coins extends Allies
      * Constructor for Coins class
      */
     public Coins(){
-        MyWorld world = ((MyWorld)getWorld());
-        world.makeArrays(coins, "gold", 10, index);
-
+        coins = new GreenfootImage[10];
+        index = 0;
+        for(int i = 0; i<coins.length; i++){
+            coins[i] = new GreenfootImage("gold" + (i+1) + ".png");
+        }
     }
     /**
      * Act - do whatever the Coins wants to do. This method is called whenever

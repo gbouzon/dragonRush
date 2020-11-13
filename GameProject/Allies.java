@@ -14,6 +14,19 @@ public class Allies extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        generateAllies();
+    } 
+    /**
+     * Generates a random ally when Allies class is instantianted.
+     * @author Giuliana Bouzon
+     */
+    public Actor generateAllies(){
+        int choice = Greenfoot.getRandomNumber(2);
+        if(choice==0){
+            return new Coins();
+        }
+        else{
+            return new Fruits();
+        }
+    }
 }

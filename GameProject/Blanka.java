@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class Blanka here.
  * 
@@ -15,11 +15,25 @@ public class Blanka extends Enemies
     /**
      * Constructor for Blanka class.
      */
-    public Blanka(){
-        MyWorld world = ((MyWorld)getWorld());
-        world.makeArrays(blankaExplode,"blankaExplode",3, indexExplode);
-        world.makeArrays(blankaPunch, "blankaPunch", 3, indexPunch);
-        world.makeArrays(blankaWalking, "blankaWalking",5, indexWalking);
+    public Blanka(){ //to be refactored
+        blankaExplode = new GreenfootImage[3];
+        indexExplode = 0;
+        for(int i = 0; i<blankaExplode.length; i++){
+            blankaExplode[i] = new GreenfootImage("blankaExplode" + (i+1) + ".png");
+        }
+        
+        blankaPunch = new GreenfootImage[3];
+        indexPunch = 0;
+        for(int i = 0; i<blankaPunch.length; i++){
+            blankaPunch[i] = new GreenfootImage("blankaPunch" + (i+1) + ".png");
+        }
+        
+        blankaWalking = new GreenfootImage[5];
+        indexWalking = 0;
+        for(int i = 0; i<blankaWalking.length; i++){
+            blankaWalking[i] = new GreenfootImage("blankaWalking" + (i+1) + ".png");
+        }
+
         
     }
     /**

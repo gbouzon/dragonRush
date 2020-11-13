@@ -15,9 +15,18 @@ public class Hulk extends Enemies
      * Constructor for Hulk class.
      */
     public Hulk(){
-        MyWorld world = ((MyWorld)getWorld());
-        world.makeArrays(hulkSmash, "hulkSmash", 6, indexSmash);
-        world.makeArrays(hulkWalking, "hulkWalking", 5, indexWalking);
+        hulkSmash = new GreenfootImage[6];
+        indexSmash = 0;
+        for(int i = 0; i<hulkSmash.length; i++){
+            hulkSmash[i] = new GreenfootImage("hulkSmash" + (i+1) + ".png");
+        }
+        
+        hulkWalking = new GreenfootImage[5];
+        indexWalking = 0;
+        for(int i = 0; i<hulkWalking.length; i++){
+            hulkWalking[i] = new GreenfootImage("hulkWalking" + (i+1) + ".png");
+        }
+
 
     }
     /**
