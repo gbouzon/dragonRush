@@ -7,4 +7,6 @@ comment1.text=\n\ Act\ -\ do\ whatever\ the\ Dragon\ wants\ to\ do.\ This\ metho
 comment2.params=array\ index\ actor
 comment2.target=void\ checkKeyPress(greenfoot.GreenfootImage[],\ int,\ greenfoot.Actor)
 comment2.text=\n\ Coordinates\ the\ user's\ input\ keyboard\ keys\ with\n\ @author\ Chelsea\ Nadarajah-Chinniah\n
-numComments=3
+comment3.params=
+comment3.target=void\ checkForJump()
+numComments=4
