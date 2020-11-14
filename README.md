@@ -17,9 +17,11 @@
 </h1>
 
 <p>
-	Made Fruits move to the left of the world and disappear(a part of the scrolling wolrld). <br>
+	Made Fruits move to the left of the world and disappear(a part of the scrolling world). <br>
 	Made lining of the world (the ground) move (also a part of the scrolling world).<br>
-	Edited and added the borders to the world. Edited walking baby dragon sprites. <br>
-	Added user controls to the dragons. Did the jump controls for the dragon. 
+	Edited and added the borders to the world.<br> 
+	Edited walking baby dragon sprites. <br>
+	Added user controls to the dragons. <br>
+	Did the jump controls for the dragon. 
 </p>
 
