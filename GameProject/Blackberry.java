@@ -14,6 +14,6 @@ public class Blackberry extends Fruits
      */
     public void act() 
     {
-        movingFruits();
+        //movingFruits();
     }    
 }

@@ -1,15 +1,15 @@
 #BlueJ class context
 comment0.target=Fruits
-comment0.text=\n\ Write\ a\ description\ of\ class\ Fruits\ here.\n\ \n\ @author\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Fruits\ here.\r\n\ \r\n\ @author\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
-comment1.target=Fruits()
+comment1.target=void\ movingFruits()
+comment1.text=\r\n\ Moves\ fruits\ until\ the\ left\ of\ the\ screen\ (which\ is\ where\ they\ will\ disappear)\r\n\ @author\ Chelsea\ Nadarajah-Chinniah\r\n
 comment2.params=
-comment2.target=void\ movingFruits()
-comment2.text=\n\ Moves\ fruits\ until\ the\ left\ of\ the\ screen\ (which\ is\ where\ they\ will\ disappear)\n\ @author\ Chelsea\ Nadarajah-Chinniah\n
+comment2.target=Fruits()
 comment3.params=
 comment3.target=void\ act()
-comment3.text=\n\ Act\ -\ do\ whatever\ the\ Fruits\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Fruits\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment4.params=
-comment4.target=greenfoot.Actor\ generateFruits()
-comment4.text=\n\ Generates\ a\ new\ Fruit\ randomly\ when\ the\ class\ Fruits\ is\ instantiated.\n\ @author\ Giuliana\ Bouzon\n
+comment4.target=void\ generateFruits()
+comment4.text=\r\n\ Generates\ a\ new\ Fruit\ randomly\ when\ the\ class\ Fruits\ is\ instantiated.\r\n\ @author\ Giuliana\ Bouzon\r\n
 numComments=5

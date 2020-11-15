@@ -14,6 +14,6 @@ public class Raspberry extends Fruits
      */
     public void act() 
     {
-       movingFruits();
+       //movingFruits();
     }    
 }

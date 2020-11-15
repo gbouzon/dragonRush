@@ -8,21 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Hulk extends Enemies
 {
-    private GreenfootImage[] hulkSmash;
-    private GreenfootImage[] hulkWalking;
-    private int indexSmash, indexWalking, counter;
+    
     /**
      * Constructor for Hulk class.
      */
     public Hulk(){
         hulkSmash = new GreenfootImage[6];
-        indexSmash = 0;
+        indexHulkSmash = 0;
         for(int i = 0; i<hulkSmash.length; i++){
             hulkSmash[i] = new GreenfootImage("hulkSmash" + (i+1) + ".png");
         }
         
         hulkWalking = new GreenfootImage[5];
-        indexWalking = 0;
+        indexHulkWalking = 0;
         for(int i = 0; i<hulkWalking.length; i++){
             hulkWalking[i] = new GreenfootImage("hulkWalking" + (i+1) + ".png");
         }

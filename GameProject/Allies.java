@@ -6,8 +6,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Allies extends Actor
+public class Allies extends MyActor
 {
+    public Allies(){
+
+    }
     /**
      * Act - do whatever the Allies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -29,4 +32,5 @@ public class Allies extends Actor
             return new Fruits();
         }
     }
+    
 }

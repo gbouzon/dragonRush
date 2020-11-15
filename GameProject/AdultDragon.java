@@ -8,8 +8,6 @@ import java.util.*;
  */
 public class AdultDragon extends Dragon
 {
-    private ArrayList<GreenfootImage> fire;
-    private int indexFire;
     /**
      * Constructor for Adult Dragon class.
      */

@@ -14,6 +14,6 @@ public class StarFruit extends Fruits
      */
     public void act() 
     {
-        movingFruits();
+        //movingFruits();
     }    
 }

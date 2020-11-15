@@ -14,6 +14,6 @@ public class Plum extends Fruits
      */
     public void act() 
     {
-        movingFruits();
+        //movingFruits();
     }    
 }

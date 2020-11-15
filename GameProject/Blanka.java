@@ -8,28 +8,25 @@ import java.util.*;
  */
 public class Blanka extends Enemies
 {
-    private GreenfootImage[] blankaExplode;
-    private GreenfootImage[] blankaPunch;
-    private GreenfootImage[] blankaWalking;
-    private int indexExplode, indexPunch, indexWalking, counter;
+    
     /**
      * Constructor for Blanka class.
      */
     public Blanka(){ //to be refactored
         blankaExplode = new GreenfootImage[3];
-        indexExplode = 0;
+        indexBlankaExplode = 0;
         for(int i = 0; i<blankaExplode.length; i++){
             blankaExplode[i] = new GreenfootImage("blankaExplode" + (i+1) + ".png");
         }
         
         blankaPunch = new GreenfootImage[3];
-        indexPunch = 0;
+        indexBlankaPunch = 0;
         for(int i = 0; i<blankaPunch.length; i++){
             blankaPunch[i] = new GreenfootImage("blankaPunch" + (i+1) + ".png");
         }
         
         blankaWalking = new GreenfootImage[5];
-        indexWalking = 0;
+        indexBlankaWalk = 0;
         for(int i = 0; i<blankaWalking.length; i++){
             blankaWalking[i] = new GreenfootImage("blankaWalking" + (i+1) + ".png");
         }

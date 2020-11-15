@@ -14,6 +14,6 @@ public class Orange extends Fruits
      */
     public void act() 
     {
-        movingFruits();
+        //movingFruits();
     }    
 }

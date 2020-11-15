@@ -8,34 +8,86 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BabyDragon extends Dragon
 {
-    private GreenfootImage[] dragonAttack;
-    private GreenfootImage[] dragonWalkLeft;
-    private GreenfootImage[] dragonWalkRight;
-    private GreenfootImage dragonIdle;
-    private int indexAttack, indexLeft, indexRight, counter;
+    private int counter;
     /**
      * Constructor for Baby Dragon class.
      */
     public BabyDragon(){ //to be refactored using methods
-        dragonIdle = new GreenfootImage("dragonIdle.png");
+        bDragonIdle = new GreenfootImage("dragonIdle.png");
         
-        dragonAttack = new GreenfootImage[5];
-        indexAttack = 0;
-        for(int i = 0; i<dragonAttack.length; i++){
-            dragonAttack[i] = new GreenfootImage("dragonAttack" + (i+1) + ".png");
+        
+      
+        bDragonAttack = new GreenfootImage[5];
+        indexBDragonAttack = 0;
+        for(int i = 0; i<bDragonAttack.length; i++){
+            bDragonAttack[i] = new GreenfootImage("dragonAttack" + (i+1) + ".png");
         }
         
-        dragonWalkLeft = new GreenfootImage[5];
-        indexLeft = 0;
-        for(int i = 0; i<dragonWalkLeft.length; i++){
-            dragonWalkLeft[i] = new GreenfootImage("dragonWalkLeft" + (i+1) + ".png");
+        bDragonWalkLeft = new GreenfootImage[5];
+        indexBDragonLeft = 0;
+        for(int i = 0; i<bDragonWalkLeft.length; i++){
+            bDragonWalkLeft[i] = new GreenfootImage("dragonWalkLeft" + (i+1) + ".png");
+        }
+       
+        bDragonWalkRight = new GreenfootImage[5];
+        indexBDragonRight = 0;
+        for(int i = 0; i<bDragonWalkRight.length; i++){
+            bDragonWalkRight[i] = new GreenfootImage("dragonWalkRight" + (i+1) + ".png");
+        }
+    }
+    private void switchImageRight(){
+        setImage(bDragonWalkRight[indexBDragonRight % bDragonWalkRight.length]);
+        indexBDragonRight++;
+    }
+    private void switchImageLeft(){
+        setImage(bDragonWalkLeft[indexBDragonLeft % bDragonWalkLeft.length]);
+        indexBDragonLeft++;
+    }
+    private void attack(){
+        Fire fire = new Fire();
+        getWorld().addObject(fire, this.getX()+150, this.getY());
+        fire.growFire();
+    }
+    private void stop(){
+        Fire fire = new Fire();
+        getWorld().addObject(fire, this.getX()+150, this.getY());
+        fire.shrinkFire();
+    }
+    
+    private void userControl(){
+        if(Greenfoot.isKeyDown("a")) {
+            setLocation(getX()-5,getY());
+            removeTouching(Fire.class);
+            if(counter==4){
+                switchImageLeft();
+                counter=0;
+            }
+            else{
+                counter++;
+            }
+        }
+        if(Greenfoot.isKeyDown("D")) {
+            setLocation(getX()+5,getY());
+            removeTouching(Fire.class);
+            if(counter==4){
+                switchImageRight();
+                counter=0;
+            }
+            else{
+                counter++;
+            }
+            
+        }
+        if(Greenfoot.isKeyDown("space")) {
+            //jump
+        }
+        if(Greenfoot.isKeyDown("x")){
+                setImage("dragonAttack3.png");
+                attack();
         }
         
-        dragonWalkRight = new GreenfootImage[5];
-        indexRight = 0;
-        for(int i = 0; i<dragonWalkRight.length; i++){
-            dragonWalkRight[i] = new GreenfootImage("dragonWalkRight" + (i+1) + ".png");
-        }
+          
+        
     }
     /**
      * Act - do whatever the BabyDragon wants to do. This method is called whenever
@@ -44,6 +96,8 @@ public class BabyDragon extends Dragon
     public void act() 
     {
         //example of using the animation method. Put this in your control method.
-        //super.checkKeyPress();
+        userControl();
+        eat();
+        new Fruits().generateFruits();
     }    
 }

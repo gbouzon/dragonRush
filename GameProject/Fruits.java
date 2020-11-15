@@ -29,33 +29,33 @@ public class Fruits extends Allies
      */
     public void act() 
     {
-        generateFruits();
+        //generateFruits();
     }  
     /**
      * Generates a new Fruit randomly when the class Fruits is instantiated.
      * @author Giuliana Bouzon
      */
-    public Actor generateFruits(){
+    public void generateFruits(){
         int choice = Greenfoot.getRandomNumber(8);
         switch(choice){
             case 0:
-                return new Blackberry();
+                 new Blackberry();
             case 1:
-                return new Cherry();
+                 new Cherry();
             case 2:
-                return new Lemon();
+                 new Lemon();
             case 3:
-                return new Orange();
+                 new Orange();
             case 4:
-                return new Plum();
+                 new Plum();
             case 5:
-                return new Raspberry();
+                 new Raspberry();
             case 6:
-                return new StarFruit();
+                 new StarFruit();
             case 7:
-                return new Strawberry();
+                 new Strawberry();
             default:
-                return null;
+                 
         }
     }
 }
