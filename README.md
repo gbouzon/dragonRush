@@ -23,5 +23,7 @@
 	Edited walking baby dragon sprites. <br>
 	Added user controls to the dragons. <br>
 	Did the jump controls for the dragon. 
+	Fixed the hitbox.
+	Fire animation to go left and right in progress.
 </p>
 
