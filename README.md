@@ -6,6 +6,7 @@
 </h1>
 
 <p>
+	Giuliana Bouzon:
     Added classes (Fruits, Dragon, World, Enemies parent classes + their respective child classes).<br> 
     Made makeArrays() method in World class to make images arrays for each character.<br>
     Made switchImage() method in World class to provide animation for each animated character (with multiple images in arrays).<br>
@@ -17,6 +18,7 @@
 </h1>
 
 <p>
+	Chelsea Nadarajah-Chinniah:
 	Made Fruits move to the left of the world and disappear(a part of the scrolling world). <br>
 	Made lining of the world (the ground) move (also a part of the scrolling world).<br>
 	Edited and added the borders to the world.<br> 
@@ -26,4 +28,15 @@
 	Fixed the hitbox.
 	Fire animation to go left and right in progress.
 </p>
+<h1> 
+    <b>Version 1.2, November 19<sup>th</sup> of 2020:</b>
+</h1>
 
+<p>
+	Giuliana Bouzon:
+	Deleted unused classes
+	Simplified methods
+	Deleted images
+	Simplified game
+	New concept: childhood games, Pac-man, Snake game, Mario
+</p>
