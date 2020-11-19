@@ -8,13 +8,11 @@ import java.util.*;
  */
 public abstract class MyActor extends Actor
 {
-    protected int indexCoins, indexHulkSmash, indexHulkWalking, indexBlankaExplode, indexBlankaPunch, 
-    indexBlankaWalk, indexBDragonAttack, indexBDragonLeft, indexBDragonRight, indexFire;
+    protected int indexCoins,indexDragonA, indexDragonL, indexDragonR, indexFire;
     
-    protected GreenfootImage[] coins,hulkSmash, hulkWalking, blankaExplode, blankaPunch, blankaWalking, 
-    bDragonAttack, bDragonWalkLeft, bDragonWalkRight, fire;
+    protected GreenfootImage[] coins,dragonA, dragonL, dragonR, fire;
     
-    protected GreenfootImage bDragonIdle;
+    protected GreenfootImage dragonI;
     
 
      
@@ -45,8 +43,4 @@ public abstract class MyActor extends Actor
         setImage(array[index % array.length]);
         index++;
     }
-    /**
-     * Adds more allies objects to the world when there are none.
-     */
-    
 }

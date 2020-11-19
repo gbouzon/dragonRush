@@ -18,17 +18,5 @@ public class Fire extends Dragon
     }  
     public Fire(){
         fire = new GreenfootImage[6];
-        indexFire = 0;
-        for(int i =0; i<fire.length; i++){
-            fire[i] = new GreenfootImage("fire" + (i+1) + ".png");
-        }
-    }
-    public void growFire(){
-        setImage(fire[indexFire % fire.length]);
-        indexFire++;
-    }
-    public void shrinkFire(){
-        setImage(fire[indexFire % fire.length]);
-        indexFire--;
     }
 }
