@@ -41,7 +41,7 @@
 	New concept: childhood games, Pac-man, Snake game, Mario<br>
 </p>
 <h1> 
-    <b>Version 1.3, November 19<sup>th</sup> of 2020:</b>
+    <b>Version 2.0, November 19<sup>th</sup> of 2020:</b>
 </h1>
 
 <p>
