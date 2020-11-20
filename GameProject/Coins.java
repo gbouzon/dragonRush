@@ -10,9 +10,9 @@ public class Coins extends Allies
 {
     private int counter;
     private int speed;
-    /**
+    /*
      * Constructor for Coins class
-     */
+     
     public Coins(){
         speed = Greenfoot.getRandomNumber(5)+1;
         coins = new GreenfootImage[10];
@@ -43,6 +43,5 @@ public class Coins extends Allies
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() {
-        switchImage();
     }    
 }

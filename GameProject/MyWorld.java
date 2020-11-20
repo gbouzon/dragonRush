@@ -17,7 +17,7 @@ public abstract class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1280, 720, 1); 
+        super(1080, 725, 1); 
     }
     public void checkObjects(){ //to be refactored
        List<MyActor> list = new ArrayList<>();
@@ -32,8 +32,7 @@ public abstract class MyWorld extends World
         showText("Score: " + score, 80, 25);
     }
     public void addScore(int points) {
-        score +=points;
+        score += points;
         showScore();
-        
     }
 }

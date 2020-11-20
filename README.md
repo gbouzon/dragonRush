@@ -40,3 +40,16 @@
 	Simplified game<br>
 	New concept: childhood games, Pac-man, Snake game, Mario<br>
 </p>
+<h1> 
+    <b>Version 1.3, November 19<sup>th</sup> of 2020:</b>
+</h1>
+
+<p>
+	Chelsea Nadarajah-Chinniah:<br>
+	Created new world (added new background and edited pictures of characters and the powerups to fit the background) <br>
+	Added the user controls for the dragon and the knight (this includes detection of the collision with the walls of the maze through colour detection) <br>
+	Added win/lose conditions for the games <br>
+	Added points for the fruits and coins <br>
+	Added timer for the world (which connects to the win condition) <br>
+	Added the collision between the dragon (the main character) and the knight (the enemy) (which connects to the lose condition) <br>
+</p>

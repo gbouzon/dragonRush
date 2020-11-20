@@ -8,6 +8,7 @@ import java.util.*;
  */
 public class Dragon extends MyActor
 {
+    /*
     public Dragon(){
         //constructor
     }
@@ -15,18 +16,11 @@ public class Dragon extends MyActor
         setImage(array[index % array.length]);
         index++;
     }
-    /**
-     * Act - do whatever the Dragon wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-
-    } 
+    
     /**
      * Coordinates the user's input keyboard keys with
      * @author Chelsea Nadarajah-Chinniah
-     */
+     
  protected void checkKeyPress() {
         if(Greenfoot.isKeyDown("A")) {
             setLocation(getX()-5,getY());
@@ -56,5 +50,14 @@ public class Dragon extends MyActor
             removeTouching(Coins.class);
         }
     }
+    */
+   /**
+     * Act - do whatever the Dragon wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+   */
+    public void act() 
+    {
+
+    } 
     
 }

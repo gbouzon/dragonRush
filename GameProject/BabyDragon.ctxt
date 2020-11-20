@@ -1,12 +1,7 @@
 #BlueJ class context
 comment0.target=BabyDragon
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ BabyDragon\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ BabyDragon\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=BabyDragon()
-comment1.text=\r\n\ Constructor\ for\ Baby\ Dragon\ class.\r\n
-comment2.params=
-comment2.target=void\ userControl()
-comment3.params=
-comment3.target=void\ act()
-comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ BabyDragon\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=4
+comment1.target=void\ act()
+comment1.text=\n\ Constructor\ for\ Baby\ Dragon\ class.\n\ \ \ \ \ \n\ \ \ \ public\ BabyDragon(){\ //to\ be\ refactored\ using\ methods\n\ \ \ \ \ \ \ \ dragonI\ \=\ new\ GreenfootImage("dragonIdle1.png");\n\ \ \ \ }\n\ \ \ \ \n\ \ \ \ private\ void\ userControl(){\n\ \ \ \ \ \ \ \ if(Greenfoot.isKeyDown("a"))\ {\n\ \ \ \ \ \ \ \ \ \ \ \ setLocation(getX()-5,getY());\n\ \ \ \ \ \ \ \ \ \ \ \ if(counter\=\=4){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter\=0;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \ \ else{\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter++;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ if(Greenfoot.isKeyDown("D"))\ {\n\ \ \ \ \ \ \ \ \ \ \ \ setLocation(getX()+5,getY());\n\ \ \ \ \ \ \ \ \ \ \ \ if(counter\=\=4){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter\=0;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \ \ else{\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter++;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ if(Greenfoot.isKeyDown("space"))\ {\n\ \ \ \ \ \ \ \ \ \ \ \ //jump\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ if(Greenfoot.isKeyDown("x")){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setImage("dragonA5.png");\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ /*\nif(Greenfoot.isKeyDown("x")\ &&\ getImage().equals(dragonR)){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setImage("dragonA5.png");\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attack();\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ else\ if(Greenfoot.isKeyDown("x")\ &&\ getImage().equals(dragonL)){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ setImage("dragonA5L.png");\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ attack();\n\ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \ \ \n\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ \n\ \ \ \ /**\n\ Act\ -\ do\ whatever\ the\ BabyDragon\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=2

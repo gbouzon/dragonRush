@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=tinyBabyDragon
+comment0.text=\n\ Write\ a\ description\ of\ class\ tinyBabyDragon\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=tinyBabyDragon()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ tinyBabyDragon\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment3.params=
+comment3.target=void\ userControl()
+comment3.text=\n\ Allows\ the\ user\ to\ control\ the\ game\ using\ the\ keys\ (w,a,s,d\ and\ right,left,up,down)\n
+comment4.params=
+comment4.target=boolean\ touchingWalls()
+comment4.text=\n\ Checks\ if\ the\ character\ is\ touching\ the\ walls\ of\ the\ maze\n
+comment5.params=
+comment5.target=void\ eatFruits()
+comment5.text=\n\ Checks\ if\ the\ dragon\ eats\ the\ fruit.\ If\ it\ does,\ fruits\ will\ be\ removed,\ then\ points\ will\ be\ \n\ added\ to\ the\ overall\ score\n
+comment6.params=
+comment6.target=void\ winCoins()
+comment6.text=\n\ Checks\ if\ the\ dragon\ touches\ a\ coin.\ If\ it\ does,\ coins\ will\ be\ removed,\ then\ points\ will\ be\ \n\ added\ to\ the\ overall\ score\n
+comment7.params=
+comment7.target=void\ loseCondition()
+comment7.text=\n\ The\ player\ loses\ the\ game\ if\ the\ enemy\ touches\ the\ dragon\n
+numComments=8

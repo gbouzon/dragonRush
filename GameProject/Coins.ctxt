@@ -1,14 +1,7 @@
 #BlueJ class context
 comment0.target=Coins
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Coins\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Coins\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=Coins()
-comment1.text=\r\n\ Constructor\ for\ Coins\ class\r\n
-comment2.params=
-comment2.target=void\ movingCoins()
-comment3.params=
-comment3.target=void\ switchImage()
-comment4.params=
-comment4.target=void\ act()
-comment4.text=\r\n\ Act\ -\ do\ whatever\ the\ Coins\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=5
+comment1.target=void\ act()
+comment1.text=\n\ Constructor\ for\ Coins\ class\n\ \ \ \ \ \n\ \ \ \ public\ Coins(){\n\ \ \ \ \ \ \ \ speed\ \=\ Greenfoot.getRandomNumber(5)+1;\n\ \ \ \ \ \ \ \ coins\ \=\ new\ GreenfootImage[10];\n\ \ \ \ \ \ \ \ indexCoins\ \=\ 0;\n\ \ \ \ \ \ \ \ for(int\ i\ \=\ 0;\ i<coins.length;\ i++){\n\ \ \ \ \ \ \ \ \ \ \ \ coins[i]\ \=\ new\ GreenfootImage("gold"\ +\ (i+1)\ +\ ".png");\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\n\ \ \ \ public\ void\ movingCoins()\ {\n\ \ \ \ \ \ \ \ setLocation(getX()-speed,getY());\n\ \ \ \ \ \ \ \ if\ (getX()\ \=\=\ 0)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ MyWorld\ myworld\ \=\ (MyWorld)getWorld();\n\ \ \ \ \ \ \ \ \ \ \ \ myworld.removeObject(this);\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\n\ \ \ \ public\ void\ switchImage(){\n\ \ \ \ \ \ \ \ if(counter\=\=5){\n\ \ \ \ \ \ \ \ \ \ \ \ setImage(coins[indexCoins\ %\ coins.length]);\n\ \ \ \ \ \ \ \ \ \ \ \ indexCoins++;\n\ \ \ \ \ \ \ \ \ \ \ \ counter\ \=\ 0;\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ else{\n\ \ \ \ \ \ \ \ \ \ \ \ counter++;\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\n\ \ \ \ /**\n\ Act\ -\ do\ whatever\ the\ Coins\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=2

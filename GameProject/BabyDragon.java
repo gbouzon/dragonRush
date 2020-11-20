@@ -9,9 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class BabyDragon extends Dragon
 {
     private int counter;
-    /**
+    /*
      * Constructor for Baby Dragon class.
-     */
+     
     public BabyDragon(){ //to be refactored using methods
         dragonI = new GreenfootImage("dragonIdle1.png");
     }
@@ -19,7 +19,6 @@ public class BabyDragon extends Dragon
     private void userControl(){
         if(Greenfoot.isKeyDown("a")) {
             setLocation(getX()-5,getY());
-            removeTouching(Fire.class);
             if(counter==4){
                 
                 counter=0;
@@ -30,7 +29,6 @@ public class BabyDragon extends Dragon
         }
         if(Greenfoot.isKeyDown("D")) {
             setLocation(getX()+5,getY());
-            removeTouching(Fire.class);
             if(counter==4){
                 
                 counter=0;
@@ -55,9 +53,10 @@ public class BabyDragon extends Dragon
               setImage("dragonA5L.png");
               attack();
          }
-          */
+          
 
         }
+        */
     /**
      * Act - do whatever the BabyDragon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -65,7 +64,7 @@ public class BabyDragon extends Dragon
     public void act() 
     {
         //example of using the animation method. Put this in your control method.
-        userControl();
-        eat();
+        //userControl();
+        //eat();
     }    
 }
