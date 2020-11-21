@@ -1,5 +1,5 @@
 # Dragon Rush
-<p>This repository was made for us to collaborate work on our final game project</p>
+<p>This repository was made for us to collaborate work on our final game project.</p>
 
 <h1> 
     <b>Version 1.0, November 12<sup>th</sup> of 2020:</b>
@@ -34,11 +34,11 @@
 
 <p>
 	Giuliana Bouzon:<br>
-	Deleted unused classes<br>
-	Simplified methods<br>
-	Deleted images<br>
-	Simplified game<br>
-	New concept: childhood games, Pac-man, Snake game, Mario<br>
+	Deleted unused classes.<br>
+	Simplified methods.<br>
+	Deleted images.<br>
+	Simplified game.<br>
+	New concept: childhood games, Pac-man, Snake game, Mario.<br>
 </p>
 <h1> 
     <b>Version 2.0, November 19<sup>th</sup> of 2020:</b>
@@ -46,10 +46,22 @@
 
 <p>
 	Chelsea Nadarajah-Chinniah:<br>
-	Created new world (added new background and edited pictures of characters and the powerups to fit the background) <br>
-	Added the user controls for the dragon and the knight (this includes detection of the collision with the walls of the maze through colour detection) <br>
-	Added win/lose conditions for the games <br>
-	Added points for the fruits and coins <br>
-	Added timer for the world (which connects to the win condition) <br>
-	Added the collision between the dragon (the main character) and the knight (the enemy) (which connects to the lose condition) <br>
+	Created new world (added new background and edited pictures of characters and the powerups to fit the background). <br>
+	Added the user controls for the dragon and the knight (this includes detection of the collision with the walls of the maze through colour detection). <br>
+	Added win/lose conditions for the games. <br>
+	Added points for the fruits and coins. <br>
+	Added timer for the world (which connects to the win condition). <br>
+	Added the collision between the dragon (the main character) and the knight (the enemy) (which connects to the lose condition).<br>
+</p>
+<h1> 
+    <b>Version 2.1, November 20<sup>th</sup> of 2020:</b>
+</h1>
+
+<p>
+	Giuliana Bouzon:<br>
+	Created new background for PacMan class as well as MenuScreen class and TransitionScreen class. <br>
+	Updated knight's movement in PacMan game as well as collision detection and scoring/timing system.<br>
+	Updated class inheritance as well as inherited methods.<br>
+	Updated jump() method --to be fixed.<br>
+	Added a Block class to be used as Platforms in DinoRush class. <br>
 </p>
