@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=PacMan
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ PacMan\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=PacMan()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Level3.\r\n\ \r\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ prepare()
+comment4.params=
+comment4.target=void\ countTime()
+comment4.text=\r\n\ Count\ down\ the\ game\ time\ and\ display\ it.\ Stop\ the\ game\ with\ a\ winning\ message\ when\ time\ is\ up.\ \ \r\n
+comment5.params=
+comment5.target=void\ showTime()
+comment5.text=\r\n\ Show\ the\ remaining\ game\ time\ on\ screen.\r\n
+comment6.params=
+comment6.target=void\ showEndMessage()
+comment6.text=\r\n\ Show\ the\ end-of-game\ message\ on\ screen.\r\n
+numComments=7

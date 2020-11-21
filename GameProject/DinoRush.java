@@ -1,21 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Level1 here.
+ * Write a description of class DinoRush here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level1 extends MyWorld
+public class DinoRush extends MyWorld
 {
-
     /**
      * Constructor for objects of class Level1.
      * 
      */
-    public Level1()
+    public DinoRush()
     {
         prepare();
+        setPaintOrder(Border.class,BabyDragon.class, Coins.class, Fruits.class);
     }
 
     /**
@@ -41,5 +41,29 @@ public class Level1 extends MyWorld
         addObject(coins,582,556);
         Coins coins2 = new Coins();
         addObject(coins2,823,557);
+        Ground ground = new Ground();
+        addObject(ground,640,361);
+        ground.setLocation(639,359);
+
+        ground.setLocation(465,437);
+        Block block = new Block();
+        addObject(block,465,437);
+        ground.setLocation(518,436);
+        ground.setLocation(518,436);
+        Block block2 = new Block();
+        addObject(block2,518,436);
+        ground.setLocation(524,435);
+        ground.setLocation(569,437);
+        ground.setLocation(569,437);
+        Block block3 = new Block();
+        addObject(block3,569,437);
+        ground.setLocation(746,482);
+        Block block4 = new Block();
+        addObject(block4,746,482);
+        ground.setLocation(799,481);
+        ground.setLocation(799,481);
+        Block block5 = new Block();
+        addObject(block5,799,481);
+        ground.setLocation(808,481);
     }
 }

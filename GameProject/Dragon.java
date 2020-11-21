@@ -6,9 +6,13 @@ import java.util.*;
  * @author Chelsea Nadarajah-Chinniah
  * @version (a version number or a date)
  */
-public class Dragon extends MyActor
+public class Dragon extends Actor
 {
-    /*
+    protected GreenfootImage[] dragonA, dragonL, dragonR;
+    protected int indexDragonA, indexDragonL, indexDragonR;
+    /**
+     * Constructor for Dragon class.
+     */
     public Dragon(){
         //constructor
     }
@@ -16,32 +20,15 @@ public class Dragon extends MyActor
         setImage(array[index % array.length]);
         index++;
     }
-    
     /**
-     * Coordinates the user's input keyboard keys with
-     * @author Chelsea Nadarajah-Chinniah
-     
- protected void checkKeyPress() {
-        if(Greenfoot.isKeyDown("A")) {
-            setLocation(getX()-5,getY());
-        }
-        if(Greenfoot.isKeyDown("D")) {
-            setLocation(getX()+5,getY());
-        }
-        if(Greenfoot.isKeyDown("space")) {
-             setLocation(getX(),getY());
-        }
-        if(Greenfoot.isKeyDown("X")) {
-           setLocation(getX(),getY());
-        }
-    }
+     * 
+     */
     protected void eat(){
-        ((MyWorld)getWorld()).checkObjects();
+        //((MyWorld)getWorld()).checkObjects();
         ((MyWorld)getWorld()).showScore();
         if(isTouching(Fruits.class)){
             Greenfoot.playSound("eat.wav");
             ((MyWorld)getWorld()).addScore(5);
-            
             removeTouching(Fruits.class);
         }
         else if(isTouching(Coins.class)){
@@ -50,14 +37,11 @@ public class Dragon extends MyActor
             removeTouching(Coins.class);
         }
     }
-    */
-   /**
+    /**
      * Act - do whatever the Dragon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
-   */
-    public void act() 
-    {
+     */
+    public void act(){
 
     } 
-    
 }

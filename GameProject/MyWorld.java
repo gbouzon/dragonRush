@@ -9,7 +9,7 @@ import java.lang.*;
  */
 public abstract class MyWorld extends World
 {
-    public int score;
+    protected static int score;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -18,16 +18,19 @@ public abstract class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1080, 725, 1); 
+        score = 0;
     }
+    /*
     public void checkObjects(){ //to be refactored
        List<MyActor> list = new ArrayList<>();
-       list.addAll(getObjects(Allies.class));
+       list.addAll(getObjects(Fruits.class));
        if(list.size() == 0){
            for(int i = 0; i<5;){
                addObject(new Coins(), 1250, Greenfoot.getRandomNumber(500));
            }
        }
     }
+    */
     public void showScore(){
         showText("Score: " + score, 80, 25);
     }

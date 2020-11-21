@@ -10,9 +10,11 @@ public class Coins extends Allies
 {
     private int counter;
     private int speed;
-    /*
+    private int indexCoins;
+    private GreenfootImage[] coins;
+    /**
      * Constructor for Coins class
-     
+    */
     public Coins(){
         speed = Greenfoot.getRandomNumber(5)+1;
         coins = new GreenfootImage[10];
@@ -21,22 +23,18 @@ public class Coins extends Allies
             coins[i] = new GreenfootImage("gold" + (i+1) + ".png");
         }
     }
-    public void movingCoins() {
-        setLocation(getX()-speed,getY());
-        if (getX() == 0) {
-            MyWorld myworld = (MyWorld)getWorld();
-            myworld.removeObject(this);
-        }
-    }
+    /**
+     * Method to create character animation.
+     */
     public void switchImage(){
-        if(counter==5){
+       if(counter==5){
             setImage(coins[indexCoins % coins.length]);
             indexCoins++;
             counter = 0;
-        }
-        else{
+       }
+       else{
             counter++;
-        }
+       }
     }
     /**
      * Act - do whatever the Coins wants to do. This method is called whenever

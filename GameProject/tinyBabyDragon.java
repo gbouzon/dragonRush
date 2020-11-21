@@ -8,51 +8,41 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class tinyBabyDragon extends Dragon
 {
-    private Color blue;
-    private int points = 0;
+    private Color white;
+    
     public tinyBabyDragon() {
-        blue = Color.BLUE;
+        white = Color.WHITE;
     }
-    /**
-     * Act - do whatever the tinyBabyDragon wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        userControl();
-        eatFruits();
-        loseCondition();
-        winCoins();
-    }
+    
     /**
      * Allows the user to control the game using the keys (w,a,s,d and right,left,up,down)
      */
     public void userControl() {
-        if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("a")) {
+        if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")) {
             setLocation(getX() + 2, getY());
             if(touchingWalls()) {
-                setLocation(getX() - 2, getY());
+                setLocation(getX() - 4, getY());
                 Greenfoot.playSound("8BitHurt.wav");
             }
         }
-        if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("d")) {
+        if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")) {
             setLocation(getX() - 2, getY());
             if(touchingWalls()) {
-                setLocation(getX() + 2, getY());
+                setLocation(getX() + 4, getY());
                 Greenfoot.playSound("8BitHurt.wav");
             }
         }
         if(Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("w")) {
             setLocation(getX(), getY() - 2);
             if(touchingWalls()) {
-                setLocation(getX(), getY() + 2);
+                setLocation(getX(), getY() + 4);
                 Greenfoot.playSound("8BitHurt.wav");
             }
         }
         if(Greenfoot.isKeyDown("down") || Greenfoot.isKeyDown("s")) {
             setLocation(getX(), getY() + 2);
             if(touchingWalls()) {
-                setLocation(getX(), getY() - 2);
+                setLocation(getX(), getY() - 4);
                 Greenfoot.playSound("8BitHurt.wav");
             }
         }
@@ -61,9 +51,9 @@ public class tinyBabyDragon extends Dragon
      * Checks if the character is touching the walls of the maze
      */
     public boolean touchingWalls() {
-        World world = (Level3)getWorld();
+        World world = (PacMan)getWorld();
         GreenfootImage background = world.getBackground();
-        if (background.getColorAt(getX(), getY()).equals(blue)) {
+        if (background.getColorAt(getX()+10, getY()+10).equals(white)) {
             return true;
         }
         else {
@@ -110,5 +100,16 @@ public class tinyBabyDragon extends Dragon
             Greenfoot.stop();
             getWorld().showText("GAME OVER, YOU LOSE",540,410);
         }
+    }
+    /**
+     * Act - do whatever the tinyBabyDragon wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
+    {
+        userControl();
+        eatFruits();
+        loseCondition();
+        winCoins();
     }
 }

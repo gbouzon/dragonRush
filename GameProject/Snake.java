@@ -6,14 +6,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level2 extends MyWorld
+public class Snake extends MyWorld
 {
 
     /**
      * Constructor for objects of class Level2.
      * 
      */
-    public Level2()
+    public Snake()
     {
     }
 }

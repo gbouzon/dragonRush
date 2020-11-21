@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fire extends Dragon
 {
+    private int indexFire;
+    private GreenfootImage[] fire;
     /**
      * Act - do whatever the Fire wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

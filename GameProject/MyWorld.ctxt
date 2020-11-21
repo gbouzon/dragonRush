@@ -1,13 +1,12 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\n\ Parent\ class\ for\ game\ levels.\n\ \n\ @author\ Giuliana\ Bouzon\n\ @version\ 1.0\n
+comment0.text=\r\n\ Parent\ class\ for\ game\ levels.\r\n\ \r\n\ @author\ Giuliana\ Bouzon\r\n\ @version\ 1.0\r\n
 comment1.params=
 comment1.target=MyWorld()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\n\ \n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
 comment2.params=
-comment2.target=void\ checkObjects()
-comment3.params=
-comment3.target=void\ showScore()
-comment4.params=points
-comment4.target=void\ addScore(int)
-numComments=5
+comment2.target=void\ showScore()
+comment2.text=\r\n\ \ \ \ public\ void\ checkObjects(){\ //to\ be\ refactored\r\n\ \ \ \ \ \ \ List<MyActor>\ list\ \=\ new\ ArrayList<>();\r\n\ \ \ \ \ \ \ list.addAll(getObjects(Fruits.class));\r\n\ \ \ \ \ \ \ if(list.size()\ \=\=\ 0){\r\n\ \ \ \ \ \ \ \ \ \ \ for(int\ i\ \=\ 0;\ i<5;){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addObject(new\ Coins(),\ 1250,\ Greenfoot.getRandomNumber(500));\r\n\ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n
+comment3.params=points
+comment3.target=void\ addScore(int)
+numComments=4

@@ -8,10 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class tinyEnemy extends Enemies
 {
-    private Color blue;
+    private Color white;
     
     public tinyEnemy() {
-        blue = Color.BLUE;
+        white = Color.WHITE;
     }
     /**
      * Act - do whatever the tinyEnemy wants to do. This method is called whenever
@@ -25,19 +25,22 @@ public class tinyEnemy extends Enemies
      * Makes the enemy move through the maze
      */
     public void enemyMoves() {
-        if(!touchingWalls()) {
+        if(!touchingWalls() && !isAtEdge()) {
             move(-3);
         }
         else {
             int rnd = Greenfoot.getRandomNumber(3);
             if(rnd == 0) {
                 turn(90);
+                move(-3);
             }
             else if(rnd == 1) {
-                turn(-90);
+                turn(180);
+                move(-3);
             }
             else {
-                turn(180);
+                turn(30);
+                move(-3);
             }
         }
     }
@@ -45,9 +48,9 @@ public class tinyEnemy extends Enemies
      * Checks if the character is touching the walls of the maze
      */
     public boolean touchingWalls() {
-        World world = (Level3)getWorld();
+        World world = (PacMan)getWorld();
         GreenfootImage background = world.getBackground();
-        if (background.getColorAt(getX(), getY()).equals(blue)) {
+        if (background.getColorAt(getX(), getY()).equals(white)) {
             return true;
         }
         else {

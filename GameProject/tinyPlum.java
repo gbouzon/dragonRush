@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class tinyPlum extends tinyFruits
+public class tinyPlum extends Fruits
 {
     /**
      * Act - do whatever the tinyPlum wants to do. This method is called whenever

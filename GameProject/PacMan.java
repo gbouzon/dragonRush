@@ -1,22 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Level3 here.
+ * Write a description of class PacMan here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level3 extends MyWorld
+public class PacMan extends MyWorld
 {
     private int time;
     /**
      * Constructor for objects of class Level3.
      * 
      */
-    public Level3()
+    public PacMan()
     {
         prepare();
-        time = 3000;
+        time = 3500;
         showTime();
     }
     
@@ -26,47 +26,41 @@ public class Level3 extends MyWorld
     
     private void prepare() {
         tinyBabyDragon tinyBabyDragon = new tinyBabyDragon();
-        addObject(tinyBabyDragon,216,19);
-        tinyBabyDragon.setLocation(667,666);
-        tinyBabyDragon.setLocation(126,203);
-        tinyBabyDragon.setLocation(25,19);
+        addObject(tinyBabyDragon,59,36);
         tinyEnemy tinyEnemy = new tinyEnemy();
-        addObject(tinyEnemy,626,370);
-        tinyEnemy.setLocation(557,24);
-        tinyEnemy.setLocation(561,16);
-        tinyEnemy.setLocation(474,45);
-        tinyBabyDragon.setLocation(76,45);
-        tinyEnemy.setLocation(474,59);
+        addObject(tinyEnemy,414,37);
+
         tinyStarFruit tinyStarFruit = new tinyStarFruit();
-        addObject(tinyStarFruit,373,142);
+        addObject(tinyStarFruit,493,140);
         tinyCherry tinyCherry = new tinyCherry();
-        addObject(tinyCherry,548,330);
+        addObject(tinyCherry,833,482);
         tinyPlum tinyPlum = new tinyPlum();
         addObject(tinyPlum,259,303);
-        tinyCherry.setLocation(833,482);
         Coins coins = new Coins();
-        addObject(coins,544,327);
+        addObject(coins,503,340);
         Coins coins2 = new Coins();
-        addObject(coins2,827,137);
+        addObject(coins2,776,304);
         Coins coins3 = new Coins();
-        addObject(coins3,148,590);
+        addObject(coins3,143,643);
     }
+
     /**
      * Count down the game time and display it. Stop the game with a winning message when time is up.  
      */
     private void countTime() {
-        time -= 1;
+        time --;
         showTime();
-        if(time == 0) {
-            showEndMessage();
-            Greenfoot.stop();
+        if(time == -100) {
+            addObject(new TransitionScreen(),540,363);
         }
     }
     /**
      * Show the remaining game time on screen.
      */
     private void showTime() {
-        showText("Time: " + time,1000,25);
+        if(time>=0){
+            showText("Time: " + time,1000,25);
+        }
     }
     /**
      * Show the end-of-game message on screen.
