@@ -29,7 +29,7 @@ public class Snake extends MyWorld
          */
         int y= Greenfoot.getRandomNumber(getHeight());
         int x= Greenfoot.getRandomNumber(getWidth());
-        addObject(new Dragon(), x, y);
+        addObject(new Dragond(), x, y);
         addObject(num,28,30);
         addKnight();
         
