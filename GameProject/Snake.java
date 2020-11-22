@@ -8,12 +8,36 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Snake extends MyWorld
 {
-
-    /**
-     * Constructor for objects of class Level2.
-     * 
-     */
+    Score num=new Score();
+    int amount=0;
+    public Score dragonScore=new Score();
     public Snake()
     {
+        /* So the world is 35 by 35 and the size of each individual squares will be 25 by 25.
+         * DrawRect to color the outlines.
+         * Purpose of these squares is to make boundaries where the dragon can move.
+         */
+        
+        GreenfootImage lines= new GreenfootImage(25,25);
+        lines.setColor(Color.BLACK);
+        lines.drawRect(0,0,25,25);
+        
+
+        
+        /*
+         * Randomly generated initial spots for the dragon
+         */
+        int y= Greenfoot.getRandomNumber(getHeight());
+        int x= Greenfoot.getRandomNumber(getWidth());
+        addObject(new Dragon(), x, y);
+        addObject(num,28,30);
+        addKnight();
+        
+    }
+    public void addKnight()
+    {
+       int y=Greenfoot.getRandomNumber(30);
+       int x=Greenfoot.getRandomNumber(30);
+       addObject(new Knight(), x+1, y+1);
     }
 }
