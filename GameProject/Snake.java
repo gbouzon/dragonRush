@@ -8,7 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Snake extends MyWorld
 {
-    Score num=new Score();
+    ScoringSystem num=new Score();
+    
+    
     int amount=0;
     public Score dragonScore=new Score();
     public Snake()
@@ -27,6 +29,7 @@ public class Snake extends MyWorld
         /*
          * Randomly generated initial spots for the dragon
          */
+        Dragon now=new Dragond();
         int y= Greenfoot.getRandomNumber(getHeight());
         int x= Greenfoot.getRandomNumber(getWidth());
         addObject(new Dragond(), x, y);
@@ -36,6 +39,7 @@ public class Snake extends MyWorld
     }
     public void addKnight()
     {
+        Enemies kill=new Knight();
        int y=Greenfoot.getRandomNumber(30);
        int x=Greenfoot.getRandomNumber(30);
        addObject(new Knight(), x+1, y+1);
