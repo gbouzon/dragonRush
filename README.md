@@ -66,14 +66,14 @@
 	Added a Block class to be used as Platforms in DinoRush class. <br>
 </p>
 <h1> 
-    <b>Version 2.2, November 21<sup>th</sup> of 2020:</b>
+    <b>Version 2.2, November 21<sup>st</sup> of 2020:</b>
 </h1>
 
 <p>
 	Andrei Marinescu:<br>
-	Created new world (Snake)
-	Added new characters and background (new dragon heads and view for background)
-	Added the controls for my Dragon (w,a,s,d)
-	Added new point system for the dragon while eating the knights
-	Added the lanes where the dragon and knight would spawn and/or walk. (So it's a linear type of movement)
+	Created new world (Snake)<br>
+	Added new characters and background (new dragon heads and view for background)<br>
+	Added the controls for my Dragon (w,a,s,d)<br>
+	Added new point system for the dragon while eating the knights<br>
+	Added the lanes where the dragon and knight would spawn and/or walk. (So it's a linear type of movement)<br>
 </p>
