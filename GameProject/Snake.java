@@ -37,20 +37,20 @@ public class Snake extends MyWorld
 
     public void act() {
         countTime();
-
-        if(Greenfoot.getRandomNumber(100)<0.5){
-            addObject(new StarFruit(), Greenfoot.getRandomNumber(1080), 1);
+        if(time>0){
+            if(Greenfoot.getRandomNumber(100)<0.5){
+                addObject(new StarFruit(), Greenfoot.getRandomNumber(1080), 1);
+            }
+            if(Greenfoot.getRandomNumber(100)<1){
+                addObject(new Plum(), Greenfoot.getRandomNumber(1080), 1);
+            }
+            if(Greenfoot.getRandomNumber(100)<0.5){
+                addObject(new Cherry(), Greenfoot.getRandomNumber(1080), 1);
+            }
+            if(Greenfoot.getRandomNumber(100)<0.1){
+                addObject(new Coins(), Greenfoot.getRandomNumber(1080), 1);
+            }
         }
-        if(Greenfoot.getRandomNumber(100)<1){
-            addObject(new Plum(), Greenfoot.getRandomNumber(1080), 1);
-        }
-        if(Greenfoot.getRandomNumber(100)<0.5){
-            addObject(new Cherry(), Greenfoot.getRandomNumber(1080), 1);
-        }
-        if(Greenfoot.getRandomNumber(100)<0.1){
-            addObject(new Coins(), Greenfoot.getRandomNumber(1080), 1);
-        }
-
     }
 
     /**
@@ -81,7 +81,7 @@ public class Snake extends MyWorld
     {
         Ground ground = new Ground();
         addObject(ground,541,655);
-        DragonSnake dragonSnake = new DragonSnake();
+        BabyDragon dragonSnake = new BabyDragon();
         addObject(dragonSnake,186,538);
     }
 }

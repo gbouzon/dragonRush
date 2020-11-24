@@ -56,7 +56,7 @@ public abstract class MyWorld extends World
             Greenfoot.stop();
        }
        else if(isGameOver(timer)){
-            //Greenfoot.setWorld(new RestartScreen());  
+            //Greenfoot.setWorld(new MenuScreen());  
             //restart the game or end here.
             //if player chooses to restart the game: score will be reset to 0;
        }

@@ -8,10 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BabyDragon extends Dragon
 {
-    private GreenfootImage dragonI;
-    
-    private int counter;
-    
+    //private GreenfootImage dragonI;
+    private Color white;
+    private int counter, speed;
     private int vSpeed = 0;
     private int acceleration = 1;
     private int jumpHeight = -8;
@@ -19,7 +18,8 @@ public class BabyDragon extends Dragon
      * Constructor for Baby Dragon class.
      */
     public BabyDragon(){ //to be refactored using methods
-        dragonI = new GreenfootImage("dragonIdle1.png");
+        //dragonI = new GreenfootImage("dragonIdle1.png");
+        white = Color.WHITE;
     }
     /**
      * Adds basic physics concepts (gravity) so the character falls.
@@ -54,11 +54,11 @@ public class BabyDragon extends Dragon
     /**
      * userControl() method overridden from superclass and implemented to move character.
      */
-    public void userControl(){
+    private void userControl(){
         if(Greenfoot.isKeyDown("a")) {
-            setLocation(getX()-2,getY());
+            setLocation(getX()-speed,getY());
             if(counter==4){
-                //switchImage();
+                switchImage(dragonL, indexDragonL);
                 counter=0;
             }
             else{
@@ -66,9 +66,11 @@ public class BabyDragon extends Dragon
             }
         }
         if(Greenfoot.isKeyDown("D")) {
-            setLocation(getX()+2,getY());
+            setLocation(getX()+speed,getY());
             if(counter==4){
-                //switchImage();
+                //for some reason the animation doesnt work. 
+                //switchImage() method is implemented in Dragon class.
+                switchImage(dragonR, indexDragonR); 
                 counter=0;
             }
             else{
@@ -88,16 +90,82 @@ public class BabyDragon extends Dragon
               //attack(); --yet to be implemented
         }
     }
-        
+     /**
+     * Allows the user to control the game using the keys (w,a,s,d and right,left,up,down)
+     */
+    private void userControlP() {
+        if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")) {
+            setLocation(getX() + 2, getY());
+            if(touchingWalls()) {
+                setLocation(getX() - 4, getY());
+                Greenfoot.playSound("8BitHurt.wav");
+            }
+        }
+        if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")) {
+            setLocation(getX() - 2, getY());
+            if(touchingWalls()) {
+                setLocation(getX() + 4, getY());
+                Greenfoot.playSound("8BitHurt.wav");
+            }
+        }
+        if(Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("w")) {
+            setLocation(getX(), getY() - 2);
+            if(touchingWalls()) {
+                setLocation(getX(), getY() + 4);
+                Greenfoot.playSound("8BitHurt.wav");
+            }
+        }
+        if(Greenfoot.isKeyDown("down") || Greenfoot.isKeyDown("s")) {
+            setLocation(getX(), getY() + 2);
+            if(touchingWalls()) {
+                setLocation(getX(), getY() - 4);
+                Greenfoot.playSound("8BitHurt.wav");
+            }
+        }
+    }
+    /**
+     * Checks if the character is touching the walls of the maze
+     */
+    private boolean touchingWalls() {
+        World world = (PacMan)getWorld();
+        GreenfootImage background = world.getBackground();
+        if (background.getColorAt(getX(), getY()).equals(white)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    /**
+     * Detects the World the dragon is in to behave accordingly.
+     */
+    private void detectClass(){
+        if(getWorld().getClass() == Snake.class){
+            speed = 5;
+            userControl();
+            eat();
+            checkFalling();
+        }
+        else if(getWorld().getClass() == DinoRush.class){
+            speed = 2;
+            userControl();
+            checkFalling();
+            eat();
+        }
+        else if(getWorld().getClass() == PacMan.class){
+            userControlP();
+            eat();
+        }
+    }
+    private void attack(){
+        //yet to be implemented
+    }
     /**
      * Act - do whatever the BabyDragon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        //example of using the animation method. Put this in your control method.
-        userControl();
-        checkFalling();
-        eat();
+        detectClass();
     }    
 }

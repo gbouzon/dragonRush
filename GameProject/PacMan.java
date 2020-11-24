@@ -18,7 +18,7 @@ public class PacMan extends MyWorld
         prepare();
         time = 3500;
         showTime();
-        
+        score=0;
     }
     /**
      * Act - do whatever the PacMan wants to do. This method is called whenever
@@ -29,23 +29,39 @@ public class PacMan extends MyWorld
     }
     
     private void prepare() {
-        tinyBabyDragon tinyBabyDragon = new tinyBabyDragon();
+        BabyDragon tinyBabyDragon = new BabyDragon();
+        scaleImage(tinyBabyDragon);
         addObject(tinyBabyDragon,59,36);
-        tinyEnemy tinyEnemy = new tinyEnemy();
+        Knight tinyEnemy = new Knight();
+        scaleImage(tinyEnemy);
         addObject(tinyEnemy,414,37);
 
-        tinyStarFruit tinyStarFruit = new tinyStarFruit();
+        StarFruit tinyStarFruit = new StarFruit();
+        scaleImage(tinyStarFruit);
         addObject(tinyStarFruit,493,140);
-        tinyCherry tinyCherry = new tinyCherry();
+        
+        Cherry tinyCherry = new Cherry();
+        scaleImage(tinyCherry);
         addObject(tinyCherry,833,482);
-        tinyPlum tinyPlum = new tinyPlum();
+        Plum tinyPlum = new Plum();
+        scaleImage(tinyPlum);
         addObject(tinyPlum,259,303);
         Coins coins = new Coins();
+        scaleImage(coins);
         addObject(coins,503,340);
         Coins coins2 = new Coins();
+        scaleImage(coins2);
         addObject(coins2,776,304);
         Coins coins3 = new Coins();
+        scaleImage(coins3);
         addObject(coins3,143,643);
+    }
+    /**
+     * Scales the images to fit in the PacMan (maze is smaller than other classes).
+     */
+    private void scaleImage(Actor actor){
+        GreenfootImage image = actor.getImage();
+        image.scale(image.getWidth()/2, image.getHeight()/2);
     }
 
     /**
