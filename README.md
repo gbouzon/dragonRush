@@ -90,3 +90,12 @@
 	Updated overall game structure.<br>
 	Changed game concept for Snake game.<br>
 </p>
+<h1> 
+    <b>Version 3.1, November 24<sup>th</sup> of 2020:</b>
+</h1>
+
+<p>
+	Giuliana Bouzon:<br>
+	Refactored Dragon classes and Fruits classes.<br>
+	Updated overall game structure. <br>
+</p>
