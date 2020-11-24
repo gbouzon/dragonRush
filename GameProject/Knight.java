@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class Knight here.
  * 
@@ -10,10 +10,15 @@ public class Knight extends Enemies
 {
     
     public void act() 
-    {
-        GreenfootImage yup=getImage();
-        int myNewHeight = (int)yup.getHeight();
-        int myNewWidth = (int)yup.getWidth();
-        yup.scale(myNewWidth, myNewHeight);
-    }    
+    {  
+    } 
+    public void generateKnights(){
+       List<Knight> list = new ArrayList<>();
+       list.addAll(getWorld().getObjects(Knight.class));
+       if(list.size() == 0){
+           for(int i = 0; i<3;){
+               getWorld().addObject(new Knight(), Greenfoot.getRandomNumber(500), Greenfoot.getRandomNumber(500));
+           }
+       }
+    }
 }

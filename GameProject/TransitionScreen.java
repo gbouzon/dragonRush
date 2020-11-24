@@ -44,6 +44,11 @@ public class TransitionScreen extends Actor
                 counter++;
             }
         }
+        else if (getWorld().getClass()==DinoRush.class){
+            //Greenfoot.setWorld(new GameOverScreen());
+            //player chooses to play again or to end
+            Greenfoot.setWorld(new MenuScreen());
+        }
         else{
             setImage("Transition1.png");
             if(counter==500){

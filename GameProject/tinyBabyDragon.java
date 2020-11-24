@@ -9,9 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class tinyBabyDragon extends Dragon
 {
     private Color white;
-    
+    public int points;
     public tinyBabyDragon() {
         white = Color.WHITE;
+        points = 0;
     }
     
     /**
@@ -53,7 +54,7 @@ public class tinyBabyDragon extends Dragon
     public boolean touchingWalls() {
         World world = (PacMan)getWorld();
         GreenfootImage background = world.getBackground();
-        if (background.getColorAt(getX()+10, getY()+10).equals(white)) {
+        if (background.getColorAt(getX(), getY()).equals(white)) {
             return true;
         }
         else {
@@ -97,8 +98,9 @@ public class tinyBabyDragon extends Dragon
      */
     public void loseCondition() {
         if(isTouching(tinyEnemy.class)) {
-            Greenfoot.stop();
-            getWorld().showText("GAME OVER, YOU LOSE",540,410);
+            //Greenfoot.stop();
+            //getWorld().showText("GAME OVER, YOU LOSE",540,410);
+            ((MyWorld)getWorld()).score = -1;
         }
     }
     /**

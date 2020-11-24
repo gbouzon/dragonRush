@@ -24,16 +24,14 @@ public class Dragon extends Actor
      * 
      */
     protected void eat(){
-        //((MyWorld)getWorld()).checkObjects();
-        ((MyWorld)getWorld()).showScore();
         if(isTouching(Fruits.class)){
             Greenfoot.playSound("eat.wav");
-            ((MyWorld)getWorld()).addScore(5);
+            ((MyWorld)getWorld()).addScore(10);
             removeTouching(Fruits.class);
         }
         else if(isTouching(Coins.class)){
             Greenfoot.playSound("coins.wav");
-            ((MyWorld)getWorld()).addScore(10);
+            ((MyWorld)getWorld()).addScore(30);
             removeTouching(Coins.class);
         }
     }

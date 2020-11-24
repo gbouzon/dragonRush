@@ -6,11 +6,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Coins extends Allies
+public class Coins extends Actor
 {
-    private int counter;
-    private int speed;
-    private int indexCoins;
+    private int counter,speed, indexCoins;
     private GreenfootImage[] coins;
     /**
      * Constructor for Coins class
@@ -36,10 +34,23 @@ public class Coins extends Allies
             counter++;
        }
     }
+    public void detectClass(){
+        if(getWorld().getClass() == Snake.class){
+            setLocation(getX(), getY()+speed);
+            if(isTouching(Ground.class)){
+                ((MyWorld)getWorld()).addScore(-10);
+                ((MyWorld)getWorld()).removeObject(this);
+            }
+        }
+        else if(getWorld().getClass() == DinoRush.class){
+            setLocation(getX()-1, getY());
+        }
+    }
     /**
      * Act - do whatever the Coins wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() {
+        detectClass();
     }    
 }

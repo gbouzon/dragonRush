@@ -18,8 +18,12 @@ public class PacMan extends MyWorld
         prepare();
         time = 3500;
         showTime();
+        
     }
-    
+    /**
+     * Act - do whatever the PacMan wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act() {
         countTime();
     }
@@ -47,7 +51,7 @@ public class PacMan extends MyWorld
     /**
      * Count down the game time and display it. Stop the game with a winning message when time is up.  
      */
-    private void countTime() {
+    public void countTime() {
         time --;
         showTime();
         if(time == -100) {
@@ -57,16 +61,18 @@ public class PacMan extends MyWorld
     /**
      * Show the remaining game time on screen.
      */
-    private void showTime() {
+    public void showTime() {
         if(time>=0){
             showText("Time: " + time,1000,25);
         }
     }
-    /**
+    
+    /*
      * Show the end-of-game message on screen.
-     */
+     
     private void showEndMessage() {
         showText("Time is up, YOU WIN!",540,410);
-        showText("Your final score: " + score + " points",540,25);
+        showText("Your final score: "  + " points",540,25);
     }
+    */
 }

@@ -1,17 +1,21 @@
 #BlueJ class context
 comment0.target=BabyDragon
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ BabyDragon\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Defines\ behaviours\ and\ characteristics\ of\ the\ BabyDragon.\r\n\ \r\n\ @author\ Giuliana\ Bouzon\r\n\ @version\ Version\ 3.0\r\n
 comment1.params=
 comment1.target=BabyDragon()
 comment1.text=\r\n\ Constructor\ for\ Baby\ Dragon\ class.\r\n
 comment2.params=
 comment2.target=void\ fall()
+comment2.text=\r\n\ Adds\ basic\ physics\ concepts\ (gravity)\ so\ the\ character\ falls.\r\n
 comment3.params=
 comment3.target=boolean\ onGround()
+comment3.text=\r\n\ Checks\ if\ the\ character\ is\ on\ the\ ground\ and\ returns\ true\ when\ that\ is\ the\ case.\r\n
 comment4.params=
 comment4.target=boolean\ onBlock()
+comment4.text=\r\n\ Checks\ if\ the\ character\ is\ on\ the\ blocks\ and\ returns\ true\ when\ that\ is\ the\ case.\r\n
 comment5.params=
 comment5.target=void\ checkFalling()
+comment5.text=\r\n\ Makes\ the\ character\ fall\ when\ it\ isn't\ on\ the\ ground\ or\ on\ a\ block\ (so\ that\r\n\ when\ it\ jumps,\ it\ falls\ back\ down).\r\n
 comment6.params=
 comment6.target=void\ userControl()
 comment6.text=\r\n\ userControl()\ method\ overridden\ from\ superclass\ and\ implemented\ to\ move\ character.\r\n
