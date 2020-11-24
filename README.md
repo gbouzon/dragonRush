@@ -77,3 +77,16 @@
 	Added new point system for the dragon while eating the knights<br>
 	Added the lanes where the dragon and knight would spawn and/or walk. (So it's a linear type of movement)<br>
 </p>
+<h1> 
+    <b>Version 3.0, November 23<sup>rd</sup> of 2020:</b>
+</h1>
+
+<p>
+	Giuliana Bouzon:<br>
+	Updated DinoRush game.<br>
+	Fixed jump() method for BabyDragon.<br>
+	Added methods to add fruits and blocks to the world randomly.<br>
+	Updated assets.<br>
+	Updated overall game structure.<br>
+	Changed game concept for Snake game.<br>
+</p>
