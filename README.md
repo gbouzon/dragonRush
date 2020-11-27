@@ -100,7 +100,7 @@
 	Updated overall game structure. <br>
 </p>
 <h1> 
-    <b>Version 3.2, November 24<sup>th</sup> of 2020:</b>
+    <b>Version 3.2, November 26<sup>th</sup> of 2020:</b>
 </h1>
 
 <p>
