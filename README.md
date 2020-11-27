@@ -99,3 +99,13 @@
 	Refactored Dragon classes and Fruits classes.<br>
 	Updated overall game structure. <br>
 </p>
+<h1> 
+    <b>Version 3.2, November 24<sup>th</sup> of 2020:</b>
+</h1>
+
+<p>
+	Chelsea Nadarajah-Chinniah:<br>
+	Edited and added new transiiton screens for all 3 levels (and a potential 4th level), menu screen options to be animated into buttons, instructions and credit screen<br>
+	Added menu screen pictures used to make<br>
+	Added more coins and fruits to level 1 of the game<br>
+</p>
