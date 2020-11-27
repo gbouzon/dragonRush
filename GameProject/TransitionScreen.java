@@ -25,7 +25,7 @@ public class TransitionScreen extends Actor
      */
     public void detectWorld(){
         if(getWorld().getClass()==PacMan.class){
-            setImage("Transition2.png");
+            setImage("level 2 transition.png");
             if(counter==500){
                 Greenfoot.setWorld(new Snake());
                 counter=0;
@@ -35,7 +35,7 @@ public class TransitionScreen extends Actor
             }
         }
         else if (getWorld().getClass()==Snake.class){
-            setImage("Transition3.png");
+            setImage("level 3 transition.png");
             if(counter==500){
                 Greenfoot.setWorld(new DinoRush());
                 counter=0;
@@ -50,7 +50,7 @@ public class TransitionScreen extends Actor
             Greenfoot.setWorld(new MenuScreen());
         }
         else{
-            setImage("Transition1.png");
+            setImage("level 1 transition.png");
             if(counter==500){
                 Greenfoot.setWorld(new PacMan());
                 counter=0;

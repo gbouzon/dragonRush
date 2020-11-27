@@ -96,29 +96,29 @@ public class BabyDragon extends Dragon
     private void userControlP() {
         if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")) {
             setLocation(getX() + 2, getY());
-            if(touchingWalls()) {
-                setLocation(getX() - 4, getY());
+            if(touchingWalls() && !isAtEdge()) {
+                setLocation(getX() - 20, getY());
                 Greenfoot.playSound("8BitHurt.wav");
             }
         }
         if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")) {
             setLocation(getX() - 2, getY());
-            if(touchingWalls()) {
-                setLocation(getX() + 4, getY());
+            if(touchingWalls() && !isAtEdge()) {
+                setLocation(getX() + 20, getY());
                 Greenfoot.playSound("8BitHurt.wav");
             }
         }
         if(Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("w")) {
             setLocation(getX(), getY() - 2);
-            if(touchingWalls()) {
-                setLocation(getX(), getY() + 4);
+            if(touchingWalls() && !isAtEdge()) {
+                setLocation(getX(), getY() + 20);
                 Greenfoot.playSound("8BitHurt.wav");
             }
         }
         if(Greenfoot.isKeyDown("down") || Greenfoot.isKeyDown("s")) {
             setLocation(getX(), getY() + 2);
-            if(touchingWalls()) {
-                setLocation(getX(), getY() - 4);
+            if(touchingWalls() && !isAtEdge()) {
+                setLocation(getX(), getY() - 20);
                 Greenfoot.playSound("8BitHurt.wav");
             }
         }

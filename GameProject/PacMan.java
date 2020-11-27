@@ -39,7 +39,7 @@ public class PacMan extends MyWorld
         StarFruit tinyStarFruit = new StarFruit();
         scaleImage(tinyStarFruit);
         addObject(tinyStarFruit,493,140);
-        
+
         Cherry tinyCherry = new Cherry();
         scaleImage(tinyCherry);
         addObject(tinyCherry,833,482);
@@ -55,7 +55,37 @@ public class PacMan extends MyWorld
         Coins coins3 = new Coins();
         scaleImage(coins3);
         addObject(coins3,143,643);
+        Plum plum2 = new Plum();
+        scaleImage(plum2);
+        addObject(plum2,1015,115);
+        StarFruit starFruit2 = new StarFruit();
+        scaleImage(starFruit2);
+        addObject(starFruit2,654,632);
+        Coins coins4 = new Coins();
+        scaleImage(coins4);
+        addObject(coins4,97,361);
+        Cherry cherry2 = new Cherry();
+        scaleImage(cherry2);
+        addObject(cherry2,290,147);
+        Plum plum3 = new Plum();
+        scaleImage(plum3);
+        addObject(plum3,507,578);
+        StarFruit starFruit3 = new StarFruit();
+        scaleImage(starFruit3);
+        addObject(starFruit3,986,360);
+        Coins coins5 = new Coins();
+        scaleImage(coins5);
+        addObject(coins5,933,637);
+        Cherry cherry3 = new Cherry();
+        scaleImage(cherry3);
+        addObject(cherry3,787,45);
+        Coins coins6 = new Coins();
+        scaleImage(coins6);
+        addObject(coins6,640,203);
+        countTime();
+        removeObject(coins4);
     }
+
     /**
      * Scales the images to fit in the PacMan (maze is smaller than other classes).
      */

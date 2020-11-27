@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=Dragon
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Dragon\ here.\r\n\ \r\n\ @author\ Chelsea\ Nadarajah-Chinniah\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Dragon\ here.\n\ \n\ @author\ Chelsea\ Nadarajah-Chinniah\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=Dragon()
-comment1.text=\r\n\ Constructor\ for\ Dragon\ class.\r\n
+comment1.text=\n\ Constructor\ for\ Dragon\ class.\n
 comment2.params=array\ index
 comment2.target=void\ switchImage(greenfoot.GreenfootImage[],\ int)
-comment2.text=\r\n\ Animates\ the\ character's\ movements\r\n
+comment2.text=\n\ Animates\ the\ character's\ movements\n
 comment3.params=
 comment3.target=void\ eat()
-comment3.text=\r\n\ Allows\ user\ to\ gain\ points\ by\ eating\ fruits\ and\ picking\ up\ coins\r\n
+comment3.text=\n\ Allows\ user\ to\ gain\ points\ by\ eating\ fruits\ and\ picking\ up\ coins\n
 comment4.params=
 comment4.target=void\ act()
-comment4.text=\r\n\ Act\ -\ do\ whatever\ the\ Dragon\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment4.text=\n\ Act\ -\ do\ whatever\ the\ Dragon\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 numComments=5
