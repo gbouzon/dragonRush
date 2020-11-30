@@ -6,7 +6,7 @@
 </h1>
 
 <p>
-	<strong>Giuliana Bouzon<strong>:<br>
+	<strong>Giuliana Bouzon:</strong><br>
     Added classes (Fruits, Dragon, World, Enemies parent classes + their respective child classes).<br> 
     Made makeArrays() method in World class to make images arrays for each character.<br>
     Made switchImage() method in World class to provide animation for each animated character (with multiple images in arrays).<br>
@@ -18,7 +18,7 @@
 </h1>
 
 <p>
-	<strong>Chelsea Nadarajah-Chinniah:<strong><br>
+	<strong>Chelsea Nadarajah-Chinniah:</strong><br>
 	Made Fruits move to the left of the world and disappear(a part of the scrolling world). <br>
 	Made lining of the world (the ground) move (also a part of the scrolling world).<br>
 	Edited and added the borders to the world.<br> 
@@ -33,7 +33,7 @@
 </h1>
 
 <p>
-	<strong>Giuliana Bouzon:<strong><br>
+	<strong>Giuliana Bouzon:</strong><br>
 	Deleted unused classes.<br>
 	Simplified methods.<br>
 	Deleted images.<br>
@@ -45,7 +45,7 @@
 </h1>
 
 <p>
-	<strong>Chelsea Nadarajah-Chinniah:<strong><br>
+	<strong>Chelsea Nadarajah-Chinniah:</strong><br>
 	Created new world (added new background and edited pictures of characters and the powerups to fit the background). <br>
 	Added the user controls for the dragon and the knight (this includes detection of the collision with the walls of the maze through colour detection). <br>
 	Added win/lose conditions for the games. <br>
@@ -58,7 +58,7 @@
 </h1>
 
 <p>
-	<strong>Giuliana Bouzon:<strong><br>
+	<strong>Giuliana Bouzon:</strong><br>
 	Created new background for PacMan class as well as MenuScreen class and TransitionScreen class. <br>
 	Updated knight's movement in PacMan game as well as collision detection and scoring/timing system.<br>
 	Updated class inheritance as well as inherited methods.<br>
@@ -70,7 +70,7 @@
 </h1>
 
 <p>
-	<strong>Andrei Marinescu:<strong><br>
+	<strong>Andrei Marinescu:</strong><br>
 	Created new world (Snake)<br>
 	Added new characters and background (new dragon heads and view for background)<br>
 	Added the controls for my Dragon (w,a,s,d)<br>
@@ -82,7 +82,7 @@
 </h1>
 
 <p>
-	<strong>Giuliana Bouzon:<strong><br>
+	<strong>Giuliana Bouzon:</strong><br>
 	Updated DinoRush game.<br>
 	Fixed jump() method for BabyDragon.<br>
 	Added methods to add fruits and blocks to the world randomly.<br>
@@ -95,7 +95,7 @@
 </h1>
 
 <p>
-	<strong>Giuliana Bouzon:<strong><br>
+	<strong>Giuliana Bouzon:</strong><br>
 	Refactored Dragon classes and Fruits classes.<br>
 	Updated overall game structure. <br>
 </p>
@@ -104,7 +104,7 @@
 </h1>
 
 <p>
-	<strong>Chelsea Nadarajah-Chinniah:<strong><br>
+	<strong>Chelsea Nadarajah-Chinniah:</strong><br>
 	Edited and added new transiiton screens for all 3 levels (and a potential 4th level), menu screen options to be animated into buttons, instructions and credit screen.<br>
 	Added menu screen pictures used to make.<br>
 	Added more coins and fruits to level 1 of the game.<br>
@@ -114,7 +114,7 @@
 </h1>
 
 <p>
-	<strong>Giuliana Bouzon:<strong><br>
+	<strong>Giuliana Bouzon:</strong><br>
 	Added screens & buttons and their animation.<br>
 	Edited assets' hitboxes.<br>
 	Fixed jump() on ground and animation method.<br>
