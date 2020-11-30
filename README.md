@@ -105,7 +105,21 @@
 
 <p>
 	Chelsea Nadarajah-Chinniah:<br>
-	Edited and added new transiiton screens for all 3 levels (and a potential 4th level), menu screen options to be animated into buttons, instructions and credit screen<br>
-	Added menu screen pictures used to make<br>
-	Added more coins and fruits to level 1 of the game<br>
+	Edited and added new transiiton screens for all 3 levels (and a potential 4th level), menu screen options to be animated into buttons, instructions and credit screen.<br>
+	Added menu screen pictures used to make.<br>
+	Added more coins and fruits to level 1 of the game.<br>
+</p>
+<h1> 
+    <b>Version 3.3, November 29<sup>th</sup> of 2020:</b>
+</h1>
+
+<p>
+	Giuliana Bouzon:<br>
+	Added screens & buttons and their animation.<br>
+	Edited assets' hitboxes.<br>
+	Fixed jump() on ground and animation method.<br>
+	Added dragon animation to level 2 and level 3 as well as fire attack.<br>
+	Created skill percentage method (based on total score and player score). <br>
+	Updated overall game structure & documentation.<br>
+
 </p>
