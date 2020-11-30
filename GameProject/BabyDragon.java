@@ -2,24 +2,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Defines behaviours and characteristics of the BabyDragon.
- * 
  * @author Giuliana Bouzon
- * @version Version 3.0
  */
 public class BabyDragon extends Dragon
 {
-    //private GreenfootImage dragonI;
     private Color white;
     private int counter, speed;
     private int vSpeed = 0;
     private int acceleration = 1;
     private int jumpHeight = -8;
+    private char direction;
+    private boolean isDownR, isDownL;
     /**
      * Constructor for Baby Dragon class.
      */
     public BabyDragon(){ //to be refactored using methods
         //dragonI = new GreenfootImage("dragonIdle1.png");
         white = Color.WHITE;
+        isDownR = false;
+        isDownL = false;
     }
     /**
      * Adds basic physics concepts (gravity) so the character falls.
@@ -32,7 +33,7 @@ public class BabyDragon extends Dragon
      * Checks if the character is on the ground and returns true when that is the case.
      */
     private boolean onGround(){
-        Actor under = getOneObjectAtOffset(0, getImage().getHeight()/2, Ground.class);
+        Actor under = getOneObjectAtOffset(0, getImage().getHeight()/2-20, Ground.class);
         return under !=null;
     }
     /**
@@ -50,15 +51,20 @@ public class BabyDragon extends Dragon
         if(onGround()==false && onBlock()==false){
             fall();
         }
+        if(getY()>536){
+            setLocation(getX(), 536);
+        }
     }
     /**
      * userControl() method overridden from superclass and implemented to move character.
      */
     private void userControl(){
+        Fire fire = new Fire();
         if(Greenfoot.isKeyDown("a")) {
             setLocation(getX()-speed,getY());
-            if(counter==4){
-                switchImage(dragonL, indexDragonL);
+            direction = 'l';
+            if(counter==(12-speed)){
+                switchImage(dragonL, indexDragonL++&dragonL.length);
                 counter=0;
             }
             else{
@@ -67,10 +73,9 @@ public class BabyDragon extends Dragon
         }
         if(Greenfoot.isKeyDown("D")) {
             setLocation(getX()+speed,getY());
-            if(counter==4){
-                //for some reason the animation doesnt work. 
-                //switchImage() method is implemented in Dragon class.
-                switchImage(dragonR, indexDragonR); 
+            direction = 'r';
+            if(counter==(12-speed)){
+                switchImage(dragonR, indexDragonR++&dragonR.length); 
                 counter=0;
             }
             else{
@@ -81,21 +86,52 @@ public class BabyDragon extends Dragon
             vSpeed = jumpHeight;
             fall();
         }
-        if(Greenfoot.isKeyDown("x") && getImage().equals(dragonR)){
-                setImage("dragonA5.png");
-                //attack(); --yet to be implemented
+        if(Greenfoot.isKeyDown("x") && direction=='r'){
+            setImage("dragonA5.png");
+            if(!isDownR){
+                getWorld().addObject(fire, this.getX()+85, this.getY());
+                isDownR = true;
+            }
+            else if(isDownR){
+                //fire.attack();
+            }
         }
-        else if(Greenfoot.isKeyDown("x") && getImage().equals(dragonL)){
-              setImage("dragonA5L.png");
-              //attack(); --yet to be implemented
+
+        else if(Greenfoot.isKeyDown("x") && direction=='l'){
+            setImage("dragonA5L.png");
+            if(!isDownL){
+                getWorld().addObject(fire, this.getX()+85, this.getY());
+                isDownL = true;
+            }
+            else if(isDownL){
+                //fire.attack();
+            }
         }
+        //getWorld().removeObject(fire);
     }
-     /**
+    private GreenfootImage[] scaleImage(GreenfootImage[] array){
+        for(int i = 0; i<array.length; i++){
+            GreenfootImage image = array[i];
+            ((PacMan)getWorld()).scaleImage(image);
+            
+        }
+        return array;
+    }
+    /**
      * Allows the user to control the game using the keys (w,a,s,d and right,left,up,down)
      */
     private void userControlP() {
+        
         if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")) {
             setLocation(getX() + 2, getY());
+            if(counter==4){
+                //scaleImage(dragonR); can't put this here cuz called in the act()
+                //switchImage(dragonR, indexDragonR++&dragonR.length); --fix scaling
+                counter=0;
+            }
+            else{
+                counter++;
+            }
             if(touchingWalls() && !isAtEdge()) {
                 setLocation(getX() - 20, getY());
                 Greenfoot.playSound("8BitHurt.wav");
@@ -103,6 +139,13 @@ public class BabyDragon extends Dragon
         }
         if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")) {
             setLocation(getX() - 2, getY());
+            if(counter==4){
+                //switchImage(dragonL, indexDragonL++&dragonL.length); --fix scaling
+                counter=0;
+            }
+            else{
+                counter++;
+            }
             if(touchingWalls() && !isAtEdge()) {
                 setLocation(getX() + 20, getY());
                 Greenfoot.playSound("8BitHurt.wav");
@@ -156,9 +199,6 @@ public class BabyDragon extends Dragon
             userControlP();
             eat();
         }
-    }
-    private void attack(){
-        //yet to be implemented
     }
     /**
      * Act - do whatever the BabyDragon wants to do. This method is called whenever

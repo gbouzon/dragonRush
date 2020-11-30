@@ -1,13 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 /**
- * Write a description of class Dragon here.
+ * Defines behaviour for Dragon class' child classes.
  * 
- * @author Chelsea Nadarajah-Chinniah
- * @version (a version number or a date)
+ * @author Chelsea Nadarajah-Chinniah, Giuliana Bouzon
  */
 public class Dragon extends Actor
 {
+    
     protected GreenfootImage[] dragonA, dragonL, dragonR;
     protected int indexDragonA, indexDragonL, indexDragonR;
     /**
@@ -32,14 +32,13 @@ public class Dragon extends Actor
             dragonR[i] = new GreenfootImage("dragonWR" + (i+1) + ".png");
         }
         
+        
     }
     /**
      * Animates the character's movements
      */
     public void switchImage(GreenfootImage[] array, int index){
         setImage(array[index % array.length]); 
-        index++;
-        //for some reason, doesn't work, check BabyDragon class userControl() method.
     }
     /**
      * Allows user to gain points by eating fruits and picking up coins
@@ -61,6 +60,7 @@ public class Dragon extends Actor
             //((MyWorld)getWorld()).score = -1; 
         }
     }
+
     /**
      * Act - do whatever the Dragon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

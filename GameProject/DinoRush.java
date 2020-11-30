@@ -38,8 +38,11 @@ public class DinoRush extends MyWorld
         addObject(babyDragon,226,536);
         Ground ground = new Ground();
         addObject(ground,541,654);
-        
+
+        Restart restart = new Restart();
+        addObject(restart,888,692);
     }
+
     /**
      * Count down the game time and display it. Stop the game with a winning message when time is up.  
      */
@@ -47,7 +50,7 @@ public class DinoRush extends MyWorld
         time --;
         showTime();
         if(time == -100) {
-            addObject(new TransitionScreen(),540,363);
+            Greenfoot.setWorld(new MenuScreen());
         }
     }
     /**
@@ -58,24 +61,34 @@ public class DinoRush extends MyWorld
             showText("Time: " + time,1000,25);
         }
     }
+    /**
+     * Adds blocks to the World according to defined rules.
+     */
     public void makeTiles(){
         height = Greenfoot.getRandomNumber(400);
         for(int i = 0; i<4; i++){
             addObject(new Block(), i*49 +1000, 482-height);
         }
     }
+    /**
+     * Adds allies to World according to defined rules.
+     */
     public void addAllies(){
         if(Greenfoot.getRandomNumber(200)<0.5){
                addObject(new StarFruit(), 1079, 500-height2);
+               totalScore = totalScore + 10;
         }
         if(Greenfoot.getRandomNumber(200)<0.5){
                addObject(new Cherry(), 1079, 500-height2);
+               totalScore = totalScore + 10;
         }
         if(Greenfoot.getRandomNumber(200)<0.5){
                addObject(new Plum(), 1079, 500-height2);
+               totalScore = totalScore + 10;
         }
         if(Greenfoot.getRandomNumber(400)<0.5){
             addObject(new Coins(), 1079, 400-height2);
+            totalScore = totalScore + 30;
         }
     }
     /**
@@ -83,10 +96,6 @@ public class DinoRush extends MyWorld
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act(){
-        if(time<0){
-            showText("Game Over", 400, 350); //still have to add gameover/restart screen.
-            Greenfoot.stop();
-        }
         height2 = Greenfoot.getRandomNumber(300);
         addAllies();
         countTime();

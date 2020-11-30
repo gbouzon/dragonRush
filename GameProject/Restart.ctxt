@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Restart
+comment0.text=\r\n\ Defines\ Restart\ button's\ behaviour.\r\n\ \r\n\ @author\ Giuliana\ Bouzon\r\n
+comment1.params=
+comment1.target=void\ detectClass()
+comment1.text=\r\n\ Detects\ class\ to\ act\ accordingly.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Restart\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=3

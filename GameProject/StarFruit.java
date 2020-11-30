@@ -8,21 +8,8 @@ import java.util.*;
  */
 public class StarFruit extends Fruits
 {
-    private int speed;
     public StarFruit(){
         speed = Greenfoot.getRandomNumber(5)+1;
-    }
-    public void detectClass(){
-        if(getWorld().getClass() == Snake.class){
-            setLocation(getX(), getY()+speed);
-            if(isTouching(Ground.class)){
-                ((MyWorld)getWorld()).addScore(-10);
-                ((MyWorld)getWorld()).removeObject(this);
-            }
-        }
-        else if(getWorld().getClass() == DinoRush.class){
-            setLocation(getX()-1, getY());
-        }
     }
     /**
      * Act - do whatever the StarFruit wants to do. This method is called whenever

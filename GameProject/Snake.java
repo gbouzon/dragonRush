@@ -1,58 +1,25 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Level2 here.
+ * Entails everything in the level 2 of game.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Giuliana Bouzon
  */
 public class Snake extends MyWorld
 {
-    int amount=0;
     private int time;
     public Snake()
     {
-        /* So the world is 35 by 35 and the size of each individual squares will be 25 by 25.
-         * DrawRect to color the outlines.
-         * Purpose of these squares is to make boundaries where the dragon can move.
-         */
         time = 3500;
         showTime();
-        //reenfootImage lines= new GreenfootImage(25,25);
-        //lines.setColor(Color.BLACK);
-        //lines.drawRect(0,0,25,25);
-
-        /*
-         * Randomly generated initial spots for the dragon
-         */
-        //Dragon now=new Dragond();
-        //int y= Greenfoot.getRandomNumber(getHeight());
-        //int x= Greenfoot.getRandomNumber(getWidth());
-        //addObject(new Dragond(), x, y);
-        //addObject(num,28,30);
-        //addKnight();
-
         prepare();
     }
-
-    public void act() {
-        countTime();
-        if(time>0){
-            if(Greenfoot.getRandomNumber(100)<0.5){
-                addObject(new StarFruit(), Greenfoot.getRandomNumber(1080), 1);
-            }
-            if(Greenfoot.getRandomNumber(100)<1){
-                addObject(new Plum(), Greenfoot.getRandomNumber(1080), 1);
-            }
-            if(Greenfoot.getRandomNumber(100)<0.5){
-                addObject(new Cherry(), Greenfoot.getRandomNumber(1080), 1);
-            }
-            if(Greenfoot.getRandomNumber(100)<0.1){
-                addObject(new Coins(), Greenfoot.getRandomNumber(1080), 1);
-            }
-        }
+    /**
+     * Returns Snake class' time.
+     */
+    public int getTime(){
+        return time;
     }
-
     /**
      * Count down the game time and display it. Stop the game with a winning message when time is up.  
      */
@@ -63,7 +30,6 @@ public class Snake extends MyWorld
             addObject(new TransitionScreen(),540,363);
         }
     }
-
     /**
      * Show the remaining game time on screen.
      */
@@ -72,7 +38,6 @@ public class Snake extends MyWorld
             showText("Time: " + time,1000,25);
         }
     }
-
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -83,5 +48,32 @@ public class Snake extends MyWorld
         addObject(ground,541,655);
         BabyDragon dragonSnake = new BabyDragon();
         addObject(dragonSnake,186,538);
+        Restart restart = new Restart();
+        addObject(restart,972,686);
+    }
+    /**
+     * Act - do whatever the Snake wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() {
+        countTime();
+        if(time>0){
+            if(Greenfoot.getRandomNumber(100)<0.5){
+                addObject(new StarFruit(), Greenfoot.getRandomNumber(1080), 1);
+                totalScore = totalScore + 10;
+            }
+            if(Greenfoot.getRandomNumber(100)<1){
+                addObject(new Plum(), Greenfoot.getRandomNumber(1080), 1);
+                totalScore = totalScore + 10;
+            }
+            if(Greenfoot.getRandomNumber(100)<0.5){
+                addObject(new Cherry(), Greenfoot.getRandomNumber(1080), 1);
+                totalScore = totalScore + 10;
+            }
+            if(Greenfoot.getRandomNumber(100)<0.1){
+                addObject(new Coins(), Greenfoot.getRandomNumber(1080), 1);
+                totalScore = totalScore + 30;
+            }
+        }
     }
 }
