@@ -6,7 +6,7 @@
 </h1>
 
 <p>
-	<strong>Giuliana Bouzon:<strong><br>
+	<strong>Giuliana Bouzon:<br>
     Added classes (Fruits, Dragon, World, Enemies parent classes + their respective child classes).<br> 
     Made makeArrays() method in World class to make images arrays for each character.<br>
     Made switchImage() method in World class to provide animation for each animated character (with multiple images in arrays).<br>
