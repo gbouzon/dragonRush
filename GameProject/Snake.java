@@ -14,6 +14,7 @@ public class Snake extends MyWorld
         showTime();
         prepare();
     }
+    
     /**
      * Returns Snake class' time.
      */

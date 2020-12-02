@@ -27,9 +27,9 @@ public class Play extends Buttons
             Greenfoot.setWorld(new PacMan());
         }
         if(getWorld().getClass() == PacMan.class && Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(new Snake());
+            Greenfoot.setWorld(new ProperSnake());
         }
-        if(getWorld().getClass() == Snake.class && Greenfoot.mouseClicked(this)){
+        if(getWorld().getClass() == ProperSnake.class && Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new DinoRush());
         }
     }
