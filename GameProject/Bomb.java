@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Bomb extends Actor
+public class Bomb extends Enemies
 {
     protected int speed;
     private int counter;

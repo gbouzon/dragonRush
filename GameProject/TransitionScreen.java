@@ -28,14 +28,14 @@ public class TransitionScreen extends Actor
         if(getWorld().getClass()==PacMan.class){
             setImage("transition2.png");
             if(counter==500){
-                Greenfoot.setWorld(new ProperSnake());
+                Greenfoot.setWorld(new Snake());
                 counter=0;
             }
             else{
                 counter++;
             }
         }
-        else if (getWorld().getClass()==ProperSnake.class){
+        else if (getWorld().getClass()==Snake.class){
             setImage("transition3.png");
             if(counter==500){
                 Greenfoot.setWorld(new DinoRush());

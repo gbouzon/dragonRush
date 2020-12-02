@@ -124,14 +124,14 @@
 
 </p>
 <h1> 
-    <b>Version 3.4, December 01<sup>th</sup> of 2020:</b>
+    <b>Version 4.0, December 1<sup>st</sup> of 2020:</b>
 </h1>
 
 <p>
 	<strong>Andrei Marinescu:</strong><br>
-	Added ProperSnake game<br>
-	Edited Fruits<br>
-	Added DBDragon as well as Tail and Bomb <br>
-	Created Timer as well as Score<br>
+	Added ProperSnake game.<br>
+	Edited Fruits.<br>
+	Added DBDragon as well as Tail and Bomb.<br>
+	Created Timer as well as Score.<br>
 	Edited the sequence of the game.<br>
 	//Note: I need to put a new Bomb png image. <br>

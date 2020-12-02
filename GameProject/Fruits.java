@@ -32,9 +32,7 @@ public class Fruits extends Actor
             setLocation(getX()-1, getY());
         
         }
-        else if(getWorld().getClass() == DinoRush.class){
-            setLocation(getX()-1, getY());
-        }else if(getWorld().getClass() == ProperSnake.class){
+        else if(getWorld().getClass() == ProperSnake.class){
             setLocation(getX(), getY()+speed);
             if(isTouching (line.class)){
                 ((MyWorld)getWorld()).addScore(-5);
@@ -44,7 +42,7 @@ public class Fruits extends Actor
                 ((MyWorld)getWorld()).addScore(+10);
                 ((MyWorld)getWorld()).removeObject(this);
                 
+            }
         }
-     }
-   }
+    }
 }
