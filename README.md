@@ -135,3 +135,14 @@
 	Created Timer as well as Score.<br>
 	Edited the sequence of the game.<br>
 	//Note: I need to put a new Bomb png image. <br>
+</p>
+<h1> 
+    <b>Version 4.1, December 3<sup>rd</sup> of 2020:</b>
+</h1>
+
+<p>
+	<strong>Chelsea Nadarajah-Chinniah:</strong><br>
+	Added game over condition.<br>
+	Made the knights disappear once they are touched by the dragon.<br>
+	When all the knights have been removed from the world, more knights are added.<br>
+</p>
