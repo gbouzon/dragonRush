@@ -1,21 +1,21 @@
 #BlueJ class context
 comment0.target=Snake
-comment0.text=\r\n\ Entails\ everything\ in\ the\ level\ 2\ of\ game.\r\n\ \r\n\ @author\ Giuliana\ Bouzon\r\n
+comment0.text=\n\ Entails\ everything\ in\ the\ level\ 2\ of\ game.\n\ \n\ @author\ Giuliana\ Bouzon\n
 comment1.params=
 comment1.target=Snake()
 comment2.params=
 comment2.target=int\ getTime()
-comment2.text=\r\n\ Returns\ Snake\ class'\ time.\r\n
+comment2.text=\n\ Returns\ Snake\ class'\ time.\n
 comment3.params=
 comment3.target=void\ countTime()
-comment3.text=\r\n\ Count\ down\ the\ game\ time\ and\ display\ it.\ Stop\ the\ game\ with\ a\ winning\ message\ when\ time\ is\ up.\ \ \r\n
+comment3.text=\n\ Count\ down\ the\ game\ time\ and\ display\ it.\ Stop\ the\ game\ with\ a\ winning\ message\ when\ time\ is\ up.\ \ \n
 comment4.params=
 comment4.target=void\ showTime()
-comment4.text=\r\n\ Show\ the\ remaining\ game\ time\ on\ screen.\r\n
+comment4.text=\n\ Show\ the\ remaining\ game\ time\ on\ screen.\n
 comment5.params=
 comment5.target=void\ prepare()
-comment5.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
+comment5.text=\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\n
 comment6.params=
 comment6.target=void\ act()
-comment6.text=\r\n\ Act\ -\ do\ whatever\ the\ Snake\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment6.text=\n\ Act\ -\ do\ whatever\ the\ Snake\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 numComments=7

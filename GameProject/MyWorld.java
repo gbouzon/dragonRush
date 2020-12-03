@@ -19,7 +19,7 @@ public abstract class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1080, 725, 1); 
-        
+        //showScore();
     }
     /**
      * Calculates skill percentage of player based on allies collected.

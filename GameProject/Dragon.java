@@ -55,12 +55,11 @@ public class Dragon extends Actor
             removeTouching(Coins.class);
         }
         else if(isTouching(Knight.class)){
-            //goes to restart screen yet to be created
-            //to be used later in game over conditions.
-            //((MyWorld)getWorld()).score = -1; 
+            ((MyWorld)getWorld()).addScore(-20);
+            removeTouching(Knight.class);
         }
     }
-
+    
     /**
      * Act - do whatever the Dragon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

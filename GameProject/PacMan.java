@@ -1,5 +1,5 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+ import java.util.*;
 /**
  * Write a description of class PacMan here.
  * 
@@ -27,6 +27,11 @@ public class PacMan extends MyWorld
      */
     public void act() {
         countTime();
+        checkKnights();
+        if (score < 0) {
+                Greenfoot.setWorld(new PacMan());
+                score = 0;
+        }
     }
     
     private void prepare() {
@@ -87,6 +92,21 @@ public class PacMan extends MyWorld
         removeObject(coins4);
         Restart restart = new Restart();
         addObject(restart,987,706);
+        Knight knight2 = new Knight();
+        addObject(knight2,832,383);
+        removeObject(knight2);
+        Knight knight3 = new Knight();
+        scaleImage(knight3.getImage());
+        addObject(knight3,830,392);
+        Knight knight4 = new Knight();
+        scaleImage(knight4.getImage());
+        addObject(knight4,285,374);
+        Knight knight5 = new Knight();
+        scaleImage(knight5.getImage());
+        addObject(knight5,810,133);
+        Knight knight6 = new Knight();
+        scaleImage(knight6.getImage());
+        addObject(knight6,751,632);
     }
 
     /**
@@ -113,6 +133,19 @@ public class PacMan extends MyWorld
     public void showTime() {
         if(time>=0){
             showText("Time: " + time,1000,25);
+        }
+    }
+    /**
+     * Checks if all the knights have left the world
+     */
+    public void checkKnights() {
+        List<Knight> knights = getObjects(Knight.class);
+        if(knights.size() == 0) {
+            for (int i = 0; i < 6; i++) {
+                Knight knight = new Knight();
+                scaleImage(knight.getImage());
+                addObject(knight,830,392);
+            }
         }
     }
 }
