@@ -55,6 +55,7 @@ public class Dragon extends Actor
             removeTouching(Coins.class);
         }
         else if(isTouching(Knight.class)){
+            Greenfoot.playSound("touchingKnight.wav");
             ((MyWorld)getWorld()).addScore(-20);
             removeTouching(Knight.class);
         }

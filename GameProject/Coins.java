@@ -24,8 +24,8 @@ public class Coins extends Actor
     /**
      * Method to create character animation.
      */
-    public void switchImage(){
-       if(counter==5){
+    private void switchImage(){
+       if(counter==4){
             setImage(coins[indexCoins % coins.length]);
             indexCoins++;
             counter = 0;
@@ -64,5 +64,6 @@ public class Coins extends Actor
      */
     public void act() {
         detectClass();
+        //switchImage();
     }    
 }

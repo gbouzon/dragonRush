@@ -17,35 +17,37 @@ public class BabyDragon extends Dragon
      * Constructor for Baby Dragon class.
      */
     public BabyDragon(){ //to be refactored using methods
-        //dragonI = new GreenfootImage("dragonIdle1.png");
         white = Color.WHITE;
         isDownR = false;
         isDownL = false;
     }
     /**
-     * Adds basic physics concepts (gravity) so the character falls.
+     * Adds basic physics concepts (gravity) so that the character falls.
      */
     private void fall(){
         setLocation(getX(), getY()+vSpeed);
         vSpeed = vSpeed + acceleration;
     }
     /**
-     * Checks if the character is on the ground and returns true when that is the case.
+     * Checks if the character is on the ground and returns true when that 
+     * is the case.
      */
     private boolean onGround(){
         Actor under = getOneObjectAtOffset(0, getImage().getHeight()/2-20, Ground.class);
         return under !=null;
     }
     /**
-     * Checks if the character is on the blocks and returns true when that is the case.
+     * Checks if the character is on the blocks and returns true when that 
+     * is the case.
      */
     private boolean onBlock(){
+        //figure out a way to normalize it like with the ground if time allows.
         Actor under = getOneObjectAtOffset(0, getImage().getHeight()/2, Block.class);
         return under!=null;
     }
     /**
-     * Makes the character fall when it isn't on the ground or on a block (so that
-     * when it jumps, it falls back down).
+     * Makes the character fall when it isn't on the ground or on a block 
+     * (so that when it jumps, it falls back down). 
      */
     private void checkFalling(){
         if(onGround()==false && onBlock()==false){
@@ -56,10 +58,21 @@ public class BabyDragon extends Dragon
         }
     }
     /**
-     * userControl() method overridden from superclass and implemented to move character.
+     * Allows the dragon to leave through one side and appear in the other.
+     */
+    private void wrapping(){
+       if(getX() == 1079 && Greenfoot.isKeyDown("d")){
+           setLocation(0, getY());
+       }
+       if(getX() == 0 && Greenfoot.isKeyDown("a")){
+           setLocation(1079, getY());
+       }
+    }
+    /**
+     * userControl() method overridden from superclass and implemented to 
+     * move character.
      */
     private void userControl(){
-        Fire fire = new Fire();
         if(Greenfoot.isKeyDown("a")) {
             setLocation(getX()-speed,getY());
             direction = 'l';
@@ -71,7 +84,7 @@ public class BabyDragon extends Dragon
                 counter++;
             }
         }
-        if(Greenfoot.isKeyDown("D")) {
+        if(Greenfoot.isKeyDown("d")) {
             setLocation(getX()+speed,getY());
             direction = 'r';
             if(counter==(12-speed)){
@@ -87,27 +100,24 @@ public class BabyDragon extends Dragon
             fall();
         }
         if(Greenfoot.isKeyDown("x") && direction=='r'){
-            setImage("dragonA5.png");
             if(!isDownR){
-                getWorld().addObject(fire, this.getX()+85, this.getY());
+                Greenfoot.playSound("fire.wav");
                 isDownR = true;
             }
-            else if(isDownR){
-                //fire.attack();
-            }
+            setImage("dragonA5.png");
+            getWorld().addObject(new Fire(), this.getX()+85, this.getY());
+            isDownR = false;
         }
 
         else if(Greenfoot.isKeyDown("x") && direction=='l'){
-            setImage("dragonA5L.png");
             if(!isDownL){
-                getWorld().addObject(fire, this.getX()+85, this.getY());
+                Greenfoot.playSound("fire.wav");
                 isDownL = true;
             }
-            else if(isDownL){
-                //fire.attack();
-            }
+            setImage("dragonA5L.png");
+            getWorld().addObject(new Fire('l'), this.getX()-85, this.getY());
+            isDownL = false;
         }
-        //getWorld().removeObject(fire);
     }
     private GreenfootImage[] scaleImage(GreenfootImage[] array){
         for(int i = 0; i<array.length; i++){
@@ -121,17 +131,8 @@ public class BabyDragon extends Dragon
      * Allows the user to control the game using the keys (w,a,s,d and right,left,up,down)
      */
     private void userControlP() {
-        
         if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")) {
             setLocation(getX() + 2, getY());
-            if(counter==4){
-                //scaleImage(dragonR); can't put this here cuz called in the act()
-                //switchImage(dragonR, indexDragonR++&dragonR.length); --fix scaling
-                counter=0;
-            }
-            else{
-                counter++;
-            }
             if(touchingWalls() && !isAtEdge()) {
                 setLocation(getX() - 20, getY());
                 Greenfoot.playSound("8BitHurt.wav");
@@ -139,13 +140,6 @@ public class BabyDragon extends Dragon
         }
         if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")) {
             setLocation(getX() - 2, getY());
-            if(counter==4){
-                //switchImage(dragonL, indexDragonL++&dragonL.length); --fix scaling
-                counter=0;
-            }
-            else{
-                counter++;
-            }
             if(touchingWalls() && !isAtEdge()) {
                 setLocation(getX() + 20, getY());
                 Greenfoot.playSound("8BitHurt.wav");
@@ -154,20 +148,20 @@ public class BabyDragon extends Dragon
         if(Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("w")) {
             setLocation(getX(), getY() - 2);
             if(touchingWalls() && !isAtEdge()) {
-                setLocation(getX(), getY() + 20);
+                setLocation(getX(), getY() + 30);
                 Greenfoot.playSound("8BitHurt.wav");
             }
         }
         if(Greenfoot.isKeyDown("down") || Greenfoot.isKeyDown("s")) {
             setLocation(getX(), getY() + 2);
             if(touchingWalls() && !isAtEdge()) {
-                setLocation(getX(), getY() - 20);
+                setLocation(getX(), getY() - 30);
                 Greenfoot.playSound("8BitHurt.wav");
             }
         }
     }
     /**
-     * Checks if the character is touching the walls of the maze
+     * Checks if the character is touching the walls of the maze.
      */
     private boolean touchingWalls() {
         World world = (PacMan)getWorld();
@@ -188,12 +182,15 @@ public class BabyDragon extends Dragon
             userControl();
             eat();
             checkFalling();
+            wrapping();
         }
         else if(getWorld().getClass() == DinoRush.class){
+            jumpHeight = -6;
             speed = 2;
             userControl();
             checkFalling();
             eat();
+            wrapping();
         }
         else if(getWorld().getClass() == PacMan.class){
             userControlP();

@@ -50,7 +50,7 @@ public class DinoRush extends MyWorld
         time --;
         showTime();
         if(time == -100) {
-            Greenfoot.setWorld(new MenuScreen());
+            Greenfoot.setWorld(new GameOverScreen());
         }
     }
     /**
@@ -73,22 +73,26 @@ public class DinoRush extends MyWorld
     /**
      * Adds allies to World according to defined rules.
      */
-    public void addAllies(){
+    private void addAllies(){
         if(Greenfoot.getRandomNumber(200)<0.5){
                addObject(new StarFruit(), 1079, 500-height2);
-               totalScore = totalScore + 10;
+               incrementTotalScore(10);
         }
         if(Greenfoot.getRandomNumber(200)<0.5){
                addObject(new Cherry(), 1079, 500-height2);
-               totalScore = totalScore + 10;
+               incrementTotalScore(10);
         }
         if(Greenfoot.getRandomNumber(200)<0.5){
                addObject(new Plum(), 1079, 500-height2);
-               totalScore = totalScore + 10;
+               incrementTotalScore(10);
         }
         if(Greenfoot.getRandomNumber(400)<0.5){
             addObject(new Coins(), 1079, 400-height2);
-            totalScore = totalScore + 30;
+            incrementTotalScore(30);
+        }
+        if(Greenfoot.getRandomNumber(600)<0.5){
+            addObject(new Knight(), 1079,559);
+            incrementTotalScore(30);
         }
     }
     /**

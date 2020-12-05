@@ -9,8 +9,8 @@ import java.lang.*;
  */
 public abstract class MyWorld extends World
 {
-   protected static int score;
-   protected static int totalScore;
+    protected static int score;
+    protected static int totalScore;
     /**
     * Constructor for objects of class MyWorld.
     * 
@@ -19,57 +19,69 @@ public abstract class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1080, 725, 1); 
-        //showScore();
+        showScore();
     }
     /**
-     * Calculates skill percentage of player based on allies collected.
+     * Increment totalScore based on allies collected.
      */
-    public int calculatePercentage(){
-        //to be used in gameOver condition
-        int result = score/totalScore;
-        return (result*100);
+    protected void incrementTotalScore(int points){
+        totalScore+=points;
+        showPercentage();
+    }
+    /**
+     * Display skill percentage of the player.
+     */
+    protected void showPercentage(){
+        showText("Performance: " + ((score/totalScore)*100), 80, 40);
     }
     /**
     * Method to display the score in the upper left corner of the World.
     */
-    public void showScore(){
+    protected void showScore(){
         showText("Score: " + score, 80, 25);
     }
     /**
     * Adds points collected to the final score.
     */
-    public void addScore(int points) {
+    protected void addScore(int points) {
         score += points;
         showScore();
     }
-
     /**
-    * Checks if the player has lost the game (score is equal or smaller than zero)
-    */
-    public boolean isGameOver(int timer){ //to be fixed
-        if(this.getClass() == PacMan.class && timer<3500 && score<0){
-            return true;  
-        }
-        else if (this.getClass() !=PacMan.class && score<=0){
+     * Scales the images to fit in the PacMan (maze is smaller than other classes).
+     */
+    protected void scaleImage(GreenfootImage image){
+        //GreenfootImage image = actor.getImage();
+        image.scale(image.getWidth()/2, image.getHeight()/2);
+    }
+    /**
+     * Checks if there are any knights in the World.
+     */
+    public boolean isKnightIn() {
+        List<Knight> knights = getObjects(Knight.class);
+        if(knights.size() != 0) {
             return true;
         }
         return false;
     }
     /**
-     * Resets the game in case player has lost or ends the game when the player has 
+     * Adds more knight objects to the World when there are none left.
+     */
+    protected void makeKnights(){
+        if(!isKnightIn()){
+            for (int i = 0; i < 6; i++) {
+                Knight knight = new Knight();
+                scaleImage(knight.getImage());
+                addObject(knight,830,392);
+            }
+        }
+    }
+    /**
+     * Ends the game when the player has  
      * finished the last level and then displays results.
      */
-    public void gameOver(int timer){// to be fixed
-       if(this.getClass() == DinoRush.class && timer <=0){
-            //Greenfoot.setWorld(new GameOverScreen()); --yet to be created
-            score = 0;
-            Greenfoot.stop();
-            totalScore = 0;
-       }
-       else if(isGameOver(timer)){
-            //Greenfoot.setWorld(new MenuScreen());  
-            //restart the game or end here.
-            //if player chooses to restart the game: score will be reset to 0;
-       }
+    public void gameOver(){
+        
+        
     }
 }

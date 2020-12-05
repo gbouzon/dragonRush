@@ -61,19 +61,19 @@ public class Snake extends MyWorld
         if(time>0){
             if(Greenfoot.getRandomNumber(100)<0.5){
                 addObject(new StarFruit(), Greenfoot.getRandomNumber(1080), 1);
-                totalScore = totalScore + 10;
+                incrementTotalScore(10);
             }
             if(Greenfoot.getRandomNumber(100)<1){
                 addObject(new Plum(), Greenfoot.getRandomNumber(1080), 1);
-                totalScore = totalScore + 10;
+                incrementTotalScore(10);
             }
             if(Greenfoot.getRandomNumber(100)<0.5){
                 addObject(new Cherry(), Greenfoot.getRandomNumber(1080), 1);
-                totalScore = totalScore + 10;
+                incrementTotalScore(10);
             }
             if(Greenfoot.getRandomNumber(100)<0.1){
                 addObject(new Coins(), Greenfoot.getRandomNumber(1080), 1);
-                totalScore = totalScore + 30;
+                incrementTotalScore(30);
             }
         }
     }

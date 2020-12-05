@@ -1,11 +1,17 @@
 #BlueJ class context
 comment0.target=Fire
-comment0.text=\n\ Write\ a\ description\ of\ class\ Fire\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=Fire()
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Fire\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=direction
+comment1.target=Fire(char)
 comment2.params=
-comment2.target=void\ attack()
+comment2.target=Fire()
 comment3.params=
-comment3.target=void\ act()
-comment3.text=\n\ Act\ -\ do\ whatever\ the\ Fire\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
-numComments=4
+comment3.target=void\ attack()
+comment3.text=\r\n\ Animates\ fire.\r\n
+comment4.params=
+comment4.target=void\ moveAccordingly()
+comment4.text=\r\n\ Makes\ the\ fire\ move\ according\ to\ the\ direction\ entered.\r\n
+comment5.params=
+comment5.target=void\ act()
+comment5.text=\r\n\ Act\ -\ do\ whatever\ the\ Fire\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=6
