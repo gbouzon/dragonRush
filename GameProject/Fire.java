@@ -1,13 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Fire here.
+ * Defines fire's behaviour.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Giuliana Bouzon
  */
-public class Fire extends Dragon
-{
+public class Fire extends Dragon {
     private int indexFire,counter;
     private GreenfootImage[] fire;
     private char direction;
@@ -47,8 +45,7 @@ public class Fire extends Dragon
      * Act - do whatever the Fire wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
-    {
+    public void act() {
         if(isTouching(Knight.class)){
             getWorld().removeObject(this);
         }

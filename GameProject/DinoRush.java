@@ -1,35 +1,29 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class DinoRush here.
+ * Provides everything in level 3 of the game (Dino Rush).
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Giuliana Bouzon
  */
-public class DinoRush extends MyWorld
-{
+public class DinoRush extends MyWorld {
     private int time,counter, height, height2, random;
     /**
      * Constructor for objects of class Level1.
      * 
      */
-    public DinoRush()
-    {
-        
+    public DinoRush() {
         counter=0;
         time = 3500;
         showTime();
         prepare();
         setPaintOrder(Border.class,BabyDragon.class, Coins.class, Fruits.class);
     }
-
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
     private void prepare()
     {
-
         Border border = new Border();
         addObject(border,1254,358);
         Border border2 = new Border();
@@ -42,11 +36,10 @@ public class DinoRush extends MyWorld
         Restart restart = new Restart();
         addObject(restart,888,692);
     }
-
     /**
      * Count down the game time and display it. Stop the game with a winning message when time is up.  
      */
-    public void countTime() {
+    private void countTime() {
         time --;
         showTime();
         if(time == -100) {
@@ -56,7 +49,7 @@ public class DinoRush extends MyWorld
     /**
      * Show the remaining game time on screen.
      */
-    public void showTime() {
+    private void showTime() {
         if(time>=0){
             showText("Time: " + time,1000,25);
         }
@@ -64,7 +57,7 @@ public class DinoRush extends MyWorld
     /**
      * Adds blocks to the World according to defined rules.
      */
-    public void makeTiles(){
+    private void makeTiles(){
         height = Greenfoot.getRandomNumber(400);
         for(int i = 0; i<4; i++){
             addObject(new Block(), i*49 +1000, 482-height);

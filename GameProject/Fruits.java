@@ -1,22 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Defines the fruits' behaviour.
+ * Defines common behaviour for the fruit objects in the game (child classes).
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Giuliana Bouzon
  */
-public class Fruits extends Actor
-{
-    protected int speed;
-    /**
-     * Act - do whatever the Fruits wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }  
+public class Fruits extends Actor {
+    protected int speed;  
     /**
      * Detects class and defines the fruits' behaviour accordingly.
      */
@@ -44,5 +34,12 @@ public class Fruits extends Actor
                 
             }
         }
+    }
+    /**
+     * Act - do whatever the Fruits wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() {
+        // Add your action code here.
     }
 }

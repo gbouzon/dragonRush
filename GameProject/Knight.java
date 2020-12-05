@@ -1,13 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.*;
 /**
- * Defines Knight's behaviour.
+ * Defines the knight objects' behaviour.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Giuliana Bouzon, Chelsea Nadarajah-Chinniah
  */
-public class Knight extends Enemies
-{
+public class Knight extends Enemies {
     private Color white;
     private int x;
     private GreenfootImage WR1, WR2, WR3, WL1, WL2, WL3;
@@ -24,6 +21,9 @@ public class Knight extends Enemies
         WL3 = new GreenfootImage("knightWR3.png");
 
     }
+    /**
+     * Animates knight's movement to the right.
+     */
     private void switchImageRight(){
         if(getImage() == WR1){
             setImage(WR2);
@@ -35,6 +35,9 @@ public class Knight extends Enemies
             setImage(WR1);
         }
     }
+    /**
+     * Animates knight's movement to the left.
+     */
     private void switchImageLeft(){
         if(getImage() == WL1){
             setImage(WL2);
@@ -107,7 +110,6 @@ public class Knight extends Enemies
     private void detectClass(){
         if(getWorld().getClass() == DinoRush.class){
             moveDino();
-            switchImageRight();
             if(isTouching(Fire.class)){
                 ((MyWorld)getWorld()).addScore(30);
                 getWorld().removeObject(this);

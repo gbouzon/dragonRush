@@ -1,12 +1,14 @@
 #BlueJ class context
 comment0.target=Knight
-comment0.text=\r\n\ Defines\ Knight's\ behaviour.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Defines\ the\ knight\ objects'\ behaviour.\r\n\ \r\n\ @author\ Giuliana\ Bouzon,\ Chelsea\ Nadarajah-Chinniah\r\n
 comment1.params=
 comment1.target=Knight()
 comment2.params=
 comment2.target=void\ switchImageRight()
+comment2.text=\r\n\ Animates\ knight's\ movement\ to\ the\ right.\r\n
 comment3.params=
 comment3.target=void\ switchImageLeft()
+comment3.text=\r\n\ Animates\ knight's\ movement\ to\ the\ left.\r\n
 comment4.params=
 comment4.target=void\ enemyMoves()
 comment4.text=\r\n\ Makes\ the\ enemy\ move\ through\ the\ maze\ (Pac-Man).\r\n

@@ -1,39 +1,26 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 /**
- * Write a description of class MenuScreen here.
+ * Screen to display game menu options.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Giuliana Bouzon
  */
-public class MenuScreen extends World
-{
+public class MenuScreen extends World {
     /**
      * Constructor for objects of class MenuScreen.
      * 
      */
-    public MenuScreen()
-    {    
+    public MenuScreen() {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1080, 725, 1); 
         prepare();
         Greenfoot.start();
     }
-
-    /**
-     * Act - do whatever the MenuScreen wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act(){
-        //startGame();
-    }
-   
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    private void prepare()
-    {
+    private void prepare() {
         Play play = new Play();
         addObject(play,533,252);
         Credits credits = new Credits();

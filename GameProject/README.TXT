@@ -9,7 +9,7 @@ PURPOSE OF PROJECT: Game project for game programming course
 VERSION or DATE: Version 1.0, November 12th, 2020
 HOW TO START THIS PROJECT:
 AUTHORS: Chelsea Chinniah, Andrei Marinescu, Giuliana Bouzon
-USER INSTRUCTIONS: yet to be defined
+USER INSTRUCTIONS: please check menu options in the game && GDD for further information.
 
 ------------------------------------------------------------------------
 
@@ -27,17 +27,17 @@ think it looks right. Suggestions?
 
 Things to be fixed/implemented:
 
-1. scaling of animation for PacMan game (in BabyDragon class)
+1. scaling of animation for PacMan game (in BabyDragon class) -DONE
 2. Skill percentage method doesn't work (????)
-3. Edit screens to fix typos/ style for Credits screen
-4. Fix fire animation/ disappear
+3. Edit screens to fix typos/ style for Credits screen -DONE
+4. Fix fire animation/ disappear -DONE
 5. Work on gameOver conditions
-6. Add more enemies to levels 2 and 3 and more allies to level 1
-7. Create gameOver screen
-8. Decide condition for restart (back to menu, level 1 or each level?)
-9. Work on overall animations and maybe consider changing dragon (no up/down imgs)
+6. Add more enemies to levels 2 and 3 and more allies to level 1 -DONE
+7. Create gameOver screen -DONE
+8. Decide condition for restart (back to menu, level 1 or each level?) -DONE
+9. Work on overall animations and maybe consider changing dragon (no up/down imgs) -DONE
 10. Fix discrepacy in jump method (when it's on block)
 11. Figure out how to make scrolling background without delay (Background class)
-12. Edit place for Menu button (maybe make white button the default) --color
+12. Edit place for Menu button (maybe make white button the default) --color -TO BE DISCUSSED
 13. Add impact to enemies/ world when attack() method (fire)
 14. Fix fruits appearance in DinoRush game --not on block

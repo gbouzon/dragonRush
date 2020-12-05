@@ -1,9 +1,10 @@
 #BlueJ class context
 comment0.target=Buttons
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Buttons\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Buttons\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-comment2.params=str
-comment2.target=void\ mouseAnimation(java.lang.String)
+comment0.text=\r\n\ Defines\ common\ behaviour\ for\ button\ objects\ (child\ classes).\r\n\ \r\n\ @author\ Giuliana\ Bouzon\r\n
+comment1.params=str
+comment1.target=void\ mouseAnimation(java.lang.String)
+comment1.text=\r\n\ Animates\ button\ when\ mouse\ hovers\ over\ it.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Buttons\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 numComments=3

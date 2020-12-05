@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Snake
-comment0.text=\r\n\ Entails\ everything\ in\ the\ level\ 2\ of\ game.\r\n\ \r\n\ @author\ Giuliana\ Bouzon\r\n
+comment0.text=\r\n\ Provides\ everything\ in\ the\ level\ 2\ of\ game.\r\n\ \r\n\ @author\ Giuliana\ Bouzon\r\n
 comment1.params=
 comment1.target=Snake()
 comment2.params=

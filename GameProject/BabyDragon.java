@@ -4,8 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Defines behaviours and characteristics of the BabyDragon.
  * @author Giuliana Bouzon
  */
-public class BabyDragon extends Dragon
-{
+public class BabyDragon extends Dragon {
     private Color white;
     private int counter, speed;
     private int vSpeed = 0;
@@ -13,10 +12,7 @@ public class BabyDragon extends Dragon
     private int jumpHeight = -8;
     private char direction;
     private boolean isDownR, isDownL;
-    /**
-     * Constructor for Baby Dragon class.
-     */
-    public BabyDragon(){ //to be refactored using methods
+    public BabyDragon(){ 
         white = Color.WHITE;
         isDownR = false;
         isDownL = false;
@@ -119,14 +115,6 @@ public class BabyDragon extends Dragon
             isDownL = false;
         }
     }
-    private GreenfootImage[] scaleImage(GreenfootImage[] array){
-        for(int i = 0; i<array.length; i++){
-            GreenfootImage image = array[i];
-            ((PacMan)getWorld()).scaleImage(image);
-            
-        }
-        return array;
-    }
     /**
      * Allows the user to control the game using the keys (w,a,s,d and right,left,up,down)
      */
@@ -201,8 +189,7 @@ public class BabyDragon extends Dragon
      * Act - do whatever the BabyDragon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
-    {
+    public void act() {
         detectClass();
     }    
 }

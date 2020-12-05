@@ -1,23 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TransitionScreen here.
+ * Screen to display instructions of each level.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Giuliana Bouzon
  */
-public class TransitionScreen extends Actor
-{
+public class TransitionScreen extends Actor {
     private int counter;
-    private String key;
     public TransitionScreen(){
         counter=0;
     }
     /**
      * Detects world
      */
-    public void detectWorld(){
-        
+    private void detectWorld(){
         if(getWorld().getClass()==PacMan.class){
             setImage("transition2.png");
             if(Greenfoot.getKey()!=null && counter>100){
@@ -39,7 +35,6 @@ public class TransitionScreen extends Actor
             }
         }
         else if (getWorld().getClass()==DinoRush.class){
-            Greenfoot.setWorld(new GameOverScreen());
             //player chooses to play again or to end
             //Greenfoot.setWorld(new MenuScreen());
         }
@@ -58,8 +53,7 @@ public class TransitionScreen extends Actor
      * Act - do whatever the TransitionScreen wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
-    {
+    public void act() {
         detectWorld();
     }  
 }

@@ -1,13 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.*;
 /**
- * Write a description of class Cherry here.
+ * Defines behaviour for the cherry objects in the game.
  * 
- * @author 
- * @version (a version number or a date)
+ * @author Giuliana Bouzon
  */
-public class Cherry extends Fruits
-{
+public class Cherry extends Fruits {
     public Cherry(){
         speed = Greenfoot.getRandomNumber(5)+1;
     }
@@ -15,9 +12,7 @@ public class Cherry extends Fruits
      * Act - do whatever the Cherry wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
-    {
+    public void act() {
        detectClass();
-    
     }    
 }

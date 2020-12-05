@@ -1,18 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Coins here.
+ * Defines coin objects' behaviour.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Giuliana Bouzon
  */
 public class Coins extends Actor
 {
     private int counter,speed, indexCoins;
     private GreenfootImage[] coins;
-    /**
-     * Constructor for Coins class
-    */
     public Coins(){
         speed = Greenfoot.getRandomNumber(5)+1;
         coins = new GreenfootImage[10];
@@ -34,9 +30,10 @@ public class Coins extends Actor
             counter++;
        }
     }
-    public void detectClass(){
+    private void detectClass(){
         if(getWorld().getClass() == Snake.class){
             setLocation(getX(), getY()+speed);
+            switchImage();
             if(isTouching(Ground.class)){
                 ((MyWorld)getWorld()).addScore(-10);
                 ((MyWorld)getWorld()).removeObject(this);
@@ -44,18 +41,7 @@ public class Coins extends Actor
         }
         else if(getWorld().getClass() == DinoRush.class){
             setLocation(getX()-1, getY());
-        }
-        else if(getWorld().getClass() == ProperSnake.class){
-            setLocation(getX(), getY()+speed);
-            if(isTouching (line.class)){
-                ((MyWorld)getWorld()).addScore(-5);
-                ((MyWorld)getWorld()).removeObject(this);
-            }
-            else if(isTouching (DBDragon.class)){
-                ((MyWorld)getWorld()).addScore(+10);
-                ((MyWorld)getWorld()).removeObject(this);
-                
-            }
+            switchImage();
         }
     }
     /**
@@ -64,6 +50,5 @@ public class Coins extends Actor
      */
     public void act() {
         detectClass();
-        //switchImage();
     }    
 }

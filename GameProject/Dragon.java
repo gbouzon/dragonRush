@@ -5,9 +5,7 @@ import java.util.*;
  * 
  * @author Chelsea Nadarajah-Chinniah, Giuliana Bouzon
  */
-public class Dragon extends Actor
-{
-    
+public class Dragon extends Actor {
     protected GreenfootImage[] dragonA, dragonL, dragonR;
     protected int indexDragonA, indexDragonL, indexDragonR;
     /**
@@ -31,8 +29,6 @@ public class Dragon extends Actor
         for(int i = 0; i<dragonR.length; i++){
             dragonR[i] = new GreenfootImage("dragonWR" + (i+1) + ".png");
         }
-        
-        
     }
     /**
      * Animates the character's movements
@@ -60,12 +56,11 @@ public class Dragon extends Actor
             removeTouching(Knight.class);
         }
     }
-    
     /**
      * Act - do whatever the Dragon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act(){
-
+        //act method here
     } 
 }

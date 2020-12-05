@@ -1,20 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Entails everything in the level 2 of game.
+ * Provides everything in the level 2 of game.
  * 
  * @author Giuliana Bouzon
  */
-public class Snake extends MyWorld
-{
+public class Snake extends MyWorld {
     private int time;
-    public Snake()
-    {
+    public Snake() {
         time = 3500;
         showTime();
         prepare();
     }
-    
     /**
      * Returns Snake class' time.
      */
@@ -43,8 +40,7 @@ public class Snake extends MyWorld
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    private void prepare()
-    {
+    private void prepare() {
         Ground ground = new Ground();
         addObject(ground,541,655);
         BabyDragon dragonSnake = new BabyDragon();

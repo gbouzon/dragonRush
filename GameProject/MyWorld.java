@@ -2,13 +2,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 import java.lang.*;
 /**
- * Parent class for game levels.
+ * Parent class for game levels. Defines common behaviour for game levels.
  * 
  * @author Giuliana Bouzon
- * @version 1.0
  */
-public abstract class MyWorld extends World
-{
+public abstract class MyWorld extends World{
     protected static int score;
     protected static int totalScore;
     /**
@@ -80,7 +78,7 @@ public abstract class MyWorld extends World
      * Ends the game when the player has  
      * finished the last level and then displays results.
      */
-    public void gameOver(){
+    protected void gameOver(){
         
         
     }

@@ -1,31 +1,25 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class CreditsScreen here.
+ * Screen to display game credits (authors and asset creators).
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Giuliana Bouzon
  */
-public class CreditsScreen extends World
-{
-
+public class CreditsScreen extends World {
     /**
      * Constructor for objects of class CreditsScreen.
      * 
      */
-    public CreditsScreen()
-    {    
+    public CreditsScreen() {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1080, 725, 1); 
         prepare();
     }
-
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    private void prepare()
-    {
+    private void prepare() {
         Menu menu = new Menu();
         addObject(menu,534,670);
     }

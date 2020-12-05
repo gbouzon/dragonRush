@@ -1,27 +1,23 @@
  import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  import java.util.*;
 /**
- * Write a description of class PacMan here.
+ * Provides everything in level 1 (Pac-Man) of the game.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Chelsea Nadarajah-Chinniah, Giuliana Bouzon
  */
-public class PacMan extends MyWorld
-{
-    public int time;
+public class PacMan extends MyWorld {
+    private int time;
     /**
      * Constructor for objects of class Level3.
      * 
      */
-    public PacMan()
-    {
+    public PacMan(){
         prepare();
         time = 3500;
         showTime();
         score=0;
         totalScore = 0;
     }
-    
     private void prepare() {
         BabyDragon tinyBabyDragon = new BabyDragon();
         scaleImage(tinyBabyDragon.getImage());
@@ -125,7 +121,7 @@ public class PacMan extends MyWorld
     /**
      * Count down the game time and display it. Stop the game with a winning message when time is up.  
      */
-    public void countTime() {
+    private void countTime() {
         time --;
         showTime();
         if(time == -100) {
@@ -135,7 +131,7 @@ public class PacMan extends MyWorld
     /**
      * Show the remaining game time on screen.
      */
-    protected void showTime() {
+    private void showTime() {
         if(time>=0){
             showText("Time: " + time,1000,25);
         }
