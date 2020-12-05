@@ -160,3 +160,16 @@
 	Implemented Knight animation and movement.<br>
 	Updated GameOver class & TransitionScreen class.<br>
 </p>
+<h1> 
+    <b>Version 4.3, December 1<sup>st</sup> of 2020:</b>
+</h1>
+
+<p>
+	<strong>Andrei Marinescu:</strong><br>
+	Deleted ProperDragon map including some necessary classes for that map.<br>
+	Created new enemy <br>
+	Added animation to the bomb when "detonated" (Audio difficulty going to fix late)<br>
+	Added a game over condition so to restart when score<0.<br>
+	Speed up function when at a certain score.<br>
+</p>
+	

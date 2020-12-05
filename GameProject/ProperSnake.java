@@ -18,7 +18,7 @@ public class ProperSnake extends MyWorld
     public ProperSnake()
     {
        counter=0;
-       timer = 1000;
+       timer = 3000;
        showTime();
        prepare();
        lines();
@@ -47,11 +47,11 @@ public class ProperSnake extends MyWorld
         addObject(line4,950,740);
         line line5= new line();
         addObject(line5,210,740);
+        
     }
+    
     public void act() {
-          
           countTime();
-          
           if(timer>0){
             if(Greenfoot.getRandomNumber(100)<0.5){
                 addObject(new StarFruit(), Greenfoot.getRandomNumber(1080), 1);
@@ -69,12 +69,11 @@ public class ProperSnake extends MyWorld
                 addObject(new Coins(), Greenfoot.getRandomNumber(1080), 1);
                 totalScore = totalScore + 30;
           }
-          /*if(Greenfoot.getRandomNumber(100)<0.1){
-              addObject(new Bomb(), Greenfoot.getRandomNumber(1080),500); 
-            }*/
-            // Need to find better image of a bomb
-        }
-        
+          if(Greenfoot.getRandomNumber(100)<0.1){
+                addObject(new Bomb(), Greenfoot.getRandomNumber(1080), 1);
+                totalScore = totalScore - 30;
+          }
+         }
     }
     private void Restart(){
         Restart restart = new Restart();

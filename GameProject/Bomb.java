@@ -8,16 +8,46 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bomb extends Enemies
 {
-    protected int speed;
-    private int counter;
-    private int indexBomb;
-    private GreenfootImage[] Bomb;
+    int speed;
+    private int timer=0;
+    
+    
     /**
      * Act - do whatever the Bomb wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Bomb(){
+        speed = Greenfoot.getRandomNumber(5)+1;
+    }
+     
     public void act() 
     {
+        GreenfootImage image=getImage();
+        image.scale(70, 70);
+        spawn();
         
     } 
+    public void spawn(){
+        if(getWorld().getClass() == Snake.class){
+            setLocation(getX(), getY()+speed);
+            if(isTouching (Ground.class)){
+                ((MyWorld)getWorld()).addScore(-5);
+                ((MyWorld)getWorld()).removeObject(this);
+            }
+            else if(isTouching (BabyDragon.class)){
+                ((MyWorld)getWorld()).addScore(-10);
+                timer++;
+                if(timer==2){
+                    setImage("bombSprite1.png");
+                }
+                if(timer==4){
+                    setImage("Explosion.png");
+                }
+                if(timer==5){
+                    ((MyWorld)getWorld()).removeObject(this);
+                }
+          }
+    }
+   }
+   
 }

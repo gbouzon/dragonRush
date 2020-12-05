@@ -24,8 +24,8 @@ public class Fruits extends Actor {
         }
         else if(getWorld().getClass() == ProperSnake.class){
             setLocation(getX(), getY()+speed);
-            if(isTouching (line.class)){
-                ((MyWorld)getWorld()).addScore(-5);
+            if(isTouching (Ground.class)){
+                ((MyWorld)getWorld()).addScore(-1);
                 ((MyWorld)getWorld()).removeObject(this);
             }
             else if(isTouching (DBDragon.class)){

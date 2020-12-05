@@ -71,6 +71,10 @@ public class Snake extends MyWorld {
                 addObject(new Coins(), Greenfoot.getRandomNumber(1080), 1);
                 incrementTotalScore(30);
             }
+            if(Greenfoot.getRandomNumber(100)<0.1){
+                addObject(new Bomb(), Greenfoot.getRandomNumber(1080), 1);
+                totalScore = totalScore - 30;
+            }
         }
     }
 }

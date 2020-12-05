@@ -19,10 +19,13 @@ public class DBDragon extends Dragon
         moveDBDragon();
         size();
         speed=3;
-        tailInitial();
-        
+        //tailInitial();
+        //increment();
     }   
-    
+    /*public void increment(){
+        countTime();
+        if (count
+    }*/
     public void size(){
         GreenfootImage image=getImage();
         int myNewHeight = (int)image.getHeight();
@@ -48,7 +51,7 @@ public class DBDragon extends Dragon
         
     }
     
-    public void tailInitial(){
+    /*public void tailInitial(){
         newTail++;
         getWorld().addObject(new Tail(), getX()-25, getY()-25);
         
@@ -56,7 +59,8 @@ public class DBDragon extends Dragon
             speed++;
         
         }
-    }
-
+    */
 }
+
+
 
