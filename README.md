@@ -146,3 +146,17 @@
 	Made the knights disappear once they are touched by the dragon.<br>
 	When all the knights have been removed from the world, more knights are added.<br>
 </p>
+<h1> 
+    <b>Version 4.2, December 4<sup>th</sup> of 2020:</b>
+</h1>
+
+<p>
+	<strong>Giuliana Bouzon:</strong><br>
+	Fixed spacing and access modifiers.<br>
+	Updated documentations & overall game structure.<br>
+	Added wrapping method for level 2 and level 3.<br>
+	Implemented Fire class.<br>
+	Added enemies to level 3 as well as attack implemented in Fire class.<br>
+	Implemented Knight animation and movement.<br>
+	Updated GameOver class & TransitionScreen class.<br>
+</p>
