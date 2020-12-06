@@ -161,7 +161,7 @@
 	Updated GameOver class & TransitionScreen class.<br>
 </p>
 <h1> 
-    <b>Version 4.3, December 1<sup>st</sup> of 2020:</b>
+    <b>Version 4.3, December 5<sup>th</sup> of 2020:</b>
 </h1>
 
 <p>
@@ -171,5 +171,15 @@
 	Added animation to the bomb when "detonated" (Audio difficulty going to fix late)<br>
 	Added a game over condition so to restart when score<0.<br>
 	Speed up function when at a certain score.<br>
+</p>
+<h1> 
+    <b>Version 4.4, December 5<sup>th</sup> of 2020:</b>
+</h1>
+
+<p>
+	<strong>Giuliana Bouzon:</strong><br>
+	Updated documentations & overall game structure.<br>
+	Edited sounds (equalizer) & images.<br>
+	Just some more refactoring.<br>
 </p>
 	
