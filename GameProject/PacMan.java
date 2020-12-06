@@ -30,72 +30,72 @@ public class PacMan extends MyWorld {
         StarFruit tinyStarFruit = new StarFruit();
         scaleImage(tinyStarFruit.getImage());
         addObject(tinyStarFruit,493,140);
-        incrementTotalScore(10);
+        
 
         Cherry tinyCherry = new Cherry();
         scaleImage(tinyCherry.getImage());
         addObject(tinyCherry,833,482);
-        incrementTotalScore(10);
+        
         
         Plum tinyPlum = new Plum();
         scaleImage(tinyPlum.getImage());
         addObject(tinyPlum,259,303);
-        incrementTotalScore(10);
+        
         
         Coins coins = new Coins();
         scaleImage(coins.getImage());
         addObject(coins,503,340);
-        incrementTotalScore(30);
+        
         
         Coins coins2 = new Coins();
         scaleImage(coins2.getImage());
         addObject(coins2,776,304);
-        incrementTotalScore(30);
+        
         
         Coins coins3 = new Coins();
         scaleImage(coins3.getImage());
         addObject(coins3,143,643);
-        incrementTotalScore(30);
+        
         
         Plum plum2 = new Plum();
         scaleImage(plum2.getImage());
         addObject(plum2,1015,115);
-        incrementTotalScore(10);
+        
         
         StarFruit starFruit2 = new StarFruit();
         scaleImage(starFruit2.getImage());
         addObject(starFruit2,654,632);
-        incrementTotalScore(10);
+        
         
         Cherry cherry2 = new Cherry();
         scaleImage(cherry2.getImage());
         addObject(cherry2,290,147);
-        incrementTotalScore(10);
+        
         
         Plum plum3 = new Plum();
         scaleImage(plum3.getImage());
         addObject(plum3,507,578);
-        incrementTotalScore(10);
+        
         
         StarFruit starFruit3 = new StarFruit();
         scaleImage(starFruit3.getImage());
         addObject(starFruit3,986,360);
-        incrementTotalScore(10);
+        
         
         Coins coins5 = new Coins();
         scaleImage(coins5.getImage());
         addObject(coins5,933,637);
-        incrementTotalScore(30);
+        
         
         Cherry cherry3 = new Cherry();
         scaleImage(cherry3.getImage());
         addObject(cherry3,787,45);
-        incrementTotalScore(10);
+        
         
         Coins coins6 = new Coins();
         scaleImage(coins6.getImage());
         addObject(coins6,640,203);
-        incrementTotalScore(30);
+        
         
         countTime();
         
@@ -117,6 +117,8 @@ public class PacMan extends MyWorld {
         Knight knight6 = new Knight();
         scaleImage(knight6.getImage());
         addObject(knight6,751,632);
+        
+        incrementTotalScore(240);
     }
     /**
      * Count down the game time and display it. Stop the game with a winning message when time is up.  

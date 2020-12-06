@@ -8,7 +8,7 @@ import java.lang.*;
  */
 public abstract class MyWorld extends World{
     protected static int score;
-    protected static int totalScore;
+    protected static double totalScore;
     /**
     * Constructor for objects of class MyWorld.
     * 
@@ -22,16 +22,16 @@ public abstract class MyWorld extends World{
     /**
      * Increment totalScore based on allies collected.
      */
-    protected void incrementTotalScore(int points){
+    public void incrementTotalScore(int points){
         totalScore+=points;
         showPercentage();
     }
     /**
      * Display skill percentage of the player.
      */
-    protected void showPercentage(){
+    public void showPercentage(){
         if(totalScore>0){
-            showText("Performance: " + ((score/totalScore)*100), 80, 40);
+            showText("Performance: " + (int)((score/totalScore)*100) + "%", 80, 40);
         }
     }
     /**
