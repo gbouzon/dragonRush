@@ -22,18 +22,6 @@ public class Fruits extends Actor {
             setLocation(getX()-1, getY());
         
         }
-        else if(getWorld().getClass() == ProperSnake.class){
-            setLocation(getX(), getY()+speed);
-            if(isTouching (Ground.class)){
-                ((MyWorld)getWorld()).addScore(-1);
-                ((MyWorld)getWorld()).removeObject(this);
-            }
-            else if(isTouching (DBDragon.class)){
-                ((MyWorld)getWorld()).addScore(+10);
-                ((MyWorld)getWorld()).removeObject(this);
-                
-            }
-        }
     }
     /**
      * Act - do whatever the Fruits wants to do. This method is called whenever

@@ -42,17 +42,6 @@ public class Coins extends Actor
         else if(getWorld().getClass() == DinoRush.class){
             setLocation(getX()-1, getY());
             switchImage();
-        }else if(getWorld().getClass() == ProperSnake.class){
-            setLocation(getX(), getY()+speed);
-            if(isTouching (line.class)){
-                ((MyWorld)getWorld()).addScore(-1);
-                ((MyWorld)getWorld()).removeObject(this);
-            }
-            else if(isTouching (DBDragon.class)){
-                ((MyWorld)getWorld()).addScore(+10);
-                ((MyWorld)getWorld()).removeObject(this);
-                
-            }
         }
     }
     /**

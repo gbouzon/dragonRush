@@ -143,9 +143,6 @@ public class PacMan extends MyWorld {
     public void act() {
         countTime();
         makeKnights();
-        if (score < 0) {
-                Greenfoot.setWorld(new PacMan());
-                score = 0;
-        }
+        
     }
 }

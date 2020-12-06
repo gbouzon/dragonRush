@@ -30,7 +30,9 @@ public abstract class MyWorld extends World{
      * Display skill percentage of the player.
      */
     protected void showPercentage(){
-        showText("Performance: " + ((score/totalScore)*100), 80, 40);
+        if(totalScore>0){
+            showText("Performance: " + ((score/totalScore)*100), 80, 40);
+        }
     }
     /**
     * Method to display the score in the upper left corner of the World.
@@ -75,11 +77,12 @@ public abstract class MyWorld extends World{
         }
     }
     /**
-     * Ends the game when the player has  
-     * finished the last level and then displays results.
+     * Act - do whatever the PacMan wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    protected void gameOver(){
-        
-        
+    public void act(){
+        if(score<0){
+            Greenfoot.setWorld(new GameOverScreen());
+        }
     }
 }

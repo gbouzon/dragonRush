@@ -3,12 +3,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Provides everything in the level 2 of game.
  * 
- * @author Giuliana Bouzon
+ * @author Giuliana Bouzon, Andrei Marinescu.
  */
 public class Snake extends MyWorld {
     private int time;
+    private int speed;
     public Snake() {
         time = 3500;
+        speed = 0;
         showTime();
         prepare();
     }
@@ -21,17 +23,20 @@ public class Snake extends MyWorld {
     /**
      * Count down the game time and display it. Stop the game with a winning message when time is up.  
      */
-    public void countTime() {
+    private void countTime() {
         time --;
         showTime();
         if(time == -100) {
             addObject(new TransitionScreen(),540,363);
         }
+        if(time<390){
+            speed++;
+        }
     }
     /**
      * Show the remaining game time on screen.
      */
-    public void showTime() {
+    private void showTime() {
         if(time>=0){
             showText("Time: " + time,1000,25);
         }
@@ -59,7 +64,7 @@ public class Snake extends MyWorld {
                 addObject(new StarFruit(), Greenfoot.getRandomNumber(1080), 1);
                 incrementTotalScore(10);
             }
-            if(Greenfoot.getRandomNumber(100)<1){
+            if(Greenfoot.getRandomNumber(100)<0.5){
                 addObject(new Plum(), Greenfoot.getRandomNumber(1080), 1);
                 incrementTotalScore(10);
             }
@@ -67,13 +72,13 @@ public class Snake extends MyWorld {
                 addObject(new Cherry(), Greenfoot.getRandomNumber(1080), 1);
                 incrementTotalScore(10);
             }
-            if(Greenfoot.getRandomNumber(100)<0.1){
+            if(Greenfoot.getRandomNumber(200)<0.1){
                 addObject(new Coins(), Greenfoot.getRandomNumber(1080), 1);
                 incrementTotalScore(30);
             }
-            if(Greenfoot.getRandomNumber(100)<0.1){
+            if(Greenfoot.getRandomNumber(400-speed)<3){
                 addObject(new Bomb(), Greenfoot.getRandomNumber(1080), 1);
-                totalScore = totalScore - 30;
+                incrementTotalScore(5);
             }
         }
     }

@@ -13,5 +13,16 @@ public class GameOverScreen extends World {
     public GameOverScreen() {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1080, 725, 1); 
+        prepare();
+    }
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        Menu menu = new Menu();
+        addObject(menu,594,214);
     }
 }

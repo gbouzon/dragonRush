@@ -14,7 +14,7 @@ public class Restart extends Buttons {
     public void act() {
         mouseAnimation(name);
         if(Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(new PacMan());
+            Greenfoot.setWorld(new MenuScreen());
             ((MyWorld)getWorld()).score = 0;
         }
     }
