@@ -1,5 +1,7 @@
 # Dragon Rush
 <p>This repository was made for us to collaborate work on our final game project.</p>
+ 
+# Version History 
 
 <h1> 
     <b>Version 1.0, November 12<sup>th</sup> of 2020:</b>
@@ -182,4 +184,12 @@
 	Edited sounds (equalizer) & images.<br>
 	Just some more refactoring.<br>
 </p>
-	
+
+
+# Contributing 
+
+<p>
+       Outside contributors are welcome. 
+Please open an issue first before committing any changes.
+
+</p>
