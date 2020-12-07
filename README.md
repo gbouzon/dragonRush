@@ -184,12 +184,22 @@
 	Edited sounds (equalizer) & images.<br>
 	Just some more refactoring.<br>
 </p>
+<h1> 
+    <b>Version 4.5, December 6<sup>th</sup> of 2020:</b>
+</h1>
+
+<p>
+	<strong>Giuliana Bouzon:</strong><br>
+	Updated documentations & overall game structure.<br>
+	Added sounds & game over screens.<br>
+	Just some more refactoring.<br>
+</p>
 
 
 # Contributing 
 
 <p>
-       Outside contributors are welcome. 
-Please open an issue first before committing any changes.
+	Outside contributors are welcome. 
+	Please open an issue first before committing any changes.
 
 </p>

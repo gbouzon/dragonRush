@@ -22,17 +22,14 @@ public abstract class MyWorld extends World{
     /**
      * Increment totalScore based on allies collected.
      */
-    public void incrementTotalScore(int points){
+    protected void incrementTotalScore(int points){
         totalScore+=points;
-        showPercentage();
     }
     /**
-     * Display skill percentage of the player.
+     * Calculates percentage
      */
-    public void showPercentage(){
-        if(totalScore>0){
-            showText("Performance: " + (int)((score/totalScore)*100) + "%", 80, 40);
-        }
+    protected int calculatePercentage(){
+        return (int)((score/totalScore)*100);
     }
     /**
     * Method to display the score in the upper left corner of the World.

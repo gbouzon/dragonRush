@@ -93,6 +93,10 @@ public class DinoRush extends MyWorld {
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act(){
+        if(score<0){
+            score = 0;
+            Greenfoot.setWorld(new GenGameOver());
+        }
         height2 = Greenfoot.getRandomNumber(300);
         addAllies();
         countTime();

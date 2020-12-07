@@ -14,6 +14,7 @@ public class Credits extends Buttons {
     public void act() {
         mouseAnimation(name);
         if(Greenfoot.mouseClicked(this)){
+            Greenfoot.playSound("click.wav");
             Greenfoot.setWorld(new CreditsScreen());
         }
     }    

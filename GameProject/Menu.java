@@ -16,6 +16,7 @@ public class Menu extends Buttons
     {
         mouseAnimation(name);
         if(Greenfoot.mouseClicked(this)){
+            Greenfoot.playSound("click.wav");
             Greenfoot.setWorld(new MenuScreen());
         }
     }    

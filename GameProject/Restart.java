@@ -14,6 +14,7 @@ public class Restart extends Buttons {
     public void act() {
         mouseAnimation(name);
         if(Greenfoot.mouseClicked(this)){
+            Greenfoot.playSound("click.wav");
             Greenfoot.setWorld(new MenuScreen());
             ((MyWorld)getWorld()).score = 0;
         }

@@ -43,6 +43,7 @@ public class Play extends Buttons {
     public void act() {
         mouseAnimation(name);
         if(!isTransition() && Greenfoot.mouseClicked(this)){
+            Greenfoot.playSound("click.wav");
             getWorld().addObject(new TransitionScreen(),540,363);
         }
         //detectWorld();

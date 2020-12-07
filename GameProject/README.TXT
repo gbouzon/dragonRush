@@ -31,13 +31,13 @@ Things to be fixed/implemented:
 2. Skill percentage method doesn't work (????)
 3. Edit screens to fix typos/ style for Credits screen -DONE
 4. Fix fire animation/ disappear -DONE
-5. Work on gameOver conditions
+5. Work on gameOver conditions -done
 6. Add more enemies to levels 2 and 3 and more allies to level 1 -DONE
 7. Create gameOver screen -DONE
 8. Decide condition for restart (back to menu, level 1 or each level?) -DONE
 9. Work on overall animations and maybe consider changing dragon (no up/down imgs) -DONE
 10. Fix discrepacy in jump method (when it's on block)
 11. Figure out how to make scrolling background without delay (Background class)
-12. Edit place for Menu button (maybe make white button the default) --color -TO BE DISCUSSED
+12. Edit place for Menu button (maybe make white button the default) --color 
 13. Add impact to enemies/ world when attack() method (fire)
 14. Fix fruits appearance in DinoRush game --not on block

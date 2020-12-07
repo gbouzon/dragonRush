@@ -58,6 +58,10 @@ public class Snake extends MyWorld {
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() {
+        if(score<0){
+            score = 0;
+            Greenfoot.setWorld(new GenGameOver());
+        }
         countTime();
         if(time>0){
             if(Greenfoot.getRandomNumber(100)<0.5){

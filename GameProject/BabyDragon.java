@@ -11,11 +11,10 @@ public class BabyDragon extends Dragon {
     private int acceleration = 1;
     private int jumpHeight = -8;
     private char direction;
-    private boolean isDownR, isDownL;
+    private boolean isDown;
     public BabyDragon(){ 
         white = Color.WHITE;
-        isDownR = false;
-        isDownL = false;
+        isDown = false;
     }
     /**
      * Adds basic physics concepts (gravity) so that the character falls.
@@ -92,27 +91,21 @@ public class BabyDragon extends Dragon {
             } 
         }
         if(Greenfoot.isKeyDown("space")) {
+            Greenfoot.playSound("jump.wav");
+            isDown = true;
             vSpeed = jumpHeight;
             fall();
         }
         if(Greenfoot.isKeyDown("x") && direction=='r'){
-            if(!isDownR){
-                Greenfoot.playSound("fire.wav");
-                isDownR = true;
-            }
+            Greenfoot.playSound("fire.wav");
             setImage("dragonA5.png");
             getWorld().addObject(new Fire(), this.getX()+85, this.getY());
-            isDownR = false;
         }
 
         else if(Greenfoot.isKeyDown("x") && direction=='l'){
-            if(!isDownL){
-                Greenfoot.playSound("fire.wav");
-                isDownL = true;
-            }
+            Greenfoot.playSound("fire.wav");
             setImage("dragonA5L.png");
             getWorld().addObject(new Fire('l'), this.getX()-85, this.getY());
-            isDownL = false;
         }
     }
     /**
