@@ -9,17 +9,17 @@ public class Play extends Buttons {
     private String name = "play";
     private int counter;
     /**
-     * Detects World to act accordingly
+     * Detects World to act accordingly.
      */
     private void detectWorld(){
         // to be used at some point for something I don't remember.
         if(isTransition() && getWorld().getClass() == MenuScreen.class && Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new PacMan());
         }
-        if(getWorld().getClass() == PacMan.class && Greenfoot.mouseClicked(this)){
+        else if(getWorld().getClass() == PacMan.class && Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new Snake());
         }
-        if(getWorld().getClass() == Snake.class && Greenfoot.mouseClicked(this)){
+        else if(getWorld().getClass() == Snake.class && Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new DinoRush());
         }
     }
@@ -40,7 +40,7 @@ public class Play extends Buttons {
      * Act - do whatever the Play wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() {
+    public void act(){
         mouseAnimation(name);
         if(!isTransition() && Greenfoot.mouseClicked(this)){
             Greenfoot.playSound("click.wav");

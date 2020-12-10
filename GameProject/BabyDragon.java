@@ -5,16 +5,38 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Giuliana Bouzon
  */
 public class BabyDragon extends Dragon {
+    private GreenfootImage[] dragonL, dragonR;
+    private int indexDragonL, indexDragonR;
     private Color white;
     private int counter, speed;
     private int vSpeed = 0;
     private int acceleration = 1;
     private int jumpHeight = -8;
     private char direction;
-    private boolean isDown;
+    private GreenfootSound jump, fire;
+    private static int x;
     public BabyDragon(){ 
         white = Color.WHITE;
-        isDown = false;
+        jump = new GreenfootSound("jump.wav");
+        fire = new GreenfootSound("fire.wav");
+        
+        dragonL = new GreenfootImage[5];
+        indexDragonL = 0;
+        for(int i = 0; i<dragonL.length; i++){
+            dragonL[i] = new GreenfootImage("dragonWL" + (i+1) + ".png");
+        }
+        
+        dragonR = new GreenfootImage[5];
+        indexDragonR = 0;
+        for(int i = 0; i<dragonR.length; i++){
+            dragonR[i] = new GreenfootImage("dragonWR" + (i+1) + ".png");
+        }
+    }
+    /**
+     * Returns current dragon object's x-coordinate
+     */
+    public static int getDragonX(){
+        return x;
     }
     /**
      * Adds basic physics concepts (gravity) so that the character falls.
@@ -68,7 +90,7 @@ public class BabyDragon extends Dragon {
      * move character.
      */
     private void userControl(){
-        if(Greenfoot.isKeyDown("a")) {
+        if(Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left")) {
             setLocation(getX()-speed,getY());
             direction = 'l';
             if(counter==(12-speed)){
@@ -79,7 +101,7 @@ public class BabyDragon extends Dragon {
                 counter++;
             }
         }
-        if(Greenfoot.isKeyDown("d")) {
+        if(Greenfoot.isKeyDown("d") || Greenfoot.isKeyDown("right")) {
             setLocation(getX()+speed,getY());
             direction = 'r';
             if(counter==(12-speed)){
@@ -91,19 +113,18 @@ public class BabyDragon extends Dragon {
             } 
         }
         if(Greenfoot.isKeyDown("space")) {
-            Greenfoot.playSound("jump.wav");
-            isDown = true;
+            jump.play();
             vSpeed = jumpHeight;
             fall();
         }
         if(Greenfoot.isKeyDown("x") && direction=='r'){
-            Greenfoot.playSound("fire.wav");
+            fire.play();
             setImage("dragonA5.png");
             getWorld().addObject(new Fire(), this.getX()+85, this.getY());
         }
 
         else if(Greenfoot.isKeyDown("x") && direction=='l'){
-            Greenfoot.playSound("fire.wav");
+            fire.play();
             setImage("dragonA5L.png");
             getWorld().addObject(new Fire('l'), this.getX()-85, this.getY());
         }
@@ -182,7 +203,8 @@ public class BabyDragon extends Dragon {
      * Act - do whatever the BabyDragon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() {
+    public void act(){
         detectClass();
+        x = getX();
     }    
 }

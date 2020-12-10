@@ -11,7 +11,7 @@ public class Instructions extends Buttons {
      * Act - do whatever the Instructions wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() {
+    public void act(){
         mouseAnimation(name);
         if(Greenfoot.mouseClicked(this)){
             Greenfoot.playSound("click.wav");

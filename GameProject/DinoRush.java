@@ -12,7 +12,7 @@ public class DinoRush extends MyWorld {
      * 
      */
     public DinoRush() {
-        counter=0;
+        counter = 0;
         time = 3500;
         showTime();
         prepare();
@@ -22,8 +22,7 @@ public class DinoRush extends MyWorld {
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    private void prepare()
-    {
+    private void prepare(){
         Border border = new Border();
         addObject(border,1254,358);
         Border border2 = new Border();
@@ -39,7 +38,7 @@ public class DinoRush extends MyWorld {
     /**
      * Count down the game time and display it. Stop the game with a winning message when time is up.  
      */
-    private void countTime() {
+    private void countTime(){
         time --;
         showTime();
         if(time == -100) {
@@ -49,7 +48,7 @@ public class DinoRush extends MyWorld {
     /**
      * Show the remaining game time on screen.
      */
-    private void showTime() {
+    private void showTime(){
         if(time>=0){
             showText("Time: " + time,1000,25);
         }
@@ -100,10 +99,11 @@ public class DinoRush extends MyWorld {
         height2 = Greenfoot.getRandomNumber(300);
         addAllies();
         countTime();
+        displayPercentage();
         counter++;
         if(counter==250+random){
             makeTiles();
-            counter=0;
+            counter = 0;
             random = Greenfoot.getRandomNumber(150);
         }
     }

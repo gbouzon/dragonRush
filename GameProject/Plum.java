@@ -1,10 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
  * Defines behaviour for the plum objects in the game.
  * 
  * @author Giuliana Bouzon
  */
 public class Plum extends Fruits {
+   /**
+     * Constructor for Plum class
+     */
    public Plum(){
         speed = Greenfoot.getRandomNumber(5)+1;
    }
@@ -12,7 +16,7 @@ public class Plum extends Fruits {
      * Act - do whatever the Plum wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-   public void act() {
+   public void act(){
         detectClass();
    }    
 }

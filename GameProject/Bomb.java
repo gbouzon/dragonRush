@@ -6,19 +6,30 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Andrei Marinescu, Giuliana Bouzon
  */
 public class Bomb extends Enemies {
-    int speed;
-    private int timer;
+    private int speed, timer;
+    /**
+     * Constructor for Bomb class.
+     */
     public Bomb(){
         speed = Greenfoot.getRandomNumber(5)+1;
         timer = 0;
     }
     /**
+     * Checks if bomb overlaps with fruits or coins before adding it to the World.
+     */
+    private void preventOverlap(){
+        if((isTouching(Fruits.class) || isTouching(Coins.class))){
+            setLocation(getX()+1,getY());
+        }
+    }
+    /**
      * Spawns bombs in Snake class.
      */
     private void spawn(){
+        preventOverlap();
         setLocation(getX(), getY()+speed);
         if(isTouching(Ground.class)){
-            ((MyWorld)getWorld()).addScore(5);
+            ((MyWorld)getWorld()).addScore(10);
             ((MyWorld)getWorld()).removeObject(this);
         }
         else if(isTouching(BabyDragon.class) && ((Snake)getWorld()).getTime()>0){
@@ -44,6 +55,6 @@ public class Bomb extends Enemies {
     public void act(){
         GreenfootImage image = getImage();
         image.scale(70, 70);
-        spawn();
+        spawn();        
     } 
 }

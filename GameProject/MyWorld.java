@@ -1,22 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
-import java.lang.*;
+
 /**
  * Parent class for game levels. Defines common behaviour for game levels.
  * 
  * @author Giuliana Bouzon
  */
-public abstract class MyWorld extends World{
+public abstract class MyWorld extends World {
     protected static int score;
     protected static double totalScore;
+    protected GreenfootSound music;
     /**
     * Constructor for objects of class MyWorld.
     * 
     */
-    public MyWorld()
-    {    
+    public MyWorld(){    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1080, 725, 1); 
+        music = new GreenfootSound("background.wav");
         showScore();
     }
     /**
@@ -30,6 +31,12 @@ public abstract class MyWorld extends World{
      */
     protected int calculatePercentage(){
         return (int)((score/totalScore)*100);
+    }
+    /**
+     * Displays percentage
+     */
+    protected void displayPercentage(){
+        showText("Performance: " + calculatePercentage() + "%", 80, 50);
     }
     /**
     * Method to display the score in the upper left corner of the World.
@@ -78,8 +85,6 @@ public abstract class MyWorld extends World{
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act(){
-        if(score<0){
-            Greenfoot.setWorld(new GameOverScreen());
-        }
+        //act method here
     }
 }

@@ -1,5 +1,5 @@
  import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
- import java.util.*;
+ 
 /**
  * Provides everything in level 1 (Pac-Man) of the game.
  * 
@@ -18,7 +18,6 @@ public class PacMan extends MyWorld {
         score=0;
         totalScore = 0;
     }
-    
     private void prepare() {
         BabyDragon tinyBabyDragon = new BabyDragon();
         scaleImage(tinyBabyDragon.getImage());
@@ -118,7 +117,6 @@ public class PacMan extends MyWorld {
         scaleImage(plum4.getImage());
         addObject(plum4,510,429);
     }
-
     /**
      * Count down the game time and display it. Stop the game with a winning message when time is up.  
      */
@@ -146,6 +144,7 @@ public class PacMan extends MyWorld {
         makeKnights();
         if(score<0){
             score = 0;
+            Greenfoot.playSound("game-over.wav");
             Greenfoot.setWorld(new GenGameOver());
         }
     }

@@ -14,20 +14,19 @@ public class Fruits extends Actor {
         if(getWorld().getClass() == Snake.class){
             setLocation(getX(), getY()+speed);
             if(isTouching(Ground.class)&& ((Snake)getWorld()).getTime()>0){
-                ((MyWorld)getWorld()).addScore(-10);
+                ((MyWorld)getWorld()).addScore(-5);
                 ((MyWorld)getWorld()).removeObject(this);
             }
         }
         else if(getWorld().getClass() == DinoRush.class){
             setLocation(getX()-1, getY());
-        
         }
     }
     /**
      * Act - do whatever the Fruits wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() {
+    public void act(){
         // Add your action code here.
     }
 }

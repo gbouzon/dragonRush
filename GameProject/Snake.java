@@ -13,6 +13,7 @@ public class Snake extends MyWorld {
         speed = 0;
         showTime();
         prepare();
+        setPaintOrder(TransitionScreen.class, BabyDragon.class,Bomb.class);
     }
     /**
      * Returns Snake class' time.
@@ -60,9 +61,11 @@ public class Snake extends MyWorld {
     public void act() {
         if(score<0){
             score = 0;
+            Greenfoot.playSound("game-over.wav");
             Greenfoot.setWorld(new GenGameOver());
         }
         countTime();
+        displayPercentage();
         if(time>0){
             if(Greenfoot.getRandomNumber(100)<0.5){
                 addObject(new StarFruit(), Greenfoot.getRandomNumber(1080), 1);
@@ -80,9 +83,9 @@ public class Snake extends MyWorld {
                 addObject(new Coins(), Greenfoot.getRandomNumber(1080), 1);
                 incrementTotalScore(30);
             }
-            if(Greenfoot.getRandomNumber(400-speed)<3){
+            if(Greenfoot.getRandomNumber(400-speed)<1){
                 addObject(new Bomb(), Greenfoot.getRandomNumber(1080), 1);
-                incrementTotalScore(5);
+                incrementTotalScore(10);
             }
         }
     }

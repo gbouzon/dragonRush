@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
  * Defines the knight objects' behaviour.
  * 
@@ -7,47 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Knight extends Enemies {
     private Color white;
     private int x;
-    private GreenfootImage WR1, WR2, WR3, WL1, WL2, WL3;
+    /**
+     * Constructor for Knight class.
+     */
     public Knight(){
         white = Color.WHITE;
         x = Greenfoot.getRandomNumber(1079);
-        
-        WR1 = new GreenfootImage("knightWR1.png");
-        WR2 = new GreenfootImage("knightWR2.png");
-        WR3 = new GreenfootImage("knightWR3.png");
-        
-        WL1 = new GreenfootImage("knightWR1.png");
-        WL2 = new GreenfootImage("knightWR2.png");
-        WL3 = new GreenfootImage("knightWR3.png");
-
-    }
-    /**
-     * Animates knight's movement to the right.
-     */
-    private void switchImageRight(){
-        if(getImage() == WR1){
-            setImage(WR2);
-        }
-        else if(getImage() == WR2){
-            setImage(WR3);
-        }
-        else if(getImage() == WR3){
-            setImage(WR1);
-        }
-    }
-    /**
-     * Animates knight's movement to the left.
-     */
-    private void switchImageLeft(){
-        if(getImage() == WL1){
-            setImage(WL2);
-        }
-        else if(getImage() == WL2){
-            setImage(WL3);
-        }
-        else if(getImage() == WL3){
-            setImage(WL1);
-        }
     }
     /**
      * Makes the enemy move through the maze (Pac-Man).
@@ -73,28 +39,9 @@ public class Knight extends Enemies {
         }
     }
     /**
-     * Makes Knight move in DinoRush level.
-     */
-    private void moveDino(){
-        if(getX()<x){
-            setLocation(getX()+2, getY());
-            switchImageRight();
-        }
-        else if(getX()>x){
-            setLocation(getX()-2, getY());
-            switchImageLeft();
-        }
-        else if(getX() == x){ 
-            x = Greenfoot.getRandomNumber(1079);
-        }
-        else if(getX() == 1079 || getX() == 0){
-            getWorld().removeObject(this);
-        }
-    }
-    /**
      * Checks if the character is touching the walls of the maze
      */
-    private boolean touchingWalls() {
+    private boolean touchingWalls(){
         World world = (PacMan)getWorld();
         GreenfootImage background = world.getBackground();
         if (background.getColorAt(getX(), getY()).equals(white)) {
@@ -102,6 +49,24 @@ public class Knight extends Enemies {
         }
         else {
             return false;
+        }
+    }
+    /**
+     * Makes the enemy move in DinoRush
+     */
+    private void moveDino(){
+        turnTowards(BabyDragon.getDragonX(), getY());
+        if(getX()==BabyDragon.getDragonX()){
+            setLocation(getX(), getY());
+        }
+        else if (getX()>BabyDragon.getDragonX()){
+            setImage("knightWL1.png");
+            setLocation(getX()-1, getY());
+        }
+        
+        else if (getX()<BabyDragon.getDragonX()){
+            setImage("knightWR1.png");
+            setLocation(getX()+1, getY());
         }
     }
     /**
@@ -120,10 +85,10 @@ public class Knight extends Enemies {
         }
     }
     /**
-     * Act - do whatever the kNIGHT wants to do. This method is called whenever
+     * Act - do whatever the Knight wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() {
+    public void act(){
         detectClass();
     } 
 }
