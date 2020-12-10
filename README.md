@@ -194,6 +194,19 @@
 	Added sounds & game over screens.<br>
 	Just some more refactoring.<br>
 </p>
+<h1> 
+    <b>Version 5.0, December 10<sup>th</sup> of 2020:</b>
+</h1>
+
+<p>
+	<strong>Giuliana Bouzon:</strong><br>
+	Cleaned up folders & unnecessary code.<br>
+	Updated Fire features, Knight movement & skill percentage.<br>
+	Updated scoring, game over conditions & Screens.<br>
+	Fixed class inheritance, sound bugs & overlap in level 2.<br>
+	Added arrow keys for character movement & Record class.<br>
+	Updated spacing & game documentations.<br>
+</p>
 
 
 # Contributing 
