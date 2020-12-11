@@ -205,6 +205,8 @@
 	Updated scoring, game over conditions & Screens.<br>
 	Fixed class inheritance, sound bugs & overlap in level 2.<br>
 	Added arrow keys for character movement & Record class.<br>
+	Fixed skill percentage bug.<br>
+	Fixed overlap in level 3 & adjusted speed for Fruits, Coins & Bombs.<br>
 	Updated spacing & game documentations.<br>
 </p>
 
