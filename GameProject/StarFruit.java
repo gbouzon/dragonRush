@@ -10,7 +10,7 @@ public class StarFruit extends Fruits {
      * Constructor for StarFruit class
      */
     public StarFruit(){
-        speed = Greenfoot.getRandomNumber(5)+1;
+        speed = Greenfoot.getRandomNumber(3)+1;
     }
     /**
      * Act - do whatever the StarFruit wants to do. This method is called whenever

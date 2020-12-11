@@ -12,7 +12,7 @@ public class Coins extends Actor {
      * Constructor for Coins class.
      */
     public Coins(){
-        speed = Greenfoot.getRandomNumber(5)+1;
+        speed = Greenfoot.getRandomNumber(3)+1;
         
         coins = new GreenfootImage[10];
         indexCoins = 0;
@@ -21,7 +21,15 @@ public class Coins extends Actor {
         }
     }
     /**
-     * Method to create character animation.
+     * Prevents overlap
+     */
+    private void preventOverlap(){
+        if(isTouching(Block.class)||isTouching(Coins.class)){
+            setLocation(getX(), getY()+1);
+        }
+    }
+    /**
+     * Creates character animation.
      */
     private void switchImage(){
        if(counter==4){
@@ -46,6 +54,7 @@ public class Coins extends Actor {
             }
         }
         else if(getWorld().getClass() == DinoRush.class){
+            preventOverlap();
             setLocation(getX()-1, getY());
             switchImage();
         }

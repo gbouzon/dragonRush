@@ -15,8 +15,8 @@ public class PacMan extends MyWorld {
         prepare();
         time = 3500;
         showTime();
-        score=0;
-        totalScore = 0;
+        score = 0;
+        totalScore = 270;
     }
     private void prepare() {
         BabyDragon tinyBabyDragon = new BabyDragon();
@@ -102,8 +102,6 @@ public class PacMan extends MyWorld {
         Knight knight6 = new Knight();
         scaleImage(knight6.getImage());
         addObject(knight6,751,632);
-
-        incrementTotalScore(270);
         
         Cherry cherry4 = new Cherry();
         scaleImage(cherry4.getImage());

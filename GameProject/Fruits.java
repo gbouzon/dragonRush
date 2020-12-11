@@ -6,7 +6,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Giuliana Bouzon
  */
 public class Fruits extends Actor {
-    protected int speed;  
+    protected int speed; 
+    protected int random;
     /**
      * Detects class and defines the fruits' behaviour accordingly.
      */
@@ -20,6 +21,19 @@ public class Fruits extends Actor {
         }
         else if(getWorld().getClass() == DinoRush.class){
             setLocation(getX()-1, getY());
+            preventOverlap();
+        }
+    }
+    /**
+     * Prevents overlap
+     */
+    protected void preventOverlap(){
+        random = (int)Math.random();
+        if((isTouching(Block.class)||isTouching(Coins.class)) && random == 0){
+            setLocation(getX()-1, getY()+1);
+        }
+        else if((isTouching(Block.class)||isTouching(Coins.class)) && random == 1){
+            setLocation(getX()+1, getY()-1);
         }
     }
     /**

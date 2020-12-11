@@ -10,7 +10,7 @@ public class Plum extends Fruits {
      * Constructor for Plum class
      */
    public Plum(){
-        speed = Greenfoot.getRandomNumber(5)+1;
+        speed = Greenfoot.getRandomNumber(3)+1;
    }
    /**
      * Act - do whatever the Plum wants to do. This method is called whenever

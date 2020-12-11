@@ -18,5 +18,5 @@ comment5.target=void\ detectClass()
 comment5.text=\r\n\ Detects\ World\ to\ act\ accordingly.\r\n
 comment6.params=
 comment6.target=void\ act()
-comment6.text=\r\n\ Act\ -\ do\ whatever\ the\ kNIGHT\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment6.text=\r\n\ Act\ -\ do\ whatever\ the\ Knight\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 numComments=7

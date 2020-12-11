@@ -10,7 +10,7 @@ public class Cherry extends Fruits {
      * Constructor for Cherry class.
      */
     public Cherry(){
-        speed = Greenfoot.getRandomNumber(5)+1;
+        speed = Greenfoot.getRandomNumber(3)+1;
     }
     /**
      * Act - do whatever the Cherry wants to do. This method is called whenever

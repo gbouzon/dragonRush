@@ -11,12 +11,12 @@ public class TransitionScreen extends Actor {
         counter = 0;
     }
     /**
-     * Detects world to act accordingly
+     * Detects world to generate according transition screen.
      */
     private void detectWorld(){
         if(getWorld().getClass()==PacMan.class){
             setImage("transition2.png");
-            if(Greenfoot.getKey()!=null && counter>70){
+            if(Greenfoot.getKey()!=null && counter>50){
                 Greenfoot.setWorld(new Snake());
                 counter = 0;
             }
@@ -26,7 +26,7 @@ public class TransitionScreen extends Actor {
         }
         else if (getWorld().getClass()==Snake.class){
             setImage("transition3.png");
-            if(Greenfoot.getKey()!=null && counter>70){
+            if(Greenfoot.getKey()!=null && counter>50){
                 Greenfoot.setWorld(new DinoRush());
                 counter = 0;
             }
@@ -34,12 +34,9 @@ public class TransitionScreen extends Actor {
                 counter++;
             }
         }
-        else if (getWorld().getClass()==DinoRush.class){
-            //nothing happens.
-        }
         else{
             setImage("transition1.png");
-            if(Greenfoot.getKey()!=null && counter>70){
+            if(Greenfoot.getKey()!=null && counter>50){
                 Greenfoot.setWorld(new PacMan());
                 counter = 0;
             }

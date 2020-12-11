@@ -16,7 +16,7 @@ public class DinoRush extends MyWorld {
         time = 3500;
         showTime();
         prepare();
-        setPaintOrder(Border.class,BabyDragon.class, Coins.class, Fruits.class);
+        setPaintOrder(Border.class, BabyDragon.class, Coins.class, Fruits.class);
     }
     /**
      * Prepare the world for the start of the program.

@@ -14,6 +14,7 @@ public class Fire extends Dragon {
      */
     public Fire(char direction){
         this.direction = direction;
+        
         fire = new GreenfootImage[6];
         indexFire = 0;
         for(int i = 0; i<fire.length; i++){

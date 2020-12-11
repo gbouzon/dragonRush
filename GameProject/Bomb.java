@@ -7,12 +7,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bomb extends Enemies {
     private int speed, timer;
+    private GreenfootSound bomb;
     /**
      * Constructor for Bomb class.
      */
     public Bomb(){
-        speed = Greenfoot.getRandomNumber(5)+1;
+        speed = Greenfoot.getRandomNumber(3)+1;
         timer = 0;
+        bomb = new GreenfootSound("boom.wav");
     }
     /**
      * Checks if bomb overlaps with fruits or coins before adding it to the World.
@@ -29,19 +31,20 @@ public class Bomb extends Enemies {
         preventOverlap();
         setLocation(getX(), getY()+speed);
         if(isTouching(Ground.class)){
-            ((MyWorld)getWorld()).addScore(10);
+            ((MyWorld)getWorld()).addScore(30);
             ((MyWorld)getWorld()).removeObject(this);
         }
-        else if(isTouching(BabyDragon.class) && ((Snake)getWorld()).getTime()>0){
-            ((MyWorld)getWorld()).addScore(-10);
+        else if(getOneIntersectingObject(BabyDragon.class)!=null && ((Snake)getWorld()).getTime()>0){
+            ((MyWorld)getWorld()).addScore(-20);
             if(timer==2){
                 setImage("bombSprite1.png");
-                Greenfoot.playSound("boom.wav");
+                bomb.play();
             }
             if(timer==4){
                 setImage("Explosion.png");
             }
             if(timer==5){
+                getWorld().addObject(new Record(), getX()+20, getY());
                 ((MyWorld)getWorld()).removeObject(this);
                 timer = 0;
             }
