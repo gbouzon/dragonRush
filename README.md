@@ -1,6 +1,26 @@
 # Dragon Rush
-<p>This repository was made for us to collaborate work on our final game project.</p>
+
+<p>
+	This repository was made for us to collaborate on our final game project.<br>
+	Vanier College, Computer Science Technology, Fall 2020, Game Programming, Tassia Camoes-Araujo.
+</p>
  
+# Description
+
+<p> 
+	Dragon Rush was inspired by classic games such as Ms. Pac-Man, Snake, Sandwich Stacker, Mario & Dino Rush.<br>
+	Dragon Rush is made of several levels, each based on the aforementioned games. The goal is to test the player's skill level in each game.
+</p>
+
+# Acknowledgments
+
+<p> 
+	This game was designed and created by Giuliana Bouzon, Chelsea Nadarajah-Chinniah, Andrei Marinescu & supervised by Tassia Camoes-Araujo.<br>
+	Asset Creators: Akylrum, Robert Brooks, MadFireOn, Giuliana Bouzon, Hassekf, Carlos Alface, Scofanogd, Xom Adept, Chelsea Nadarajah-Chinniah, HerraBilbo, <br>
+	ProjectsU012, LittleRobotSoundFactory, Gemmellness, Mike Koenig, Sebastian, Cabled_Mess, Harrietniamh, Yummie, Michael Kolling, Chilka Castro.<br>
+	Asset sources: Open Game Art org, Itch.io, Game Developer Studio, GIMP, PNG Tree, Adobe After Effects, Free Sound org, Sound Bible, Michael Kolling Book Scenarios.
+</p>
+
 # Version History 
 
 <h1> 
@@ -73,11 +93,11 @@
 
 <p>
 	<strong>Andrei Marinescu:</strong><br>
-	Created new world (Snake)<br>
-	Added new characters and background (new dragon heads and view for background)<br>
-	Added the controls for my Dragon (w,a,s,d)<br>
-	Added new point system for the dragon while eating the knights<br>
-	Added the lanes where the dragon and knight would spawn and/or walk. (So it's a linear type of movement)<br>
+	Created new world (Snake).<br>
+	Added new characters and background (new dragon heads and view for background).<br>
+	Added the controls for my Dragon (w,a,s,d).<br>
+	Added new point system for the dragon while eating the knights.<br>
+	Added the lanes where the dragon and knight would spawn and/or walk (so it's a linear type of movement).<br>
 </p>
 <h1> 
     <b>Version 3.0, November 23<sup>rd</sup> of 2020:</b>
@@ -169,9 +189,9 @@
 <p>
 	<strong>Andrei Marinescu:</strong><br>
 	Deleted ProperDragon map including some necessary classes for that map.<br>
-	Created new enemy <br>
-	Added animation to the bomb when "detonated" (Audio difficulty going to fix late)<br>
-	Added a game over condition so to restart when score<0.<br>
+	Created new enemy (Bomb class). <br>
+	Added animation to the bomb when "detonated" (audio bug to be fixed).<br>
+	Added a game over condition so to restart when score is negative.<br>
 	Speed up function when at a certain score.<br>
 </p>
 <h1> 
@@ -210,11 +230,12 @@
 	Updated spacing & game documentations.<br>
 </p>
 
+# License
+<p> This game is licensed under MIT License Copyright (c) 2020 Giuliana Bouzon, Chelsea Nadarajah-Chinniah, Andrei Marinescu.</p>
 
 # Contributing 
 
 <p>
-	Outside contributors are welcome. 
+	Outside contributors are welcome.<br>
 	Please open an issue first before committing any changes.
-
 </p>
