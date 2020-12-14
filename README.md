@@ -16,7 +16,7 @@
 
 <p> 
 	This game was designed and created by Giuliana Bouzon, Chelsea Nadarajah-Chinniah, Andrei Marinescu & supervised by Tassia Camoes-Araujo.<br>
-	Asset Creators: Akylrum, Robert Brooks, MadFireOn, Giuliana Bouzon, Hassekf, Carlos Alface, Scofanogd, Xom Adept, Chelsea Nadarajah-Chinniah, HerraBilbo, <br>
+	Asset Creators: Akylrum, Robert Brooks, MadFireOn, Giuliana Bouzon, Hassekf, Carlos Alface, Scofanogd, Xom Adept, Chelsea Nadarajah-Chinniah, HerraBilbo, 
 	ProjectsU012, LittleRobotSoundFactory, Gemmellness, Mike Koenig, Sebastian, Cabled_Mess, Harrietniamh, Yummie, Michael Kolling, Chilka Castro.<br>
 	Asset sources: Open Game Art org, Itch.io, Game Developer Studio, GIMP, PNG Tree, Adobe After Effects, Free Sound org, Sound Bible, Michael Kolling Book Scenarios.
 </p>
