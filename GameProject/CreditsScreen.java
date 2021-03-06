@@ -21,6 +21,6 @@ public class CreditsScreen extends World {
      */
     private void prepare() {
         Menu menu = new Menu();
-        addObject(menu,534,670);
+        addObject(menu, 534, 670);
     }
 }

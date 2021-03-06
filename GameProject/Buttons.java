@@ -10,12 +10,12 @@ public class Buttons extends Actor {
     /**
       * Animates button when mouse hovers over it.
       */  
-    protected void mouseAnimation(String str){
-        if(!isMouseOver && Greenfoot.mouseMoved(this)){
+    protected void mouseAnimation(String str) {
+        if (!isMouseOver && Greenfoot.mouseMoved(this)) {
             setImage(str + "W.png");
             isMouseOver = true;
         }
-        if(isMouseOver && Greenfoot.mouseMoved(null) && !Greenfoot.mouseMoved(this)){
+        if (isMouseOver && Greenfoot.mouseMoved(null) && !Greenfoot.mouseMoved(this)) {
             setImage(str +  "R.png");
             isMouseOver = false;
         }
@@ -24,7 +24,7 @@ public class Buttons extends Actor {
      * Act - do whatever the Buttons wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act(){
+    public void act() {
         // Add your action code here.
     }
 }

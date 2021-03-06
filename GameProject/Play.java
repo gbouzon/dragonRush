@@ -11,28 +11,28 @@ public class Play extends Buttons {
     /**
      * Detects World to act accordingly.
      */
-    private void detectWorld(){
+    private void detectWorld() {
         // to be used at some point for something I don't remember.
-        if(isTransition() && getWorld().getClass() == MenuScreen.class && Greenfoot.mouseClicked(this)){
+        if (isTransition() && getWorld().getClass() == MenuScreen.class && Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new PacMan());
         }
-        else if(getWorld().getClass() == PacMan.class && Greenfoot.mouseClicked(this)){
+        else if (getWorld().getClass() == PacMan.class && Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new Snake());
         }
-        else if(getWorld().getClass() == Snake.class && Greenfoot.mouseClicked(this)){
+        else if (getWorld().getClass() == Snake.class && Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new DinoRush());
         }
     }
     /**
      * Checks if there is a transitionScreen object in the World.
      */
-    private boolean isTransition(){
+    private boolean isTransition() {
        List<Actor> objects = new ArrayList<Actor>();
        objects.addAll(getWorld().getObjects(TransitionScreen.class));
-       if(objects.size()>0){
+       if (objects.size() > 0) {
            return true;
        }
-       else{
+       else {
            return false;
        }
     }
@@ -40,11 +40,11 @@ public class Play extends Buttons {
      * Act - do whatever the Play wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act(){
+    public void act() {
         mouseAnimation(name);
-        if(!isTransition() && Greenfoot.mouseClicked(this)){
+        if (!isTransition() && Greenfoot.mouseClicked(this)) {
             Greenfoot.playSound("click.wav");
-            getWorld().addObject(new TransitionScreen(),540,363);
+            getWorld().addObject(new TransitionScreen(), 540, 363);
         }
         //detectWorld();
     }

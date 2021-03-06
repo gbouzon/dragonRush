@@ -22,10 +22,12 @@ public class MenuScreen extends World {
      */
     private void prepare() {
         Play play = new Play();
-        addObject(play,533,252);
+        addObject(play, 533, 252);
+        
         Credits credits = new Credits();
-        addObject(credits,537,376);
+        addObject(credits, 537, 376);
+        
         Instructions instructions = new Instructions();
-        addObject(instructions,541,314);
+        addObject(instructions, 541, 314);
     }
 }

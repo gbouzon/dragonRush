@@ -11,41 +11,41 @@ public class Bomb extends Enemies {
     /**
      * Constructor for Bomb class.
      */
-    public Bomb(){
-        speed = Greenfoot.getRandomNumber(3)+1;
+    public Bomb() {
+        speed = Greenfoot.getRandomNumber(3) + 1;
         timer = 0;
         bomb = new GreenfootSound("boom.wav");
     }
     /**
      * Checks if bomb overlaps with fruits or coins before adding it to the World.
      */
-    private void preventOverlap(){
-        if((isTouching(Fruits.class) || isTouching(Coins.class))){
-            setLocation(getX()+1,getY());
+    private void preventOverlap() {
+        if ((isTouching(Fruits.class) || isTouching(Coins.class))) {
+            setLocation(getX() + 1, getY());
         }
     }
     /**
      * Spawns bombs in Snake class.
      */
-    private void spawn(){
+    private void spawn() {
         preventOverlap();
-        setLocation(getX(), getY()+speed);
-        if(isTouching(Ground.class)){
-            ((MyWorld)getWorld()).addScore(30);
-            ((MyWorld)getWorld()).removeObject(this);
+        setLocation(getX(), getY() + speed);
+        if (isTouching(Ground.class)) {
+            ((MyWorld) getWorld()).addScore(30);
+            ((MyWorld) getWorld()).removeObject(this);
         }
-        else if(getOneIntersectingObject(BabyDragon.class)!=null && ((Snake)getWorld()).getTime()>0){
+        else if (getOneIntersectingObject(BabyDragon.class) != null && ((Snake) getWorld()).getTime() > 0) {
             ((MyWorld)getWorld()).addScore(-20);
-            if(timer==2){
+            if (timer == 2) {
                 setImage("bombSprite1.png");
                 bomb.play();
             }
-            if(timer==4){
+            if (timer == 4) {
                 setImage("Explosion.png");
             }
-            if(timer==5){
-                getWorld().addObject(new Record(), getX()+20, getY());
-                ((MyWorld)getWorld()).removeObject(this);
+            if (timer == 5) {
+                getWorld().addObject(new Record(), getX() + 20, getY());
+                ((MyWorld) getWorld()).removeObject(this);
                 timer = 0;
             }
             timer++;
@@ -55,7 +55,7 @@ public class Bomb extends Enemies {
      * Act - do whatever the Bomb wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act(){
+    public void act() {
         GreenfootImage image = getImage();
         image.scale(70, 70);
         spawn();        

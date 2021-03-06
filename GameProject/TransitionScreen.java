@@ -7,40 +7,40 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TransitionScreen extends Actor {
     private int counter;
-    public TransitionScreen(){
+    public TransitionScreen() {
         counter = 0;
     }
     /**
      * Detects world to generate according transition screen.
      */
-    private void detectWorld(){
-        if(getWorld().getClass()==PacMan.class){
+    private void detectWorld() {
+        if (getWorld().getClass() == PacMan.class) {
             setImage("transition2.png");
-            if(Greenfoot.getKey()!=null && counter>50){
+            if (Greenfoot.getKey() != null && counter > 50) {
                 Greenfoot.setWorld(new Snake());
                 counter = 0;
             }
-            else{
+            else {
                 counter++;
             }
         }
-        else if (getWorld().getClass()==Snake.class){
+        else if (getWorld().getClass() == Snake.class) {
             setImage("transition3.png");
-            if(Greenfoot.getKey()!=null && counter>50){
+            if (Greenfoot.getKey() != null && counter > 50) {
                 Greenfoot.setWorld(new DinoRush());
                 counter = 0;
             }
-            else{
+            else {
                 counter++;
             }
         }
-        else{
+        else {
             setImage("transition1.png");
-            if(Greenfoot.getKey()!=null && counter>50){
+            if (Greenfoot.getKey() != null && counter > 50) {
                 Greenfoot.setWorld(new PacMan());
                 counter = 0;
             }
-            else{
+            else {
                 counter++;
             }
         }

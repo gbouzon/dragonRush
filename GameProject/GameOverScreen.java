@@ -17,15 +17,15 @@ public class GameOverScreen extends MyWorld {
     /**
      * Displays player's skill
      */
-    private void showSkill(){
+    private void showSkill() {
         showText("Skill percentage: " + calculatePercentage() + "%", 547, 432);
     }
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    private void prepare(){
+    private void prepare() {
         Menu menu = new Menu();
-        addObject(menu,594,214);
+        addObject(menu, 594, 214);
     }
 }

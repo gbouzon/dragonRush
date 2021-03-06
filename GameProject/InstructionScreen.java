@@ -21,6 +21,6 @@ public class InstructionScreen extends World {
      */
     private void prepare() {
         Menu menu = new Menu();
-        addObject(menu,540,673);
+        addObject(menu, 540, 673);
     }
 }

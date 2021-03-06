@@ -6,56 +6,56 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Giuliana Bouzon
  */
 public class Coins extends Actor {
-    private int counter,speed, indexCoins;
+    private int counter, speed, indexCoins;
     private GreenfootImage[] coins;
     /**
      * Constructor for Coins class.
      */
-    public Coins(){
-        speed = Greenfoot.getRandomNumber(3)+1;
+    public Coins() {
+        speed = Greenfoot.getRandomNumber(3) + 1;
         
         coins = new GreenfootImage[10];
         indexCoins = 0;
-        for(int i = 0; i<coins.length; i++){
-            coins[i] = new GreenfootImage("gold" + (i+1) + ".png");
+        for (int i = 0; i < coins.length; i++) {
+            coins[i] = new GreenfootImage("gold" + (i + 1) + ".png");
         }
     }
     /**
      * Prevents overlap
      */
-    private void preventOverlap(){
-        if(isTouching(Block.class)||isTouching(Coins.class)){
-            setLocation(getX(), getY()+1);
+    private void preventOverlap() {
+        if (isTouching(Block.class) || isTouching(Coins.class)) {
+            setLocation(getX(), getY() + 1);
         }
     }
     /**
      * Creates character animation.
      */
-    private void switchImage(){
-       if(counter==4){
+    private void switchImage() {
+       if (counter == 4) {
             setImage(coins[indexCoins % coins.length]);
             indexCoins++;
             counter = 0;
        }
-       else{
+       else {
             counter++;
        }
     }
     /**
      * Detects World to act accordingly
      */
-    private void detectClass(){
-        if(getWorld().getClass() == Snake.class){
-            setLocation(getX(), getY()+speed);
+    private void detectClass() {
+        if (getWorld().getClass() == Snake.class) {
+            setLocation(getX(), getY() + speed);
             switchImage();
-            if(isTouching(Ground.class)){
-                ((MyWorld)getWorld()).addScore(-10);
-                ((MyWorld)getWorld()).removeObject(this);
+            if (isTouching(Ground.class)) {
+                ((MyWorld) getWorld()).addScore(-10);
+                ((MyWorld) getWorld()).removeObject(this);
             }
         }
-        else if(getWorld().getClass() == DinoRush.class){
+        else if (getWorld().getClass() == DinoRush.class) {
             preventOverlap();
-            setLocation(getX()-1, getY());
+            setLocation(getX() - 1, getY());
             switchImage();
         }
     }
@@ -63,7 +63,7 @@ public class Coins extends Actor {
      * Act - do whatever the Coins wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act(){
+    public void act() {
         detectClass();
     }    
 }
