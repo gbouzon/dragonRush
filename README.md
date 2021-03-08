@@ -23,9 +23,9 @@
 
 ## Version History 
 
-<h1> 
+<h3> 
     <b>Version 0.1.0, November 12<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Giuliana Bouzon:</strong><br>
