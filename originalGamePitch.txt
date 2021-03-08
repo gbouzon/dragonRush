@@ -1,0 +1,51 @@
+Final Project Idea Pitch - Giuliana Bouzon
+
+1. Game Idea:
+
+My game idea is a scrolling-world game. It would include a couple of Worlds (each world representing a different level) which have yet to be determined. 
+The goal of the game would be to return the main character (a dragon) back to its origin planet safely. There would be increasingly complicated obstacles to get through.
+There would be powerups, superpowers and maybe some type of food or coin to make the dragon stronger and to accord the player with points, which would be used to increase the level 
+of the dragon itself.
+In the first level, the World would be simple, there would be few obstacles, for example maybe a pit of water to jump through, a couple of hunters aiming arrows at the dragon, etc.
+In the second level, the World would change and we would move to a more complicated phase. There would be more superpowers/food, and the ability to fly would be added (if the player
+gathers a set quantity of points) as well as other obstacles such as hunters with guns, etc.
+In the third level, the World would change again (background to be chosen). There would be more useful superpowers and more food to give the player a better chance of upgrading the 
+dragon's level (to think about in terms of what type of changes could be made to the dragon). As obstacles, we would add maybe bombs and gases which would cloud the screen making it 
+harder for the player to view the obstacles and scientists trying to use the dragon for research.
+
+2. Characters and Scenario Description:
+
+There would be a dragon as a main character, which has the possibility of being upgraded throughout the game. 
+The dragon's goal would be to go through the obstacles and the different phases in order to return to its origin planet (where there are no people hunting it).
+The dragon would have superpowers, such as the ability to fly and to breathe fire (different colors of fire would indicate different powers). These abilities can only be used as the
+player gains points (each superpower would need a set quantity of points) eating the food or picking the coins in the game.
+
+The other characters are the obstacles. In my original idea, there would be different obstacles, both in the background itself as well as posed by different characters.
+The obstacles in the background (scenario) would be: holes, water pumps, water pits, etc. If the dragon falls in the holes, he dies. If it gets hit by any water objects, it would lose
+points, therefore making it harder to upgrade its abilities.
+The obstacles posed by secondary characters would be: hunters with arrows, which would evolve into hunter with guns, which would evolve into bat bombs (in this case the bats could eat
+the dragon if not confronted) as well as gas bombs. These gas bombs would make the player unable to properly see the obstacles in the scenario.
+I also wanted to add a "big boss" like in Mario games. My idea for the big boss would be a crazy, psychopath scientist trying to get the dragon in order to research new ways of 
+destroying the Earth. All these character obstacles would deduct points, but not kill the dragon entirely, except for the "big boss".
+
+There are different scenarios depending on the different levels. My idea was to make the scenario obstacles increasingly hard as the player advances through the levels.
+In the first level, I was thinking of having a forest background, and as the game progresses and the hunters get 'smarter' the forest would be destroyed: fallen trees, bushes on fire.
+In the second level, the impact of this fight in the scenario would be more prominent: we would show the fallen trees, stuff on fire and this time, buildings would be added.
+In the third level, these buildings would begin to fire bat bombs and gas bombs at the dragon trying to capture it or kill it.
+In the fourth level, we would have the big boss. In this level, the dragon should be upgraded so to be able to escape the scientist and return to its planet. The reason why it needed
+to pass through the big boss before flying away is because the crazy scientist has a serum that would give the dragon the ability of flying through the solar system without getting 
+burned. It cannot return without it.
+
+3. Game Win/Lose Conditions:
+
+The game can only be won if the dragon returns to its planet and that can only be achieved when it gets the special serum from the big boss.
+The game can be lost at any level; if the dragon loses enough 'life' points or gets caught in one of the scenario obstacles.
+
+4. Inspiration:
+
+This game was inspired by Mario and Dino Rush.
+
+5. Team-mates:
+
+I'm not looking for anything in particular in my team-mates. I would like to find people who are passionate and would like a bit of a challenge for their final project. People with
+a background in art would be nice, since I don't really have any and we'll probably need to play around with the game assets.
