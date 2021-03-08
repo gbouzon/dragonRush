@@ -35,9 +35,9 @@
     Added images edited and cropped by Chelsea Nadarajah-Chinniah and Giuliana Bouzon to images folder in the Greenfoot project.
 </p>
 
-<h1> 
+<h3> 
     <b>Version 0.2.1, November 13<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Chelsea Nadarajah-Chinniah:</strong><br>
@@ -51,9 +51,9 @@
 	Fire animation to go left and right in progress.<br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 0.3.1, November 19<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Giuliana Bouzon:</strong><br>
@@ -64,9 +64,9 @@
 	New concept: childhood games, Pac-man, Snake game, Mario.<br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 0.4.1, November 19<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Chelsea Nadarajah-Chinniah:</strong><br>
@@ -78,9 +78,9 @@
 	Added the collision between the dragon (the main character) and the knight (the enemy) (which connects to the lose condition).<br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.0.0, November 20<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Giuliana Bouzon:</strong><br>
@@ -91,9 +91,9 @@
 	Added a Block class to be used as Platforms in DinoRush class. <br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.1.0, November 21<sup>st</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Andrei Marinescu:</strong><br>
@@ -104,9 +104,9 @@
 	Added the lanes where the dragon and knight would spawn and/or walk (so it's a linear type of movement).<br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.2.0, November 23<sup>rd</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Giuliana Bouzon:</strong><br>
@@ -118,9 +118,9 @@
 	Changed game concept for Snake game.<br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.2.1, November 24<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Giuliana Bouzon:</strong><br>
@@ -128,9 +128,9 @@
 	Updated overall game structure. <br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.2.2, November 26<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Chelsea Nadarajah-Chinniah:</strong><br>
@@ -139,9 +139,9 @@
 	Added more coins and fruits to level 1 of the game.<br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.3.1, November 29<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Giuliana Bouzon:</strong><br>
@@ -154,9 +154,9 @@
 
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.4.0, December 1<sup>st</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Andrei Marinescu:</strong><br>
@@ -168,9 +168,9 @@
 	//Note: I need to put a new Bomb png image. <br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.4.1, December 3<sup>rd</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Chelsea Nadarajah-Chinniah:</strong><br>
@@ -179,9 +179,9 @@
 	When all the knights have been removed from the world, more knights are added.<br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.5.1, December 4<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Giuliana Bouzon:</strong><br>
@@ -194,9 +194,9 @@
 	Updated GameOver class & TransitionScreen class.<br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.5.2, December 5<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Andrei Marinescu:</strong><br>
@@ -207,9 +207,9 @@
 	Speed up function when at a certain score.<br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.5.3, December 5<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Giuliana Bouzon:</strong><br>
@@ -218,9 +218,9 @@
 	Just some more refactoring.<br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 1.5.4, December 6<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Giuliana Bouzon:</strong><br>
@@ -229,9 +229,9 @@
 	Just some more refactoring.<br>
 </p>
 
-<h1> 
+<h3> 
     <b>Version 2.0.0, December 10<sup>th</sup> of 2020:</b>
-</h1>
+</h3>
 
 <p>
 	<strong>Giuliana Bouzon:</strong><br>
